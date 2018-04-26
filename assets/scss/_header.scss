@@ -1,0 +1,58 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  padding: 30px;
+
+  .menu {
+    a.logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 60px;
+      position: relative;
+      img {
+        max-width: 135px;
+        display: block;
+        border: 0;
+        outline: 0;
+      }
+    }
+    .desktop-nav {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+
+      ul {
+        list-style: none;
+        display: block;
+        margin-bottom: 0px;
+
+        li {
+          display: inline-block;
+          padding: 5px 20px;
+
+          a {
+            color: black;
+            transition: color .2s ease-in-out;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .header-buttons {
+      line-height: 75px;
+      display: inline-block;
+      vertical-align: middle;
+      float: right;
+
+      .btn {
+        padding: 11px 25px;
+        letter-spacing: 0;
+        display: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+footer {
+  padding: 10vh 0;
+
+  h2 {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .menu-footer-menu-container {
+    margin: 100px 0;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      display: block;
+
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $text-color;
+          display: block;
+          padding: 15px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .half-page {
+    width: calc(50% - 100px);
+    display: inline-block;
+    vertical-align: top;
+
+    &.left {
+      margin-right: 50px;
+
+      form {
+        height: 46px;
+        border-radius: 3px;
+        position: relative;
+        margin-left: 0;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 400px;
+
+        label {
+          display: none !important;
+        }
+
+        .gform_footer {
+          position: absolute;
+          right: 20px;
+          box-shadow: none;
+          top: 4px;
+          line-height: 22px;
+          margin: 0;
+          clear: unset;
+          width: auto;
+          padding: 0;
+        }
+      }
+      input {
+        width: 100%!important;
+      }
+    }
+
+    &.right {
+      margin-right: 50px;
+
+      .social {
+        margin-top: 30px;
+        text-align: left;
+        
+        a {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: $text-color;
+          position: relative;
+          display: inline-block;
+          margin-right: 10px;
+
+          transition: all .2s ease-in-out;
+
+          img {
+            max-height: 15px;
+            max-width: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &:hover {
+            background: $primary-color;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+}

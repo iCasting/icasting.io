@@ -1,0 +1,152 @@
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+  box-sizing: inherit;
+}
+
+body, html {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $primary-font-family;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: $font-weight-light;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: $font-weight-light;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-weight: $font-weight-light;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-weight: $font-weight-light;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-weight: $font-weight-light;
+}
+
+.pagecontents {
+  position: relative;
+  margin-top: 130px;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  width: calc(100% - 60px);
+  position: relative;
+
+  &.small {
+    max-width: 1024px;
+  }
+  
+  &.table {
+    display: table;
+
+    .left, .right {
+      display: table-cell;
+      width: 50%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.btn {
+  border: 1px solid $primary-color;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+  padding: 16px 27px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+  }
+
+  &.arrow {
+    padding-right: 50px;
+    &:after {
+      content: '';
+      background-image: url('assets/img/button_arrow.png');
+      background-size: 10px 12px;
+      width: 10px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      transition: all .2s ease-in-out;
+      opacity: 1;
+    }
+    &:hover {
+      padding-right: 30px;
+      &:after {
+        right: 0px;
+        opacity: 0;
+      }
+    }
+  }
+
+  &.red {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      color: $primary-color;
+      background: white;
+    }
+  }
+}

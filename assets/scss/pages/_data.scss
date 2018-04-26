@@ -1,0 +1,82 @@
+.data {
+  margin: 100px 0 0;
+  position: relative;
+
+  .half-page {
+    width: calc(50% - 100px);
+    display: inline-block;
+    vertical-align: middle;
+
+    &.left {
+      padding: 100px 0 200px;
+      margin-right: 50px;
+
+      .content {
+        max-width: 400px;
+
+        h2 {
+          font-weight: 300;
+          font-size: 48px;
+          line-height: 54px;
+        }
+
+        ul {
+          margin: 30px 0 50px;
+          list-style: none;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &.right {
+      margin: 0;
+      position: absolute;
+      height: 100%;
+      width: 50vw;
+      margin-left: 50px;
+      background: url('assets/img/planet.jpg');
+      background-size: cover;
+      background-position: center center;
+      box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
+      z-index: 1;
+
+      ul {
+        list-style: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        li {
+          width: 400px;
+          color: white;
+          background: rgba(0,0,0,.3);
+          border-radius: 5px;
+          text-align: right;
+          padding: 10px 15px;
+          overflow: hidden;
+          margin: 10px 0;
+          position: relative;
+
+          p {
+            font-size: 16px;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+          }
+
+          span {
+            display: block;
+            border-radius: 5px 0 0 5px;
+            left: 0;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            background: #b8e6f7;
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}
