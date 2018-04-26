@@ -255,26 +255,30 @@ var rellax = new Rellax('.rellax');
 function setTeamCarousel() {
   var slideElement = $('.membercontainer');
   var innerElement = $('.team-carousel-inner');
+  var teamRight = $('.team-right');
+  var teamLeft = $('.team-left');
+  var containerWidth;
+
   if ($(window).width() < 1440) {
-    var containerWidth = ($(window).width() + 10);
+    containerWidth = ($(window).width() + 10);
   } else {
-    var containerWidth = 1440;
+    containerWidth = 1440;
   }
   var countSlides = slideElement.length;
   var slideWidth = slideElement.width();
 
   if ((countSlides * slideWidth) > containerWidth) {
-    $('.team-right').css('display', 'block');
-    $('.team-left').css('display', 'block');
+    teamRight.css('display', 'block');
+    teamLeft.css('display', 'block');
   }
 
-  $('.team-right').click(function() {
+  teamRight.click(function() {
     var currentPos = parseInt($(innerElement).css('left'), 10);
     $(innerElement).css('left', (currentPos - containerWidth) + 'px');
     console.log(containerWidth);
   });
 
-  $('.team-left').click(function() {
+  teamLeft.click(function() {
     var currentPos = parseInt($(innerElement).css('left'), 10);
     if (currentPos < 0 ) {
       $(innerElement).css('left', (currentPos + containerWidth) + 'px');
