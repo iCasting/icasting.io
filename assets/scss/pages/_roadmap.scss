@@ -18,7 +18,7 @@
   }
 
   .carroussel-container {
-    padding: 100px 0 128px;
+    padding: 100px 0 113px;
     width: 100%;
 
     .carroussel-inner {
@@ -132,11 +132,11 @@
 
       &:before {
         content: '';
-        width: calc(33vw + 8vw);
-        max-width: calc(400px + 8vw);
+        width: calc(33vw + 6vw);
+        max-width: calc(400px + 6vw);
         position: absolute;
         margin-top: -1px;
-        left: -3vw;
+        left: -2vw;
         background: $text-color;
         height: 3px;
       }
@@ -188,9 +188,9 @@
             width: 26px;
             background: white;
             border-radius: 50%;
-            top: -4px;
-            left: -4px;
-            border: 1px solid $text-color;
+            top: -5px;
+            left: -5px;
+            border: 2px solid $text-color;
             z-index: 1;
             opacity: 0;
 
@@ -250,8 +250,12 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    overflow: hidden;
 
     ul {
+      margin: 0;
+      padding: 0;
+
       li {
         display: inline-block;
         width: 100%;
@@ -261,19 +265,66 @@
         margin: 16px 0;
         position: relative;
         z-index: 10;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
 
-    &:after {
-      content: '';
+    //&:after {
+    //  content: '';
+    //  min-width: 100%;
+    //  width: 1800px;
+    //  height: 130px;
+    //  position: absolute;
+    //  bottom: 0;
+    //  background: url('assets/img/swirl.png');
+    //  background-position: bottom;
+    //  background-size: 100% 100%;
+    //  z-index: 0;
+    //}
+
+    svg {
+      min-width: 1800px;
       width: 100%;
-      height: 130px;
+      height: auto;
+      overflow: hidden;
       position: absolute;
-      bottom: 23px;
-      background: url('assets/img/swirl.png');
+      bottom: 7px;
       background-position: bottom;
       background-size: 100% 100%;
       z-index: 0;
+
+      path {
+        animation: swirl 4s ease alternate infinite;
+        //stroke-dasharray: 4000;
+
+        &:nth-child(2) {
+          animation-delay: 1s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0s;
+          mix-blend-mode: darken;
+        }
+
+        &:nth-child(4) {
+          animation-delay: 0s;
+        }
+      }
     }
+  }
+}
+
+
+@-webkit-keyframes swirl {
+  to {
+    //stroke-dashoffset: 8000;
+    transform: scale(1.1);
   }
 }
