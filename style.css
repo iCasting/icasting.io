@@ -370,7 +370,7 @@ a {
     .hero .hero-bottom .container img.hero-img {
       position: absolute;
       bottom: 0px;
-      right: 10vw;
+      right: calc(-760px + 45vw);
       max-width: 760px; }
   .hero .home-video {
     height: 500px;
@@ -527,8 +527,8 @@ section.blockchain {
     section.blockchain .blockchain-bottom img.hero-img {
       position: absolute;
       bottom: 100px;
-      left: 0;
-      max-width: 1100px; }
+      max-width: 1100px;
+      left: calc(-1000px + 45vw); }
     section.blockchain .blockchain-bottom .container {
       padding-top: 15vh; }
   section.blockchain .blockchain-video {
@@ -582,9 +582,9 @@ section.blockchain {
     mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     right: 60%;
-    transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
+    transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
-    transform: translate(-20%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+    transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       section.blockchain .blockchainsquare.active .dots {
@@ -599,8 +599,8 @@ section.blockchain {
       opacity: 1;
       mix-blend-mode: darken;
       transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
-      transition-delay: .25s;
-      transform: translate(40%, 50%) matrix(1, 0, 0, 1, 0, 0); }
+      transition-delay: .7  5s;
+      transform: translate(100%, 50%); }
 
 .close-hero-video, .close-blockchain-video {
   position: absolute;
