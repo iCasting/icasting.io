@@ -33,6 +33,20 @@
 }
 
 @media screen and (max-width: 1024px) {
+  section.hero {
+    .counter-container {
+      #clockdiv {
+        .clock-entity {
+          .counter {
+            height: 37px;
+            width: 39px;
+            font-size: 30px;
+            padding-top: 17px;
+          }
+        }
+      }
+    }
+  }
   section.tokenization {
     .container.table {
       display: flex;
@@ -83,6 +97,45 @@
 }
 
 @media screen and (max-width: 968px) {
+  section.hero {
+    .container.first {
+      padding: 5vh 0;
+      .left, .right {
+        display: block;
+        width: 100%;
+        text-align: center!important;
+      }
+      .left {
+        height: 40vh;
+      }
+      .square {
+        top: 40vh;
+        left: -10vw;
+        width: 110vw;
+        height: 35vh;
+      }
+    }
+    .hero-text {
+      .text-contents {
+        p {
+          margin: 0 auto;
+        }
+      }
+      .signup form {
+        margin: 0 auto;
+      }
+    }
+    .hero-bottom {
+      .container {
+
+        img.hero-img {
+          left: -10vw;
+          max-width: 550px;
+          right: unset;
+        }
+      }
+    }
+  }
   section.team-advisors {
     .membercontainer {
       width: 50%;
