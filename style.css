@@ -124,7 +124,7 @@ footer {
     text-align: center;
     font-size: 14px; }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], textarea {
   box-shadow: 0px 8px 21px 0px rgba(179, 195, 219, 0.55);
   padding: 21px 30px !important;
   border: none;
@@ -145,6 +145,33 @@ input[type="submit"] {
   input[type="submit"]:hover {
     background: #df1f36;
     color: white; }
+
+.loading {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s ease-in-out;
+  position: absolute;
+  top: 2px;
+  right: -60px; }
+  .loading.active {
+    opacity: 1;
+    visibility: visible; }
+
+p.form-msg {
+  margin-top: 20px;
+  font-size: 14px; }
+
+#mc_embed_signup_scroll {
+  position: relative; }
+  #mc_embed_signup_scroll .email {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; }
+  #mc_embed_signup_scroll .button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: auto !important; }
 
 *, :before, :after {
   margin: 0;
@@ -223,7 +250,8 @@ iframe {
   .container.small {
     max-width: 1024px; }
   .container.table {
-    display: table; }
+    display: table;
+    border-collapse: collapse; }
     .container.table .left, .container.table .right {
       display: table-cell;
       width: 50%;
@@ -311,23 +339,11 @@ a {
       border-radius: 3px;
       position: relative;
       margin-left: 0;
-      margin-top: 30px;
+      margin-top: 10px;
       width: 100%;
       max-width: 400px; }
       .hero .hero-text .signup form label {
         display: none; }
-      .hero .hero-text .signup form .gform_footer {
-        position: absolute;
-        right: 20px;
-        box-shadow: none;
-        top: 4px;
-        line-height: 22px;
-        margin: 0;
-        clear: unset;
-        width: auto;
-        padding: 0; }
-    .hero .hero-text .signup input {
-      width: 100% !important; }
   .hero .counter-container {
     text-align: center; }
     .hero .counter-container h2 {
@@ -647,7 +663,9 @@ section.tokenization {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0; }
+      top: 0;
+      top: 50%;
+      transform: translateY(-50%); }
     section.tokenization .column-large svg {
       max-width: 400px;
       margin: 0 auto;
@@ -1242,10 +1260,26 @@ section.team-advisors {
 @media screen and (max-width: 1250px) {
   section.team-advisors .membercontainer {
     width: calc(100% / 3);
-    max-width: unset; } }
+    max-width: unset; }
+  section.team-advisors .advisor {
+    width: 50%;
+    max-width: unset;
+    display: inline-block; } }
+@media screen and (max-width: 1024px) {
+  section.tokenization .container.table {
+    display: block;
+    text-align: center; }
+  section.tokenization .column-small, section.tokenization .column-large {
+    display: block;
+    width: 100%;
+    text-align: center; } }
 @media screen and (max-width: 968px) {
   section.team-advisors .membercontainer {
     width: 50%;
+    max-width: unset; } }
+@media screen and (max-width: 768px) {
+  section.team-advisors .advisor {
+    width: 100%;
     max-width: unset; } }
 @media screen and (max-width: 550px) {
   section.team-advisors .membercontainer {

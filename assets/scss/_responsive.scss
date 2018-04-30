@@ -24,6 +24,25 @@
       width: calc(100% / 3);
       max-width: unset;
     }
+    .advisor {
+      width: 50%;
+      max-width: unset;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.tokenization {
+    .container.table {
+      display: block;
+      text-align: center;
+    }
+    .column-small, .column-large {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -31,6 +50,15 @@
   section.team-advisors {
     .membercontainer {
       width: 50%;
+      max-width: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.team-advisors {
+    .advisor {
+      width: 100%;
       max-width: unset;
     }
   }
