@@ -92,6 +92,17 @@
 }
 
 @media screen and (max-width: 768px) {
+  .roadmap .carroussel-container .carroussel-inner .slide {
+    .half-page {
+      margin: 20px 0 !important;
+      width: calc(100% - 30px);
+
+      &.right {
+        display: none;
+      }
+    }
+  }
+
   section.team-advisors {
     .advisor {
       width: 100%;
