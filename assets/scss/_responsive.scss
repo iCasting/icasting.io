@@ -1,7 +1,45 @@
 @media screen and (max-width: 1520px) {
   section.team-advisors {
     .membercontainer {
-      width: 50vw;
+      width: 25%;
+      max-width: unset;
+    }
+
+    span.team-left, span.team-right {
+      top: unset;
+      bottom: -30px;
+      left: 0;
+    }
+
+    span.team-right {
+      right: unset;
+      left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  section.team-advisors {
+    .membercontainer {
+      width: calc(100% / 3);
+      max-width: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  section.team-advisors {
+    .membercontainer {
+      width: 50%;
+      max-width: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.team-advisors {
+    .membercontainer {
+      width: 50%;
       max-width: unset;
     }
   }

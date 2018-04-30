@@ -280,6 +280,9 @@ a {
     .hero .container.first .right {
       position: relative;
       z-index: 100; }
+    .hero .container.first .left {
+      position: relative;
+      z-index: 99; }
   .hero .hero-text .text-contents p.pretitle {
     color: #df1f36;
     font-size: 16px;
@@ -416,7 +419,7 @@ a {
     mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0px rgba(4, 30, 53, 0.17);
     left: 50%;
-    transition: transform 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     .hero .square.active {
@@ -433,47 +436,50 @@ a {
       transform: translateY(50%);
       opacity: 1;
       mix-blend-mode: darken;
-      transition: transform 0.8s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
       transition-delay: 1s;
       transform: translate(50%, 50%) matrix(1, 0, 0, 1, 0, 0); }
 
-section.about h2 {
-  font-weight: 300; }
-section.about p.about-content {
-  font-size: 16px;
-  line-height: 25px;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 50px; }
-section.about .numbers {
-  margin-top: 10vh;
-  margin-bottom: 50px; }
-  section.about .numbers img {
-    max-width: 192px; }
-  section.about .numbers h2 {
-    font-size: 28px;
-    line-height: 32px;
-    font-weight: 700; }
-section.about .table {
-  border-collapse: separate;
-  border-spacing: 10px; }
-section.about .counter-single {
-  display: table-cell;
-  width: 25%; }
-  section.about .counter-single .counter-number {
-    font-size: 80px;
-    font-weight: 700;
-    color: #df1f36;
-    margin-bottom: 70px;
-    display: block; }
-  section.about .counter-single h3 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px; }
-  section.about .counter-single p {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto; }
+section.about {
+  position: relative;
+  z-index: 99; }
+  section.about h2 {
+    font-weight: 300; }
+  section.about p.about-content {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px; }
+  section.about .numbers {
+    margin-top: 10vh;
+    margin-bottom: 50px; }
+    section.about .numbers img {
+      max-width: 192px; }
+    section.about .numbers h2 {
+      font-size: 28px;
+      line-height: 32px;
+      font-weight: 700; }
+  section.about .table {
+    border-collapse: separate;
+    border-spacing: 10px; }
+  section.about .counter-single {
+    display: table-cell;
+    width: 25%; }
+    section.about .counter-single .counter-number {
+      font-size: 80px;
+      font-weight: 700;
+      color: #df1f36;
+      margin-bottom: 70px;
+      display: block; }
+    section.about .counter-single h3 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 35px; }
+    section.about .counter-single p {
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto; }
 
 section.blockchain {
   position: relative;
@@ -513,7 +519,7 @@ section.blockchain {
       position: absolute;
       bottom: 100px;
       left: 0;
-      max-width: 45vw; }
+      max-width: 1100px; }
     section.blockchain .blockchain-bottom .container {
       padding-top: 15vh; }
   section.blockchain .blockchain-video {
@@ -567,7 +573,7 @@ section.blockchain {
     mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     right: 60%;
-    transition: transform 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(-20%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     section.blockchain .blockchainsquare.active {
@@ -583,7 +589,7 @@ section.blockchain {
       vertical-align: middle;
       opacity: 1;
       mix-blend-mode: darken;
-      transition: transform 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
       transition-delay: .25s;
       transform: translate(40%, 50%) matrix(1, 0, 0, 1, 0, 0); }
 
@@ -1081,6 +1087,22 @@ section.team-advisors {
       background-position: center center;
       box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
       z-index: 1; }
+      .data .half-page.right .data-slider.active li:first-of-type span {
+        width: 8%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(2) span {
+        width: 58%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(3) span {
+        width: 10%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(4) span {
+        width: 5%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(5) span {
+        width: 3%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(6) span {
+        width: 5%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(7) span {
+        width: 3%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(8) span {
+        width: 8%; }
       .data .half-page.right ul {
         list-style: none;
         position: absolute;
@@ -1108,13 +1130,35 @@ section.team-advisors {
             left: 0;
             top: 0;
             position: absolute;
+            width: 0;
             height: 100%;
             background: #b8e6f7;
-            z-index: 0; }
+            z-index: 0;
+            transition: width 1s cubic-bezier(1, 0, 0.16, 1);
+            transition-delay: .5s; }
 
 @media screen and (max-width: 1520px) {
   section.team-advisors .membercontainer {
-    width: 50vw;
+    width: 25%;
+    max-width: unset; }
+  section.team-advisors span.team-left, section.team-advisors span.team-right {
+    top: unset;
+    bottom: -30px;
+    left: 0; }
+  section.team-advisors span.team-right {
+    right: unset;
+    left: 50px; } }
+@media screen and (max-width: 1250px) {
+  section.team-advisors .membercontainer {
+    width: calc(100% / 3);
+    max-width: unset; } }
+@media screen and (max-width: 968px) {
+  section.team-advisors .membercontainer {
+    width: 50%;
+    max-width: unset; } }
+@media screen and (max-width: 600px) {
+  section.team-advisors .membercontainer {
+    width: 50%;
     max-width: unset; } }
 
 /*# sourceMappingURL=style.css.map */

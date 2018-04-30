@@ -73,6 +73,9 @@ function checkViewPort() {
   if ($('.square').isInViewport()) {
     $('.square').addClass('active');
   }
+  if ($('.data-slider').isInViewport()) {
+    $('.data-slider').addClass('active');
+  }
 };
 
 function animateCounters(el) {
@@ -250,8 +253,6 @@ function slideCarroussel(direction) {
   }
 }
 
-var rellax = new Rellax('.rellax');
-
 function setTeamCarousel() {
   var slideElement = $('.membercontainer');
   var innerElement = $('.team-carousel-inner');
@@ -260,7 +261,7 @@ function setTeamCarousel() {
   var containerWidth;
 
   if ($(window).width() < 1440) {
-    containerWidth = ($(window).width() + 10);
+    containerWidth = (($(document).width() - 60));
   } else {
     containerWidth = 1440;
   }
