@@ -1306,7 +1306,25 @@ section.team-advisors {
 @media screen and (max-width: 968px) {
   section.team-advisors .membercontainer {
     width: 50%;
-    max-width: unset; } }
+    max-width: unset; }
+
+  footer {
+    padding: 5vh 0; }
+    footer .half-page {
+      margin: 20px 0 !important;
+      width: 100%;
+      display: inline-block; }
+      footer .half-page * {
+        text-align: center; }
+      footer .half-page form {
+        margin: auto !important;
+        height: auto !important; }
+        footer .half-page form input {
+          text-align: left; }
+      footer .half-page .social {
+        text-align: center !important; }
+    footer .menu-footer-menu-container {
+      margin: 40px 0; } }
 @media screen and (max-width: 768px) {
   .roadmap .carroussel-container .carroussel-inner .slide .half-page {
     margin: 20px 0 !important;
@@ -1329,7 +1347,16 @@ section.team-advisors {
       width: 70px; }
       section.tokenization .column-large .flip-coins .flipper img {
         height: 70px;
-        width: 70px; } }
+        width: 70px; }
+
+  footer .half-page.left form #mc_embed_signup_scroll .button {
+    position: relative;
+    width: 100% !important;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    text-align: center; } }
 @media screen and (max-width: 400px) {
   section.tokenization .column-large {
     height: 250px; }
