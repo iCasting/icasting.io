@@ -188,6 +188,18 @@ function setCarroussel() {
   }
 }
 
+function animateSwirl() {
+  var swirl = $('.bottom-background svg');
+
+  if (!swirl.hasClass('active')) {
+    swirl.toggleClass('active');
+
+    setTimeout(function(){
+      swirl.toggleClass('active');
+    }, 1500);
+  }
+}
+
 function slideCarroussel(direction) {
   var slideElement = $('.slide');
   var innerElement = $('.carroussel-inner');
@@ -198,6 +210,7 @@ function slideCarroussel(direction) {
 
   if (direction === 'right') {
     if ((slideElement.length - 1) > innerElement.data('slide')) {
+      animateSwirl();
       slide ++;
 
       slideElement.removeClass('active');
@@ -217,6 +230,7 @@ function slideCarroussel(direction) {
     }
   } else if (direction === 'left') {
     if (innerElement.data('slide') > 0) {
+      animateSwirl();
       slide --;
 
       slideElement.removeClass('active');
@@ -235,6 +249,7 @@ function slideCarroussel(direction) {
       navigationUl.find('li[data-slide="' + slide + '"]').addClass('active');
     }
   } else {
+    animateSwirl();
     slide = direction;
 
     slideElement.removeClass('active');

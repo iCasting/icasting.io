@@ -1040,20 +1040,27 @@ section.team-advisors {
       bottom: 7px;
       background-position: bottom;
       background-size: 100% 100%;
-      z-index: 0; }
-      .roadmap .bottom-background svg path {
-        animation: swirl 4s ease alternate infinite; }
-        .roadmap .bottom-background svg path:nth-child(2) {
-          animation-delay: 1s; }
-        .roadmap .bottom-background svg path:nth-child(3) {
-          animation-delay: 0s;
-          mix-blend-mode: darken; }
-        .roadmap .bottom-background svg path:nth-child(4) {
-          animation-delay: 0s; }
+      z-index: 0;
+      align-items: center; }
+      .roadmap .bottom-background svg path:nth-child(2) {
+        mix-blend-mode: darken; }
+      .roadmap .bottom-background svg.active path {
+        animation: swirl 1s ease;
+        transition: all .5s ease-in-out; }
+        .roadmap .bottom-background svg.active path:nth-child(1) {
+          animation-delay: .1s; }
+        .roadmap .bottom-background svg.active path:nth-child(2) {
+          animation-delay: .3s; }
+        .roadmap .bottom-background svg.active path:nth-child(3) {
+          animation-delay: .1s; }
+        .roadmap .bottom-background svg.active path:nth-child(4) {
+          animation-delay: .05s; }
 
 @-webkit-keyframes swirl {
-  to {
-    transform: scale(1.1); } }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 .network {
   position: relative;
   width: 100%;
