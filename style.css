@@ -799,7 +799,7 @@ section.team-advisors {
       section.team-advisors .membercontainer .memberdetails p.job-title {
         font-weight: 300; }
   section.team-advisors .advisors {
-    margin-top: 100px; }
+    margin: 100px auto 50px; }
   section.team-advisors .advisor {
     display: table-cell;
     width: 25%;
@@ -1044,17 +1044,18 @@ section.team-advisors {
       align-items: center; }
       .roadmap .bottom-background svg path:nth-child(2) {
         mix-blend-mode: darken; }
-      .roadmap .bottom-background svg.active path {
-        animation: swirl 1s ease;
-        transition: all .5s ease-in-out; }
-        .roadmap .bottom-background svg.active path:nth-child(1) {
-          animation-delay: .1s; }
-        .roadmap .bottom-background svg.active path:nth-child(2) {
-          animation-delay: .3s; }
-        .roadmap .bottom-background svg.active path:nth-child(3) {
-          animation-delay: .1s; }
-        .roadmap .bottom-background svg.active path:nth-child(4) {
-          animation-delay: .05s; }
+      .roadmap .bottom-background svg path#swirlTo1, .roadmap .bottom-background svg path#swirlTo2, .roadmap .bottom-background svg path#swirlTo3, .roadmap .bottom-background svg path#swirlTo4, .roadmap .bottom-background svg path#swirlBack1, .roadmap .bottom-background svg path#swirlBack2, .roadmap .bottom-background svg path#swirlBack3, .roadmap .bottom-background svg path#swirlBack4 {
+        display: none; }
+      .roadmap .bottom-background svg.active path.swirlTo2 {
+        display: none; }
+      .roadmap .bottom-background svg.active path:nth-child(1) {
+        animation-delay: .1s; }
+      .roadmap .bottom-background svg.active path:nth-child(2) {
+        animation-delay: .3s; }
+      .roadmap .bottom-background svg.active path:nth-child(3) {
+        animation-delay: .1s; }
+      .roadmap .bottom-background svg.active path:nth-child(4) {
+        animation-delay: .05s; }
 
 @-webkit-keyframes swirl {
   50% {

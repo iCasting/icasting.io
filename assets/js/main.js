@@ -188,15 +188,22 @@ function setCarroussel() {
   }
 }
 
+var swirlCounter = 0;
 function animateSwirl() {
-  var swirl = $('.bottom-background svg');
+  if (swirlCounter === 0) {
+    swirlCounter++;
 
-  if (!swirl.hasClass('active')) {
-    swirl.toggleClass('active');
+    TweenLite.to("#swirl1", 1, {morphSVG: "#swirlTo1", ease: Power3.easeOut});
+    TweenLite.to("#swirl2", 1, {morphSVG: "#swirlTo2", ease: Power3.easeOut});
+    TweenLite.to("#swirl3", 1, {morphSVG: "#swirlTo3", ease: Power3.easeOut});
+    TweenLite.to("#swirl4", 1, {morphSVG: "#swirlTo4", ease: Power3.easeOut});
+  } else {
+    swirlCounter = 0;
 
-    setTimeout(function(){
-      swirl.toggleClass('active');
-    }, 1500);
+    TweenLite.to("#swirl1", 1, {morphSVG: "#swirlBack1", ease: Power3.easeOut});
+    TweenLite.to("#swirl2", 1, {morphSVG: "#swirlBack2", ease: Power3.easeOut});
+    TweenLite.to("#swirl3", 1, {morphSVG: "#swirlBack3", ease: Power3.easeOut});
+    TweenLite.to("#swirl4", 1, {morphSVG: "#swirlBack4", ease: Power3.easeOut});
   }
 }
 

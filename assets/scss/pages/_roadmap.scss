@@ -304,13 +304,22 @@
         &:nth-child(2) {
           mix-blend-mode: darken;
         }
+
+        &#swirlTo1, &#swirlTo2, &#swirlTo3, &#swirlTo4,
+        &#swirlBack1, &#swirlBack2, &#swirlBack3, &#swirlBack4 {
+          display: none;
+        }
       }
 
       &.active {
         path {
-          animation: swirl 1s ease;
-          transition: all .5s ease-in-out;
+          //animation: swirl 1s ease;
+          //transition: all .5s ease-in-out;
           //stroke-dasharray: 4000;
+          
+          &.swirlTo2 {
+            display: none;
+          }
 
           &:nth-child(1) {
             animation-delay: .1s;
