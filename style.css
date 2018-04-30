@@ -847,7 +847,7 @@ section.team-advisors {
     .roadmap .container .content p {
       margin-top: 20px; }
   .roadmap .carroussel-container {
-    padding: 100px 0 128px;
+    padding: 100px 0 113px;
     width: 100%; }
     .roadmap .carroussel-container .carroussel-inner {
       margin-bottom: 100px;
@@ -928,11 +928,11 @@ section.team-advisors {
       margin-top: 50px; }
       .roadmap .carroussel-container .carroussel-navigation:before {
         content: '';
-        width: calc(33vw + 8vw);
-        max-width: calc(400px + 8vw);
+        width: calc(33vw + 6vw);
+        max-width: calc(400px + 6vw);
         position: absolute;
         margin-top: -1px;
-        left: -3vw;
+        left: -2vw;
         background: #00112a;
         height: 3px; }
       .roadmap .carroussel-container .carroussel-navigation ul {
@@ -976,9 +976,9 @@ section.team-advisors {
             width: 26px;
             background: white;
             border-radius: 50%;
-            top: -4px;
-            left: -4px;
-            border: 1px solid #00112a;
+            top: -5px;
+            left: -5px;
+            border: 2px solid #00112a;
             z-index: 1;
             opacity: 0;
             transition: all .3s ease-in-out; }
@@ -1013,27 +1013,54 @@ section.team-advisors {
   .roadmap .bottom-background {
     position: absolute;
     bottom: 0;
-    width: 100%; }
-    .roadmap .bottom-background ul li {
-      display: inline-block;
+    width: 100%;
+    overflow: hidden; }
+    .roadmap .bottom-background ul {
+      margin: 0;
+      padding: 0; }
+      .roadmap .bottom-background ul li {
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #00112a;
+        opacity: .2;
+        margin: 16px 0;
+        position: relative;
+        z-index: 10; }
+        .roadmap .bottom-background ul li:last-child {
+          margin-bottom: 0; }
+        .roadmap .bottom-background ul li:first-child {
+          margin-top: 0; }
+    .roadmap .bottom-background svg {
+      min-width: 1800px;
       width: 100%;
-      height: 1px;
-      background: #00112a;
-      opacity: .2;
-      margin: 16px 0;
-      position: relative;
-      z-index: 10; }
-    .roadmap .bottom-background:after {
-      content: '';
-      width: 100%;
-      height: 130px;
+      height: auto;
+      overflow: hidden;
       position: absolute;
-      bottom: 23px;
-      background: url("assets/img/swirl.png");
+      bottom: 7px;
       background-position: bottom;
       background-size: 100% 100%;
-      z-index: 0; }
+      z-index: 0;
+      align-items: center; }
+      .roadmap .bottom-background svg path:nth-child(2) {
+        mix-blend-mode: darken; }
+      .roadmap .bottom-background svg.active path {
+        animation: swirl 1s ease;
+        transition: all .5s ease-in-out; }
+        .roadmap .bottom-background svg.active path:nth-child(1) {
+          animation-delay: .1s; }
+        .roadmap .bottom-background svg.active path:nth-child(2) {
+          animation-delay: .3s; }
+        .roadmap .bottom-background svg.active path:nth-child(3) {
+          animation-delay: .1s; }
+        .roadmap .bottom-background svg.active path:nth-child(4) {
+          animation-delay: .05s; }
 
+@-webkit-keyframes swirl {
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 .network {
   position: relative;
   width: 100%;
@@ -1137,6 +1164,9 @@ section.team-advisors {
           margin: 30px 0 50px;
           list-style: none;
           font-size: 18px; }
+        .data .half-page.left .content img {
+          margin-bottom: 50px;
+          max-width: 100%; }
     .data .half-page.right {
       margin: 0;
       position: absolute;
