@@ -35,13 +35,49 @@
 @media screen and (max-width: 1024px) {
   section.tokenization {
     .container.table {
-      display: block;
+      display: flex;
+      flex-direction: column-reverse;
       text-align: center;
+      margin-bottom: 40px;
     }
     .column-small, .column-large {
       display: block;
       width: 100%;
       text-align: center;
+    }
+    .text-left {
+      display: none;
+    }
+    .selling-point-container {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+      
+      &:nth-of-type(4), &:nth-of-type(5) {
+        display: none;
+      }
+    }
+    .mobile-message {
+      display: block;
+    }
+    .column-large {
+      margin-bottom: 100px;
+      position: relative;
+      height: 40vh;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      img.icasting-people {
+        z-index: 99;
+      }
+    }
+    .flip-coins {
+
     }
   }
 }
@@ -69,6 +105,39 @@
     .membercontainer {
       width: 100%;
       max-width: unset;
+    }
+  }
+  section.tokenization {
+    .column-large {
+      height: 400px;
+      .flip-coins {
+        .flipper {
+          height: 70px;
+          width: 70px;
+          img {
+            height: 70px;
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section.tokenization {
+    .column-large {
+      height: 250px;
+      .flip-coins {
+        .flipper {
+          height: 40px;
+          width: 40px;
+          img {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
     }
   }
 }
