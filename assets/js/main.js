@@ -178,11 +178,17 @@ function setCarroussel() {
   var container = slideElement.width();
   var slide = innerElement.data('slide');
 
+  if (container < 300) {
+    container = 300;
+  }
+
   $('.carroussel-inner, .carroussel-navigation').css('width', (container * slides) + 'px');
   innerElement.css('left', '-' + container * slide + 'px');
 
   if ($(window).width() * 0.33 > 400) {
     navigationUl.css('left', '-' + 400 * slide + 'px');
+  } else if ($(window).width() * 0.33 < 300) {
+    navigationUl.css('left', '-' + 300 * slide + 'px');
   } else {
     navigationUl.css('left', '-' + ($(window).width() * 0.33) * slide + 'px');
   }
@@ -228,6 +234,8 @@ function slideCarroussel(direction) {
 
       if ($(window).width() * 0.33 > 400) {
         navigationUl.css('left', '-' + 400 * slide + 'px');
+      } else if ($(window).width() * 0.33 < 300) {
+        navigationUl.css('left', '-' + 300 * slide + 'px');
       } else {
         navigationUl.css('left', '-' + ($(window).width() * 0.33) * slide + 'px');
       }
@@ -248,6 +256,8 @@ function slideCarroussel(direction) {
 
       if ($(window).width() * 0.33 > 400) {
         navigationUl.css('left', '-' + 400 * slide + 'px');
+      } else if ($(window).width() * 0.33 < 300) {
+        navigationUl.css('left', '-' + 300 * slide + 'px');
       } else {
         navigationUl.css('left', '-' + ($(window).width() * 0.33) * slide + 'px');
       }
@@ -267,6 +277,8 @@ function slideCarroussel(direction) {
 
     if ($(window).width() * 0.33 > 400) {
       navigationUl.css('left', '-' + 400 * slide + 'px');
+    } else if ($(window).width() * 0.33 < 300) {
+      navigationUl.css('left', '-' + 300 * slide + 'px');
     } else {
       navigationUl.css('left', '-' + ($(window).width() * 0.33) * slide + 'px');
     }

@@ -133,6 +133,7 @@
       &:before {
         content: '';
         width: calc(33vw + 6vw);
+        min-width: calc(300px + 6vw);
         max-width: calc(400px + 6vw);
         position: absolute;
         margin-top: -1px;
@@ -151,6 +152,7 @@
 
         li {
           width: 33vw;
+          min-width: 300px;
           max-width: 400px;
           display: inline-block;
           position: relative;

@@ -929,6 +929,7 @@ section.team-advisors {
       .roadmap .carroussel-container .carroussel-navigation:before {
         content: '';
         width: calc(33vw + 6vw);
+        min-width: calc(300px + 6vw);
         max-width: calc(400px + 6vw);
         position: absolute;
         margin-top: -1px;
@@ -944,6 +945,7 @@ section.team-advisors {
         transition: all .5s ease-in-out; }
         .roadmap .carroussel-container .carroussel-navigation ul li {
           width: 33vw;
+          min-width: 300px;
           max-width: 400px;
           display: inline-block;
           position: relative;
@@ -1248,6 +1250,12 @@ section.team-advisors {
   section.team-advisors .membercontainer {
     width: 50%;
     max-width: unset; } }
+@media screen and (max-width: 768px) {
+  .roadmap .carroussel-container .carroussel-inner .slide .half-page {
+    margin: 20px 0 !important;
+    width: calc(100% - 30px); }
+    .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
+      display: none; } }
 @media screen and (max-width: 550px) {
   section.team-advisors .membercontainer {
     width: 100%;
