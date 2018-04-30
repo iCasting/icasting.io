@@ -250,8 +250,7 @@ iframe {
   .container.small {
     max-width: 1024px; }
   .container.table {
-    display: table;
-    border-collapse: collapse; }
+    display: table; }
     .container.table .left, .container.table .right {
       display: table-cell;
       width: 50%;
@@ -1272,6 +1271,12 @@ section.team-advisors {
     max-width: unset;
     display: inline-block; } }
 @media screen and (max-width: 1024px) {
+  section.hero .counter-container #clockdiv .clock-entity .counter {
+    height: 37px;
+    width: 39px;
+    font-size: 30px;
+    padding-top: 17px; }
+
   section.tokenization .container.table {
     display: flex;
     flex-direction: column-reverse;
@@ -1304,6 +1309,28 @@ section.team-advisors {
     section.tokenization .column-large img.icasting-people {
       z-index: 99; } }
 @media screen and (max-width: 968px) {
+  section.hero .container.first {
+    padding: 5vh 0; }
+    section.hero .container.first .left, section.hero .container.first .right {
+      display: block;
+      width: 100%;
+      text-align: center !important; }
+    section.hero .container.first .left {
+      height: 40vh; }
+    section.hero .container.first .square {
+      top: 40vh;
+      left: -10vw;
+      width: 110vw;
+      height: 35vh; }
+  section.hero .hero-text .text-contents p {
+    margin: 0 auto; }
+  section.hero .hero-text .signup form {
+    margin: 0 auto; }
+  section.hero .hero-bottom .container img.hero-img {
+    left: -10vw;
+    max-width: 550px;
+    right: unset; }
+
   section.team-advisors .membercontainer {
     width: 50%;
     max-width: unset; } }
