@@ -225,10 +225,14 @@
           transition: all .2s ease-in-out;
 
           &:hover {
-            transform: scale(1.2);
+            background: $text-color;
+
+            svg {
+              fill: white;
+            }
           }
 
-          img {
+          svg {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -236,11 +240,6 @@
             width: 10px;
           }
 
-          &.right {
-            img {
-              transform: translate(-50%, -50%) rotate(180deg);
-            }
-          }
         }
       }
     }
