@@ -109,25 +109,27 @@
         <a class="btn red" href="#">Join pre-sale</a>
       </div>
 
-      <span class="square rellax">
+      <span class="square">
         <span class="dots"></span>
       </span>
     </div>
 
     <div class="hero-bottom">
       <div class="container">
-        <img class="hero-img" src="assets/img/icasting_header_img.jpg"/>
-        <div class="home-video" style="background-image: url('assets/img/home_video_placholder_retina.jpg');">
-          <div class="play">
-            <div class="button" id="playbtn">
-              <img src="assets/img/play_button.png"/>
+        <div class="rellax" data-rellax-speed="-2">
+          <img class="hero-img" src="assets/img/icasting_header_img.jpg"/>
+          <div class="home-video" style="background-image: url('assets/img/home_video_placholder_retina.jpg');">
+            <div class="play">
+              <div class="button" id="playbtn">
+                <img src="assets/img/play_button.png"/>
+              </div>
             </div>
-          </div>
-          <iframe class="hero-video" width="1280" height="720" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="hero-video" width="1280" height="720" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-          <span class="close-hero-video">
+            <span class="close-hero-video">
             <img src="assets/img/close_video_icon.png"/>
           </span>
+          </div>
         </div>
       </div>
     </div>
@@ -205,7 +207,7 @@
       </div>
     </div>
 
-    <div class="blockchain-bottom">
+    <div class="blockchain-bottom rellax" data-rellax-speed="-1"">
       <img class="hero-img" src="assets/img/blockchain_section_image.jpg"/>
       <div class="container">
         <div class="blockchain-video" style="background-image: url('assets/img/home_video_placholder_retina.jpg');">
@@ -431,13 +433,73 @@
       </div>
 
       <div style="clear: both;"></div>
-      <span class="team-left"><img src="assets/img/arrow_left.png"></span>
-      <span class="team-right"><img src="assets/img/arrow_left.png"></span>
+      <span class="team-left">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="23" height="18" viewBox="0 0 23 18">
+          <path d="M23.000,10.000 L3.434,10.000 L10.000,16.566 L8.572,17.993 L0.579,10.000 L-0.000,10.000 L-0.000,8.000 L0.485,8.000 L8.485,-0.000 L9.899,1.414 L3.314,8.000 L23.000,8.000 L23.000,10.000 Z" class="cls-1"/>
+        </svg>
+      </span>
+      <span class="team-right">
+        <svg width="23" height="17.906" viewBox="0 0 23 17.906">
+          <path d="M22.414,10.000 L14.515,17.899 L13.101,16.485 L19.586,10.000 L-0.000,10.000 L-0.000,8.000 L19.572,8.000 L13.007,1.434 L14.434,0.007 L22.428,8.000 L23.000,8.000 L23.000,10.000 L22.414,10.000 Z" class="cls-1"/>
+        </svg>
+      </span>
     </div>
 
-    <div class="container">
+    <div class="container advisors">
       <h2><strong>Our Advisors</strong></h2>
       <p class="advisor-subtitle">Our great team of advisors have are the best advisors out there. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+    </div>
+
+    <div class="container table">
+
+      <div class="advisor">
+        <span class="img">
+          <img class="advisor-img" src="assets/img/advisor_jason_hung.png"/>
+          <a class="linkedin" href="#"><img src="assets/img/sticky_icon_linkedin.png"></a>
+        </span>
+        <span>
+          <h4>Jason Hung</h4>
+          <p class="role">Strategy Advisor</p>
+          <p class="speciality">#5 Expert at ICOBench.com</p>
+        </span>
+      </div>
+
+      <div class="advisor">
+        <span class="img">
+          <img class="advisor-img" src="assets/img/advisor_richard_kastelein.png"/>
+          <a class="linkedin" href="#"><img src="assets/img/sticky_icon_linkedin.png"></a>
+        </span>
+        <span>
+          <h4>Richard Kastelein</h4>
+          <p class="role">ICO Adviser</p>
+          <p class="speciality">#11 Expert at ICOBench.com</p>
+        </span>
+      </div>
+
+      <div class="advisor">
+        <span class="img">
+          <img class="advisor-img" src="assets/img/advisor_nathan_christian.png"/>
+          <a class="linkedin" href="#"><img src="assets/img/sticky_icon_linkedin.png"></a>
+        </span>
+        <span>
+          <h4>Nathan Christian</h4>
+          <p class="role">Blockchain Technology Consultant</p>
+          <p class="speciality">#6 Expert at ICOBench.com</p>
+        </span>
+      </div>
+
+      <div class="advisor">
+        <span class="img">
+          <img class="advisor-img" src="assets/img/advisor_steven_deurloo.png"/>
+          <a class="linkedin" href="#"><img src="assets/img/sticky_icon_linkedin.png"></a>
+        </span>
+        <span>
+          <h4>Steven Deurloo</h4>
+          <p class="role">Advisor</p>
+          <p class="speciality">#6 Expert at ICOBench.com</p>
+        </span>
+      </div>
+
     </div>
 
   </section>
@@ -948,8 +1010,16 @@
           </ul>
 
           <div class="buttons">
-            <span class="left"><img src="assets/img/arrow_left.png"></span>
-            <span class="right"><img src="assets/img/arrow_left.png"></span>
+            <span class="left">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="23" height="18" viewBox="0 0 23 18">
+                <path d="M23.000,10.000 L3.434,10.000 L10.000,16.566 L8.572,17.993 L0.579,10.000 L-0.000,10.000 L-0.000,8.000 L0.485,8.000 L8.485,-0.000 L9.899,1.414 L3.314,8.000 L23.000,8.000 L23.000,10.000 Z" class="cls-1"/>
+              </svg>
+            </span>
+            <span class="right">
+              <svg width="23" height="17.906" viewBox="0 0 23 17.906">
+                <path d="M22.414,10.000 L14.515,17.899 L13.101,16.485 L19.586,10.000 L-0.000,10.000 L-0.000,8.000 L19.572,8.000 L13.007,1.434 L14.434,0.007 L22.428,8.000 L23.000,8.000 L23.000,10.000 L22.414,10.000 Z" class="cls-1"/>
+              </svg>
+            </span>
           </div>
         </div>
       </div>
