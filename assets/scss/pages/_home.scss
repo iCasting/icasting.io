@@ -46,28 +46,13 @@
         border-radius: 3px;
         position: relative;
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 10px;
         width: 100%;
         max-width: 400px;
 
         label {
           display: none;
         }
-
-        .gform_footer {
-          position: absolute;
-          right: 20px;
-          box-shadow: none;
-          top: 4px;
-          line-height: 22px;
-          margin: 0;
-          clear: unset;
-          width: auto;
-          padding: 0;
-        }
-      }
-      input {
-        width: 100%!important;
       }
     }
   }
@@ -509,6 +494,8 @@ section.tokenization {
       left: 0;
       right: 0;
       top: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     svg {
