@@ -149,8 +149,8 @@ a {
     color: white;
 
     &:hover {
-      color: $primary-color;
-      background: white;
+      color: white;
+      background: $primary-color;
     }
   }
 }

@@ -64,9 +64,10 @@ footer {
         footer .menu-footer-menu-container ul li a {
           color: #00112a;
           display: block;
-          padding: 15px; }
+          padding: 15px;
+          transition: color .2s ease-in-out; }
           footer .menu-footer-menu-container ul li a:hover {
-            text-decoration: underline; }
+            color: #df1f36; }
   footer .half-page {
     width: calc(50% - 100px);
     display: inline-block;
@@ -143,7 +144,7 @@ input[type="submit"] {
   transition: all .2s ease-in-out;
   cursor: pointer; }
   input[type="submit"]:hover {
-    background: #df1f36;
+    background: #df1f36 !important;
     color: white; }
 
 .loading {
@@ -300,8 +301,8 @@ a {
     background: #df1f36;
     color: white; }
     .btn.red:hover {
-      color: #df1f36;
-      background: white; }
+      color: white;
+      background: #df1f36; }
 
 p.mobile-message {
   display: none; }

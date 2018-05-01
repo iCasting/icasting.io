@@ -24,9 +24,10 @@ footer {
           color: $text-color;
           display: block;
           padding: 15px;
+          transition: color .2s ease-in-out;
 
           &:hover {
-            text-decoration: underline;
+            color: $primary-color;
           }
         }
       }
