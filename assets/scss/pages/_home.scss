@@ -134,9 +134,13 @@
     box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
-    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all .5s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-position: center center;
     position: relative;
+
+    &.active {
+      background-position: center 510px;
+    }
 
     iframe {
       height: 100%;
@@ -370,9 +374,13 @@ section.blockchain {
     box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
-    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all .5s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-position: center center;
     position: relative;
+
+    &.active {
+      background-position: center 510px;
+    }
 
     iframe {
       height: 100%;
@@ -429,7 +437,7 @@ section.blockchain {
     transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0);
 
     img {
-      display: inline;
+      display: none;
     }
 
     &.active {
@@ -474,8 +482,10 @@ section.blockchain {
     visibility: visible;
   }
 
-  img {
-    max-width: 19px;
+  svg {
+    stroke: $primary-color;
+    stroke-width: 5px;
+    width: 25px;
   }
 }
 

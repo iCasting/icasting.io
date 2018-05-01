@@ -406,9 +406,11 @@ p.mobile-message {
     box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
-    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-position: center center;
     position: relative; }
+    .hero .home-video.active {
+      background-position: center 510px; }
     .hero .home-video iframe {
       height: 100%;
       position: absolute;
@@ -580,9 +582,11 @@ section.blockchain {
     box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
-    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-position: center center;
     position: relative; }
+    section.blockchain .blockchain-video.active {
+      background-position: center 510px; }
     section.blockchain .blockchain-video iframe {
       height: 100%;
       position: absolute;
@@ -624,7 +628,7 @@ section.blockchain {
     transition-delay: .5s;
     transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     section.blockchain .blockchainsquare img {
-      display: inline; }
+      display: none; }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       section.blockchain .blockchainsquare.active .dots {
@@ -657,8 +661,10 @@ section.blockchain {
   .close-hero-video.active, .close-blockchain-video.active {
     opacity: 1;
     visibility: visible; }
-  .close-hero-video img, .close-blockchain-video img {
-    max-width: 19px; }
+  .close-hero-video svg, .close-blockchain-video svg {
+    stroke: #df1f36;
+    stroke-width: 5px;
+    width: 25px; }
 
 section.tokenization {
   background: #f8fcfe;
