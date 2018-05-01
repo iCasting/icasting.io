@@ -1106,7 +1106,9 @@ section.team-advisors {
     margin: 150px auto 0;
     position: relative;
     max-width: 1300px;
-    width: 100%; }
+    width: calc(100% - 100px); }
+    .network .twirly.mobile {
+      display: none; }
     .network .twirly .overlay {
       position: absolute;
       top: 0;
@@ -1116,6 +1118,7 @@ section.team-advisors {
       .network .twirly .overlay .overlay-item {
         position: absolute;
         text-align: center;
+        width: 14.35%;
         cursor: pointer;
         transition: all .2s ease-in-out; }
         .network .twirly .overlay .overlay-item:hover {
@@ -1123,50 +1126,84 @@ section.team-advisors {
         .network .twirly .overlay .overlay-item img {
           margin-bottom: -60px; }
         .network .twirly .overlay .overlay-item p {
-          margin: 0; }
+          margin: 0;
+          line-height: 1.2; }
         .network .twirly .overlay .overlay-item h4 {
-          font-size: 18px; }
+          font-size: 18px;
+          hyphens: auto; }
         .network .twirly .overlay .overlay-item img {
           max-width: 500px;
-          width: auto; }
+          width: 100%; }
         .network .twirly .overlay .overlay-item.casting-platform {
           top: -16%;
-          left: 7%; }
+          left: 6.5%; }
         .network .twirly .overlay .overlay-item.casting-platform2 {
           top: 80%;
-          left: 7%; }
+          left: 6.5%; }
         .network .twirly .overlay .overlay-item.talent {
           top: 32%;
           left: -6%; }
         .network .twirly .overlay .overlay-item.blockchain {
           top: 32%;
-          left: 29%; }
+          left: 28%; }
         .network .twirly .overlay .overlay-item.transaction {
           top: -16%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.user-profiles {
           top: 32%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.smartcontracts {
           top: 80%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.ipfs {
           top: 32%;
-          left: 74.15%; }
+          left: 73.3%; }
         .network .twirly .overlay .overlay-item.user-profiles2 {
           top: -16%;
-          left: 93.8%; }
+          left: 93.2%; }
         .network .twirly .overlay .overlay-item.smartcontracts2 {
           top: 80%;
-          left: 93.8%; }
+          left: 93.2%; }
     .network .twirly svg {
       overflow: visible; }
       .network .twirly svg path {
         stroke-width: .5; }
-        .network .twirly svg path#path3 {
+        .network .twirly svg path#path3, .network .twirly svg path#path3Mobile {
           stroke-dasharray: 1.5;
           stroke-dashoffset: 50;
           animation: dash 5s linear infinite; }
+    .network .twirly.mobile .overlay .overlay-item {
+      width: 40%; }
+      .network .twirly.mobile .overlay .overlay-item.casting-platform {
+        top: 9%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.casting-platform2 {
+        top: 9%;
+        left: 79.7%; }
+      .network .twirly.mobile .overlay .overlay-item.talent {
+        top: -4%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.blockchain {
+        top: 31%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.transaction {
+        top: 53.6%;
+        left: 79.7%; }
+      .network .twirly.mobile .overlay .overlay-item.user-profiles {
+        top: 53.6%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.smartcontracts {
+        top: 53.6%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.ipfs {
+        top: 76%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.user-profiles2 {
+        top: 95%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.smartcontracts2 {
+        top: 95%;
+        left: 79.7%; }
 
 @keyframes dash {
   to {
@@ -1234,7 +1271,6 @@ section.team-advisors {
           border-radius: 5px;
           text-align: right;
           padding: 10px 15px;
-          overflow: hidden;
           margin: 10px 0;
           position: relative; }
           .data .half-page.right ul li p {
@@ -1273,8 +1309,20 @@ section.team-advisors {
   section.team-advisors .advisor {
     width: 50%;
     max-width: unset;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -50px; } }
 @media screen and (max-width: 1024px) {
+  .data .half-page.right ul li {
+    width: 300px; }
+
+  .network .twirly .overlay .overlay-item h4 {
+    font-size: 15px;
+    line-height: 17px; }
+  .network .twirly .overlay .overlay-item p {
+    font-size: 14px; }
+
   section.hero .hero-text .text-contents p.pretitle {
     font-size: 20px;
     margin-bottom: 10px;
@@ -1524,7 +1572,17 @@ section.team-advisors {
       footer .half-page .social {
         text-align: center !important; }
     footer .menu-footer-menu-container {
-      margin: 40px 0; } }
+      margin: 40px 0; }
+
+  .network {
+    padding-bottom: 130px; }
+    .network .twirly {
+      margin: 60px auto 0;
+      display: none;
+      max-width: 400px;
+      width: calc(100% - 60px); }
+      .network .twirly.mobile {
+        display: block; } }
 @media screen and (max-width: 768px) {
   .roadmap .carroussel-container .carroussel-inner .slide .half-page {
     margin: 20px 0 !important;
@@ -1537,7 +1595,37 @@ section.team-advisors {
 
   section.team-advisors .advisor {
     width: 100%;
-    max-width: unset; } }
+    max-width: unset; }
+
+  .data {
+    margin: 0; }
+    .data .half-page {
+      padding: 0 !important;
+      margin: 20px 0 !important;
+      width: 100%; }
+      .data .half-page .content {
+        max-width: 100% !important; }
+      .data .half-page.right {
+        position: relative;
+        height: auto;
+        width: calc(100% + 30px);
+        margin-bottom: 0 !important;
+        margin-left: -15px !important; }
+        .data .half-page.right ul {
+          margin: 30px auto 60px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none; }
+          .data .half-page.right ul li {
+            margin: 10px auto 50px;
+            max-width: 500px;
+            width: calc(100% - 30px);
+            box-sizing: border-box; }
+            .data .half-page.right ul li p {
+              text-align: left;
+              top: 40px;
+              left: -15px; } }
 @media screen and (max-width: 550px) {
   section.hero .container.first {
     padding: 0; }
@@ -1606,7 +1694,10 @@ section.team-advisors {
     top: 0;
     right: 0;
     margin-top: 20px;
-    text-align: center; } }
+    text-align: center; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -40px; } }
 @media screen and (max-width: 400px) {
   section.tokenization .column-large {
     height: 250px; }
@@ -1615,6 +1706,9 @@ section.team-advisors {
       width: 40px; }
       section.tokenization .column-large .flip-coins .flipper img {
         height: 40px;
-        width: 40px; } }
+        width: 40px; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -30px; } }
 
 /*# sourceMappingURL=style.css.map */
