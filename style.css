@@ -171,7 +171,8 @@ p.form-msg {
     position: absolute;
     top: 4px;
     right: 4px;
-    width: auto !important; }
+    width: auto !important;
+    background: white; }
 
 *, :before, :after {
   margin: 0;
@@ -305,6 +306,9 @@ a {
 p.mobile-message {
   display: none; }
 
+.mobile-nav, .tlnt-logo, .hamburger, .signup.mobile {
+  display: none; }
+
 .hero {
   position: relative;
   height: 150vh; }
@@ -313,10 +317,10 @@ p.mobile-message {
     height: auto; }
     .hero .container.first .right {
       position: relative;
-      z-index: 100; }
+      z-index: 81; }
     .hero .container.first .left {
       position: relative;
-      z-index: 99; }
+      z-index: 81; }
   .hero .hero-text .text-contents p.pretitle {
     color: #df1f36;
     font-size: 16px;
@@ -330,13 +334,13 @@ p.mobile-message {
     font-weight: 300;
     max-width: 500px;
     width: 100%; }
-  .hero .hero-text .signup {
+  .hero .signup {
     margin-top: 100px; }
-    .hero .hero-text .signup p {
+    .hero .signup p {
       margin-bottom: 0px; }
-    .hero .hero-text .signup .gform_wrapper {
+    .hero .signup .gform_wrapper {
       margin-top: -20px; }
-    .hero .hero-text .signup form {
+    .hero .signup form {
       height: 46px;
       border-radius: 3px;
       position: relative;
@@ -344,7 +348,7 @@ p.mobile-message {
       margin-top: 10px;
       width: 100%;
       max-width: 400px; }
-      .hero .hero-text .signup form label {
+      .hero .signup form label {
         display: none; }
   .hero .counter-container {
     text-align: center; }
@@ -438,7 +442,7 @@ p.mobile-message {
     width: 100vw;
     position: absolute;
     top: 10%;
-    z-index: 99;
+    z-index: 80;
     mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0px rgba(4, 30, 53, 0.17);
     left: 50%;
@@ -1317,11 +1321,134 @@ section.team-advisors {
   .network .twirly .overlay .overlay-item p {
     font-size: 14px; }
 
+  section.hero .hero-text .text-contents p.pretitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500; }
+  section.hero .container .square {
+    height: 45vh !important; }
+    section.hero .container .square img {
+      mix-blend-mode: darken;
+      vertical-align: bottom;
+      display: block;
+      position: absolute;
+      width: auto;
+      height: 50vh;
+      margin-top: -5vh; }
   section.hero .counter-container #clockdiv .clock-entity .counter {
     height: 37px;
     width: 39px;
     font-size: 30px;
     padding-top: 17px; }
+  section.hero .hero-bottom .container img.hero-img {
+    display: none; }
+
+  header {
+    background: white;
+    box-shadow: 0px 8px 22px 0px rgba(3, 29, 71, 0.16); }
+    header .menu .desktop-nav, header .menu .header-buttons {
+      display: none; }
+    header .menu a.logo {
+      display: block;
+      text-align: center;
+      max-width: 200px;
+      margin: 0 auto; }
+      header .menu a.logo img {
+        margin: 0 auto; }
+    header .menu .hamburger {
+      height: 40px;
+      width: 40px;
+      display: block;
+      border: 1px solid #00112a;
+      border-radius: 25px;
+      position: absolute;
+      top: 25px;
+      text-align: center;
+      transition: all .25s ease-in-out;
+      cursor: pointer;
+      z-index: 99; }
+      header .menu .hamburger.active {
+        background: #00112a; }
+        header .menu .hamburger.active span {
+          background: white; }
+          header .menu .hamburger.active span:first-of-type {
+            -webkit-transform: rotate(225deg);
+            -moz-transform: rotate(225deg);
+            -ms-transform: rotate(225deg);
+            -o-transform: rotate(225deg);
+            transform: rotate(225deg);
+            margin-top: 19px; }
+          header .menu .hamburger.active span:nth-of-type(2) {
+            -webkit-transform: rotate(-225deg);
+            -moz-transform: rotate(-225deg);
+            -ms-transform: rotate(-225deg);
+            -o-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+            margin-top: -2px; }
+      header .menu .hamburger span {
+        width: 15px;
+        height: 2px;
+        background: #00112a;
+        display: block;
+        margin: 0 auto;
+        transition: all .25s ease-in-out; }
+        header .menu .hamburger span:first-of-type {
+          margin-top: 15px; }
+        header .menu .hamburger span:nth-of-type(2) {
+          margin-top: 5px; }
+    header .menu .tlnt-logo {
+      height: 40px;
+      width: 40px;
+      display: block;
+      border: 1px solid #00112a;
+      border-radius: 25px;
+      position: absolute;
+      top: 25px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 99;
+      right: 30px; }
+      header .menu .tlnt-logo img {
+        max-width: 20px;
+        margin-top: 10px; }
+    header .mobile-nav {
+      position: absolute;
+      background: #df1f36;
+      height: 100vh;
+      width: 100vw;
+      left: 0;
+      top: 90px;
+      z-index: 999;
+      mix-blend-mode: darken;
+      transition: all 0.8s cubic-bezier(1, 0, 0.16, 1);
+      transform: translate(-100%, 0%) matrix(1, 0, 0, 1, 0, 0);
+      visibility: hidden;
+      opacity: 0;
+      display: block; }
+      header .mobile-nav.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+      header .mobile-nav .menu-container {
+        height: 100%;
+        position: relative; }
+        header .mobile-nav .menu-container ul {
+          list-style: none;
+          width: 100%;
+          max-width: 300px;
+          position: absolute;
+          left: 0;
+          margin: 0 auto;
+          right: 0;
+          top: 45%;
+          transform: translateY(-50%);
+          text-align: center;
+          font-size: 30px;
+          font-weight: 700; }
+          header .mobile-nav .menu-container ul li {
+            margin-bottom: 30px; }
+            header .mobile-nav .menu-container ul li a {
+              color: white; }
 
   section.tokenization .container.table {
     display: flex;
@@ -1355,6 +1482,30 @@ section.team-advisors {
     section.tokenization .column-large img.icasting-people {
       z-index: 99; } }
 @media screen and (max-width: 968px) {
+  .signup {
+    display: none; }
+
+  .signup.mobile {
+    margin-top: 100px;
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: block; }
+    .signup.mobile p {
+      font-size: 22px;
+      color: white;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+      line-height: 28px;
+      margin-bottom: 20px; }
+    .signup.mobile form {
+      margin: 0 auto !important; }
+      .signup.mobile form .email {
+        box-shadow: unset; }
+
   section.hero .container.first {
     padding: 5vh 0; }
     section.hero .container.first .left, section.hero .container.first .right {
@@ -1370,8 +1521,10 @@ section.team-advisors {
       height: 35vh; }
   section.hero .hero-text .text-contents p {
     margin: 0 auto; }
-  section.hero .hero-text .signup form {
-    margin: 0 auto; }
+  section.hero .hero-text .signup {
+    margin-top: 50px; }
+    section.hero .hero-text .signup form {
+      margin: 0 auto; }
   section.hero .hero-bottom .container img.hero-img {
     left: -10vw;
     max-width: 550px;
@@ -1415,10 +1568,58 @@ section.team-advisors {
     .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
       display: none; }
 
+  .container {
+    width: calc(100% - 30px) !important; }
+
   section.team-advisors .advisor {
     width: 100%;
     max-width: unset; } }
 @media screen and (max-width: 550px) {
+  section.hero .container.first {
+    padding: 0; }
+  section.hero .container .square {
+    top: 35vh !important;
+    height: 55vh !important;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset; }
+    section.hero .container .square img {
+      left: -25%;
+      height: 60vh; }
+  section.hero .signup.mobile p {
+    font-size: 18px;
+    line-height: 24px; }
+  section.hero .signup.mobile form {
+    max-width: 320px !important; }
+  section.hero .hero-bottom {
+    margin-top: 20vh; }
+    section.hero .hero-bottom .container {
+      width: 100vw !important; }
+      section.hero .hero-bottom .container .rellax {
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important; }
+      section.hero .hero-bottom .container .home-video {
+        width: 100vw;
+        height: 60vw; }
+  section.hero .counter-container #clockdiv {
+    margin-bottom: 30px; }
+    section.hero .counter-container #clockdiv .clock-entity:after {
+      right: -6px;
+      top: 4px; }
+    section.hero .counter-container #clockdiv .clock-entity .counter {
+      height: 32px;
+      width: 29px;
+      font-size: 24px;
+      padding-top: 9px; }
+  section.hero .hero-text .text-contents h1 {
+    font-size: 36px;
+    line-height: 44px; }
+  section.hero .hero-text .text-contents p.pretitle {
+    margin-bottom: 3px; }
+
   section.team-advisors .membercontainer {
     width: 100%;
     max-width: unset; }
