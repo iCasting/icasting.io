@@ -1063,8 +1063,7 @@ section.team-advisors {
   .roadmap .bottom-background {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    overflow: hidden; }
+    width: 100%; }
     .roadmap .bottom-background ul {
       margin: 0;
       padding: 0; }
@@ -1085,7 +1084,6 @@ section.team-advisors {
       min-width: 1800px;
       width: 100%;
       height: auto;
-      overflow: hidden;
       position: absolute;
       bottom: 7px;
       background-position: bottom;
@@ -1096,22 +1094,7 @@ section.team-advisors {
         mix-blend-mode: darken; }
       .roadmap .bottom-background svg path#swirlTo1, .roadmap .bottom-background svg path#swirlTo2, .roadmap .bottom-background svg path#swirlTo3, .roadmap .bottom-background svg path#swirlTo4, .roadmap .bottom-background svg path#swirlBack1, .roadmap .bottom-background svg path#swirlBack2, .roadmap .bottom-background svg path#swirlBack3, .roadmap .bottom-background svg path#swirlBack4 {
         display: none; }
-      .roadmap .bottom-background svg.active path.swirlTo2 {
-        display: none; }
-      .roadmap .bottom-background svg.active path:nth-child(1) {
-        animation-delay: .1s; }
-      .roadmap .bottom-background svg.active path:nth-child(2) {
-        animation-delay: .3s; }
-      .roadmap .bottom-background svg.active path:nth-child(3) {
-        animation-delay: .1s; }
-      .roadmap .bottom-background svg.active path:nth-child(4) {
-        animation-delay: .05s; }
 
-@-webkit-keyframes swirl {
-  50% {
-    transform: scale(1.1); }
-  100% {
-    transform: scale(1); } }
 .network {
   position: relative;
   width: 100%;

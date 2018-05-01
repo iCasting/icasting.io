@@ -250,7 +250,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    overflow: hidden;
 
     ul {
       margin: 0;
@@ -276,24 +275,10 @@
       }
     }
 
-    //&:after {
-    //  content: '';
-    //  min-width: 100%;
-    //  width: 1800px;
-    //  height: 130px;
-    //  position: absolute;
-    //  bottom: 0;
-    //  background: url('assets/img/swirl.png');
-    //  background-position: bottom;
-    //  background-size: 100% 100%;
-    //  z-index: 0;
-    //}
-
     svg {
       min-width: 1800px;
       width: 100%;
       height: auto;
-      overflow: hidden;
       position: absolute;
       bottom: 7px;
       background-position: bottom;
@@ -311,44 +296,6 @@
           display: none;
         }
       }
-
-      &.active {
-        path {
-          //animation: swirl 1s ease;
-          //transition: all .5s ease-in-out;
-          //stroke-dasharray: 4000;
-          
-          &.swirlTo2 {
-            display: none;
-          }
-
-          &:nth-child(1) {
-            animation-delay: .1s;
-          }
-
-          &:nth-child(2) {
-            animation-delay: .3s;
-          }
-
-          &:nth-child(3) {
-            animation-delay: .1s;
-          }
-
-          &:nth-child(4) {
-            animation-delay: .05s;
-          }
-        }
-      }
     }
-  }
-}
-
-
-@-webkit-keyframes swirl {
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
