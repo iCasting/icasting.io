@@ -338,15 +338,22 @@ function setTeamCarousel() {
 $(function() {
   $(".team-carousel-inner").swipe( {
     swipe:function(event, direction) {
-      if (direction == "left") {
+      if (direction === "left") {
         $( ".team-right" ).trigger( "click" );
-      }
-      if (direction == "right") {
+      } else if (direction === "right") {
         $( ".team-left" ).trigger( "click" );
       }
-    },
-    //Default is 75px, set to 0 for demo so any distance triggers swipe
-    threshold:0
+    }
+  });
+
+  $('.carroussel-inner').swipe( {
+    swipe:function(event, direction) {
+      if (direction === 'left') {
+        $('.buttons .right').trigger('click');
+      } else if (direction === 'right') {
+        $('.buttons .left').trigger('click');
+      }
+    }
   });
 });
 
