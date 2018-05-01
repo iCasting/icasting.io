@@ -158,6 +158,11 @@ $('.close-blockchain-video').click(function() {
   $(".blockchain-video").attr("src",'');
 });
 
+$('.hamburger').click(function() {
+  $(this).toggleClass('active');
+  $('.mobile-nav').toggleClass('active');
+})
+
 function flipCoins() {
   var time = 0;
   $('.flipper').each(function() {

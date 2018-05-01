@@ -7,11 +7,11 @@
 
     .right {
       position: relative;
-      z-index: 100;
+      z-index: 81;
     }
     .left {
       position: relative;
-      z-index: 99;
+      z-index: 81;
     }
   }
   .hero-text {
@@ -33,26 +33,27 @@
         width: 100%;
       }
     }
-    .signup {
-      margin-top: 100px;
-      p {
-        margin-bottom: 0px;
-      }
-      .gform_wrapper {
-        margin-top: -20px;
-      }
-      form {
-        height: 46px;
-        border-radius: 3px;
-        position: relative;
-        margin-left: 0;
-        margin-top: 10px;
-        width: 100%;
-        max-width: 400px;
+  }
 
-        label {
-          display: none;
-        }
+  .signup {
+    margin-top: 100px;
+    p {
+      margin-bottom: 0px;
+    }
+    .gform_wrapper {
+      margin-top: -20px;
+    }
+    form {
+      height: 46px;
+      border-radius: 3px;
+      position: relative;
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 400px;
+
+      label {
+        display: none;
       }
     }
   }
@@ -183,7 +184,7 @@
     width: 100vw;
     position: absolute;
     top: 10%;
-    z-index: 99;
+    z-index: 80;
     mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0px rgba(4, 30, 53, 0.17);
     left: 50%;
