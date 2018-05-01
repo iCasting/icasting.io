@@ -30,9 +30,26 @@
       display: inline-block;
     }
   }
+
+  .network .twirly .overlay .overlay-item {
+    img {
+      margin-bottom: -50px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .network .twirly .overlay .overlay-item {
+    h4 {
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
   section.hero {
     .counter-container {
       #clockdiv {
@@ -173,6 +190,21 @@
       margin: 40px 0;
     }
   }
+
+  .network {
+    padding-bottom: 130px;
+
+    .twirly {
+      margin: 60px auto 0;
+      display: none;
+      max-width: 400px;
+      width: calc(100% - 60px);
+
+      &.mobile {
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -237,6 +269,12 @@
       }
     }
   }
+
+  .network .twirly .overlay .overlay-item {
+    img {
+      margin-bottom: -40px;
+    }
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -253,6 +291,12 @@
           }
         }
       }
+    }
+  }
+
+  .network .twirly .overlay .overlay-item {
+    img {
+      margin-bottom: -30px;
     }
   }
 }
