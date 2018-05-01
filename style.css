@@ -1271,7 +1271,6 @@ section.team-advisors {
           border-radius: 5px;
           text-align: right;
           padding: 10px 15px;
-          overflow: hidden;
           margin: 10px 0;
           position: relative; }
           .data .half-page.right ul li p {
@@ -1315,6 +1314,9 @@ section.team-advisors {
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -50px; } }
 @media screen and (max-width: 1024px) {
+  .data .half-page.right ul li {
+    width: 300px; }
+
   .network .twirly .overlay .overlay-item h4 {
     font-size: 15px;
     line-height: 17px; }
@@ -1573,7 +1575,37 @@ section.team-advisors {
 
   section.team-advisors .advisor {
     width: 100%;
-    max-width: unset; } }
+    max-width: unset; }
+
+  .data {
+    margin: 0; }
+    .data .half-page {
+      padding: 0 !important;
+      margin: 20px 0 !important;
+      width: 100%; }
+      .data .half-page .content {
+        max-width: 100% !important; }
+      .data .half-page.right {
+        position: relative;
+        height: auto;
+        width: calc(100% + 30px);
+        margin-bottom: 0 !important;
+        margin-left: -15px !important; }
+        .data .half-page.right ul {
+          margin: 30px auto 60px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none; }
+          .data .half-page.right ul li {
+            margin: 10px auto 50px;
+            max-width: 500px;
+            width: calc(100% - 30px);
+            box-sizing: border-box; }
+            .data .half-page.right ul li p {
+              text-align: left;
+              top: 40px;
+              left: -15px; } }
 @media screen and (max-width: 550px) {
   section.hero .container.first {
     padding: 0; }

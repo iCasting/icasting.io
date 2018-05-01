@@ -39,14 +39,32 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .network .twirly .overlay .overlay-item {
-    h4 {
-      font-size: 15px;
-      line-height: 17px;
+  .data {
+    .half-page {
+      &.right {
+        ul  {
+          li {
+            width: 300px;
+          }
+        }
+      }
     }
+  }
 
-    p {
-      font-size: 14px;
+  .network {
+    .twirly {
+      .overlay {
+        .overlay-item {
+          h4 {
+            font-size: 15px;
+            line-height: 17px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 
@@ -413,7 +431,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .roadmap .carroussel-container .carroussel-inner .slide {
     .half-page {
       margin: 20px 0 !important;
@@ -432,6 +449,49 @@
     .advisor {
       width: 100%;
       max-width: unset;
+    }
+  }
+
+  .data {
+    margin: 0;
+
+    .half-page {
+      padding: 0 !important;
+      margin: 20px 0 !important;
+      width: 100%;
+
+      .content {
+        max-width: 100% !important;
+      }
+
+      &.right {
+        position: relative;
+        height: auto;
+        width: calc(100% + 30px);
+        margin-bottom: 0 !important;
+        margin-left: -15px !important;
+
+        ul {
+          margin: 30px auto 60px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+
+          li {
+            margin: 10px auto 50px;
+            max-width: 500px;
+            width: calc(100% - 30px);
+            box-sizing: border-box;
+
+            p {
+              text-align: left;
+              top: 40px;
+              left: -15px;
+            }
+          }
+        }
+      }
     }
   }
 }
