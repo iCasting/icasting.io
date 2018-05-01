@@ -449,6 +449,8 @@ p.mobile-message {
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+    .hero .square img {
+      display: none; }
     .hero .square.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       .hero .square.active .dots {
@@ -534,6 +536,19 @@ section.blockchain {
       display: table-cell; }
       section.blockchain .selling-points span.img {
         width: 50px; }
+        section.blockchain .selling-points span.img div {
+          height: 30px;
+          width: 30px;
+          background: #df1f36;
+          border-radius: 15px;
+          text-align: center; }
+        section.blockchain .selling-points span.img svg {
+          fill: transparent;
+          stroke-width: 3px;
+          stroke: white;
+          max-width: 15px;
+          margin-top: 9px;
+          margin-left: -1px; }
       section.blockchain .selling-points span img {
         max-width: 20px;
         margin-right: 30px; }
@@ -607,6 +622,8 @@ section.blockchain {
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+    section.blockchain .blockchainsquare img {
+      display: inline; }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       section.blockchain .blockchainsquare.active .dots {
@@ -621,7 +638,7 @@ section.blockchain {
       opacity: 1;
       mix-blend-mode: darken;
       transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
-      transition-delay: .7  5s;
+      transition-delay: .75s;
       transform: translate(100%, 50%); }
 
 .close-hero-video, .close-blockchain-video {
@@ -1106,7 +1123,9 @@ section.team-advisors {
     margin: 150px auto 0;
     position: relative;
     max-width: 1300px;
-    width: 100%; }
+    width: calc(100% - 100px); }
+    .network .twirly.mobile {
+      display: none; }
     .network .twirly .overlay {
       position: absolute;
       top: 0;
@@ -1116,6 +1135,7 @@ section.team-advisors {
       .network .twirly .overlay .overlay-item {
         position: absolute;
         text-align: center;
+        width: 14.35%;
         cursor: pointer;
         transition: all .2s ease-in-out; }
         .network .twirly .overlay .overlay-item:hover {
@@ -1123,50 +1143,84 @@ section.team-advisors {
         .network .twirly .overlay .overlay-item img {
           margin-bottom: -60px; }
         .network .twirly .overlay .overlay-item p {
-          margin: 0; }
+          margin: 0;
+          line-height: 1.2; }
         .network .twirly .overlay .overlay-item h4 {
-          font-size: 18px; }
+          font-size: 18px;
+          hyphens: auto; }
         .network .twirly .overlay .overlay-item img {
           max-width: 500px;
-          width: auto; }
+          width: 100%; }
         .network .twirly .overlay .overlay-item.casting-platform {
           top: -16%;
-          left: 7%; }
+          left: 6.5%; }
         .network .twirly .overlay .overlay-item.casting-platform2 {
           top: 80%;
-          left: 7%; }
+          left: 6.5%; }
         .network .twirly .overlay .overlay-item.talent {
           top: 32%;
           left: -6%; }
         .network .twirly .overlay .overlay-item.blockchain {
           top: 32%;
-          left: 29%; }
+          left: 28%; }
         .network .twirly .overlay .overlay-item.transaction {
           top: -16%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.user-profiles {
           top: 32%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.smartcontracts {
           top: 80%;
-          left: 51.4%; }
+          left: 50.5%; }
         .network .twirly .overlay .overlay-item.ipfs {
           top: 32%;
-          left: 74.15%; }
+          left: 73.3%; }
         .network .twirly .overlay .overlay-item.user-profiles2 {
           top: -16%;
-          left: 93.8%; }
+          left: 93.2%; }
         .network .twirly .overlay .overlay-item.smartcontracts2 {
           top: 80%;
-          left: 93.8%; }
+          left: 93.2%; }
     .network .twirly svg {
       overflow: visible; }
       .network .twirly svg path {
         stroke-width: .5; }
-        .network .twirly svg path#path3 {
+        .network .twirly svg path#path3, .network .twirly svg path#path3Mobile {
           stroke-dasharray: 1.5;
           stroke-dashoffset: 50;
           animation: dash 5s linear infinite; }
+    .network .twirly.mobile .overlay .overlay-item {
+      width: 40%; }
+      .network .twirly.mobile .overlay .overlay-item.casting-platform {
+        top: 9%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.casting-platform2 {
+        top: 9%;
+        left: 79.7%; }
+      .network .twirly.mobile .overlay .overlay-item.talent {
+        top: -4%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.blockchain {
+        top: 31%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.transaction {
+        top: 53.6%;
+        left: 79.7%; }
+      .network .twirly.mobile .overlay .overlay-item.user-profiles {
+        top: 53.6%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.smartcontracts {
+        top: 53.6%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.ipfs {
+        top: 76%;
+        left: 30%; }
+      .network .twirly.mobile .overlay .overlay-item.user-profiles2 {
+        top: 95%;
+        left: -19.5%; }
+      .network .twirly.mobile .overlay .overlay-item.smartcontracts2 {
+        top: 95%;
+        left: 79.7%; }
 
 @keyframes dash {
   to {
@@ -1234,7 +1288,6 @@ section.team-advisors {
           border-radius: 5px;
           text-align: right;
           padding: 10px 15px;
-          overflow: hidden;
           margin: 10px 0;
           position: relative; }
           .data .half-page.right ul li p {
@@ -1273,8 +1326,20 @@ section.team-advisors {
   section.team-advisors .advisor {
     width: 50%;
     max-width: unset;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -50px; } }
 @media screen and (max-width: 1024px) {
+  .data .half-page.right ul li {
+    width: 300px; }
+
+  .network .twirly .overlay .overlay-item h4 {
+    font-size: 15px;
+    line-height: 17px; }
+  .network .twirly .overlay .overlay-item p {
+    font-size: 14px; }
+
   section.hero .hero-text .text-contents p.pretitle {
     font-size: 20px;
     margin-bottom: 10px;
@@ -1438,21 +1503,57 @@ section.team-advisors {
 @media screen and (max-width: 968px) {
   section.about {
     margin-top: 50px; }
-    section.about .small .btn, section.about .numbers, section.about .table {
+    section.about .small .btn, section.about .numbers, section.about .table, section.about .center .btn {
       display: none; }
 
   .hero-img {
     display: none; }
 
   .blockchainsquare {
-    left: -30px;
-    width: 120vw !important; }
+    left: 0px;
+    width: 100% !important; }
     .blockchainsquare .dots {
       display: none !important; }
 
+  .blockchain .container:first-of-type {
+    width: 100% !important; }
+  .blockchain .container.table .btn {
+    display: none; }
+  .blockchain .container .selling-points {
+    max-width: unset; }
+    .blockchain .container .selling-points span.img div {
+      background: white; }
+    .blockchain .container .selling-points span.img svg {
+      fill: transparent;
+      stroke-width: 3px;
+      stroke: #df1f36; }
+    .blockchain .container .selling-points span:nth-of-type(2) {
+      font-size: 20px;
+      line-height: 26px; }
   .blockchain .container .left, .blockchain .container .right {
     display: block;
-    width: 100%; }
+    width: 100%;
+    color: white; }
+  .blockchain .container .right {
+    width: calc(100% - 60px);
+    margin: 0 auto; }
+  .blockchain .container .blockchainsquare {
+    height: 700px; }
+    .blockchain .container .blockchainsquare img {
+      mix-blend-mode: darken;
+      vertical-align: bottom;
+      display: block;
+      position: absolute;
+      width: auto;
+      height: 750px;
+      margin-top: -50px;
+      right: 0; }
+  .blockchain .blockchain-bottom.rellax {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important; }
 
   .signup {
     display: none; }
@@ -1524,20 +1625,77 @@ section.team-advisors {
       footer .half-page .social {
         text-align: center !important; }
     footer .menu-footer-menu-container {
-      margin: 40px 0; } }
+      margin: 40px 0; }
+
+  .network {
+    padding-bottom: 130px; }
+    .network .twirly {
+      margin: 60px auto 0;
+      display: none;
+      max-width: 400px;
+      width: calc(100% - 60px); }
+      .network .twirly.mobile {
+        display: block; } }
 @media screen and (max-width: 768px) {
+  section.blockchain {
+    height: 1350px;
+    margin-bottom: 40px; }
+
+  .hero-bottom {
+    margin-top: 210px; }
+
+  .hero-bottom .container, .blockchain-bottom .container {
+    width: 100vw !important;
+    padding-top: 4vh !important; }
+    .hero-bottom .container .rellax, .blockchain-bottom .container .rellax {
+      -webkit-transform: none !important;
+      -moz-transform: none !important;
+      -ms-transform: none !important;
+      -o-transform: none !important;
+      transform: none !important; }
+    .hero-bottom .container .home-video, .hero-bottom .container .blockchain-video, .blockchain-bottom .container .home-video, .blockchain-bottom .container .blockchain-video {
+      width: 100vw;
+      height: 60vw; }
+
   .roadmap .carroussel-container .carroussel-inner .slide .half-page {
     margin: 20px 0 !important;
     width: calc(100% - 30px); }
     .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
       display: none; }
 
-  .container {
-    width: calc(100% - 30px) !important; }
-
   section.team-advisors .advisor {
     width: 100%;
-    max-width: unset; } }
+    max-width: unset; }
+
+  .data {
+    margin: 0; }
+    .data .half-page {
+      padding: 0 !important;
+      margin: 20px 0 !important;
+      width: 100%; }
+      .data .half-page .content {
+        max-width: 100% !important; }
+      .data .half-page.right {
+        position: relative;
+        height: auto;
+        width: calc(100% + 30px);
+        margin-bottom: 0 !important;
+        margin-left: -15px !important; }
+        .data .half-page.right ul {
+          margin: 30px auto 60px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none; }
+          .data .half-page.right ul li {
+            margin: 10px auto 50px;
+            max-width: 500px;
+            width: calc(100% - 30px);
+            box-sizing: border-box; }
+            .data .half-page.right ul li p {
+              text-align: left;
+              top: 40px;
+              left: -15px; } }
 @media screen and (max-width: 550px) {
   section.hero .container.first {
     padding: 0; }
@@ -1556,20 +1714,6 @@ section.team-advisors {
     line-height: 24px; }
   section.hero .signup.mobile form {
     max-width: 320px !important; }
-  section.hero .hero-bottom {
-    margin-top: 210px; }
-    section.hero .hero-bottom .container {
-      width: 100vw !important;
-      padding-top: 4vh; }
-      section.hero .hero-bottom .container .rellax {
-        -webkit-transform: none !important;
-        -moz-transform: none !important;
-        -ms-transform: none !important;
-        -o-transform: none !important;
-        transform: none !important; }
-      section.hero .hero-bottom .container .home-video {
-        width: 100vw;
-        height: 60vw; }
   section.hero .counter-container #clockdiv {
     margin-bottom: 30px; }
     section.hero .counter-container #clockdiv .clock-entity:after {
@@ -1606,7 +1750,10 @@ section.team-advisors {
     top: 0;
     right: 0;
     margin-top: 20px;
-    text-align: center; } }
+    text-align: center; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -40px; } }
 @media screen and (max-width: 400px) {
   section.tokenization .column-large {
     height: 250px; }
@@ -1615,6 +1762,9 @@ section.team-advisors {
       width: 40px; }
       section.tokenization .column-large .flip-coins .flipper img {
         height: 40px;
-        width: 40px; } }
+        width: 40px; }
+
+  .network .twirly .overlay .overlay-item img {
+    margin-bottom: -30px; } }
 
 /*# sourceMappingURL=style.css.map */
