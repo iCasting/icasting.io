@@ -267,6 +267,32 @@
 }
 
 @media screen and (max-width: 968px) {
+  section.about {
+    margin-top: 50px;
+
+    .small .btn, .numbers, .table{
+      display: none;
+    }
+  }
+  .hero-img {
+    display: none;
+  }
+  .blockchainsquare {
+    left: -30px;
+    width: 120vw!important;
+
+    .dots {
+      display: none!important;
+    }
+  }
+  .blockchain {
+    .container {
+      .left, .right {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
   .signup {
     display: none;
   }
@@ -331,6 +357,9 @@
       }
     }
     .hero-bottom {
+      .btn {
+        display: inline-block;
+      }
       .container {
 
         img.hero-img {
@@ -412,13 +441,15 @@
       }
       .square {
         top: 35vh!important;
-        height: 55vh!important;
+        height: 450px !important;
         -webkit-box-shadow: unset;
         -moz-box-shadow: unset;
         box-shadow: unset;
         img {
           left: -25%;
-          height: 60vh;
+          height: 500px;
+          margin-top: -50px;
+
         }
       }
     }
@@ -432,9 +463,10 @@
       }
     }
     .hero-bottom {
-      margin-top: 20vh;
+      margin-top: 210px;
       .container {
         width: 100vw!important;
+        padding-top: 4vh;
         
         .rellax {
           -webkit-transform: none!important;
