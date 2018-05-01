@@ -25,7 +25,11 @@
     margin: 150px auto 0;
     position: relative;
     max-width: 1300px;
-    width: 100%;
+    width: calc(100% - 100px);
+
+    &.mobile {
+      display: none;
+    }
 
     .overlay {
       position: absolute;
@@ -37,6 +41,7 @@
       .overlay-item {
         position: absolute;
         text-align: center;
+        width: 14.35%;
         cursor: pointer;
 
         transition: all .2s ease-in-out;
@@ -51,27 +56,29 @@
 
         p {
           margin: 0;
+          line-height: 1.2;
         }
 
         h4 {
           font-size: 18px;
+          hyphens: auto;
         }
 
         img {
           max-width: 500px;
-          width: auto;
+          width: 100%;
         }
 
-        &.casting-platform { top: -16%; left: 7%; }
-        &.casting-platform2 { top: 80%; left: 7%; }
+        &.casting-platform { top: -16%; left: 6.5%; }
+        &.casting-platform2 { top: 80%; left: 6.5%; }
         &.talent { top: 32%; left: -6%; }
-        &.blockchain { top: 32%; left: 29%; }
-        &.transaction { top: -16%; left: 51.4%; }
-        &.user-profiles { top: 32%; left: 51.4%; }
-        &.smartcontracts { top: 80%; left: 51.4%; }
-        &.ipfs { top: 32%; left: 74.15%; }
-        &.user-profiles2 { top: -16%; left: 93.8%; }
-        &.smartcontracts2 { top: 80%; left: 93.8%; }
+        &.blockchain { top: 32%; left: 28%; }
+        &.transaction { top: -16%; left: 50.5%; }
+        &.user-profiles { top: 32%; left: 50.5%; }
+        &.smartcontracts { top: 80%; left: 50.5%; }
+        &.ipfs { top: 32%; left: 73.3%; }
+        &.user-profiles2 { top: -16%; left: 93.2%; }
+        &.smartcontracts2 { top: 80%; left: 93.2%; }
       }
     }
 
@@ -81,10 +88,29 @@
       path {
         stroke-width: .5;
 
-        &#path3 {
+        &#path3, &#path3Mobile {
           stroke-dasharray: 1.5;
           stroke-dashoffset: 50;
           animation: dash 5s linear infinite;
+        }
+      }
+    }
+
+    &.mobile {
+      .overlay {
+        .overlay-item {
+          width: 40%;
+
+          &.casting-platform { top: 9%; left: -19.5%; }
+          &.casting-platform2 { top: 9%; left: 79.7%; }
+          &.talent { top: -4%; left: 30%; }
+          &.blockchain { top: 31%; left: 30%; }
+          &.transaction { top: 53.6%; left: 79.7%; }
+          &.user-profiles { top: 53.6%; left: 30%; }
+          &.smartcontracts { top: 53.6%; left: -19.5%; }
+          &.ipfs { top: 76%; left: 30%; }
+          &.user-profiles2 { top: 95%; left: -19.5%; }
+          &.smartcontracts2 { top: 95%; left: 79.7%; }
         }
       }
     }
