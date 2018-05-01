@@ -305,7 +305,7 @@
   section.about {
     margin-top: 50px;
 
-    .small .btn, .numbers, .table{
+    .small .btn, .numbers, .table, .center .btn{
       display: none;
     }
   }
@@ -313,8 +313,8 @@
     display: none;
   }
   .blockchainsquare {
-    left: -30px;
-    width: 120vw!important;
+    left: 0px;
+    width: 100%!important;
 
     .dots {
       display: none!important;
@@ -322,10 +322,63 @@
   }
   .blockchain {
     .container {
+      &:first-of-type {
+        width: 100%!important;
+      }
+      &.table {
+        .btn {
+          display: none;
+        }
+      }
+      .selling-points {
+        max-width: unset;
+        span.img {
+          div {
+            background: white;
+          }
+          svg {
+            fill: transparent;
+            stroke-width: 3px;
+            stroke: $primary-color;
+          }
+        }
+        span {
+          &:nth-of-type(2) {
+            font-size: 20px;
+            line-height: 26px;
+          }
+        }
+      }
       .left, .right {
         display: block;
         width: 100%;
+        color: white;
       }
+      .right {
+        width: calc(100% - 60px);
+        margin: 0 auto;
+      }
+      .blockchainsquare {
+        height: 700px;
+
+        img {
+          mix-blend-mode: darken;
+          vertical-align: bottom;
+          display: block;
+          position: absolute;
+          width: auto;
+          height: 750px;
+          margin-top: -50px;
+          right: 0;
+        }
+      }
+    }
+    .blockchain-bottom.rellax {
+      -webkit-transform: none!important;
+      -moz-transform: none!important;
+      -ms-transform: none!important;
+      -o-transform: none!important;
+      transform: none!important;
     }
   }
   .signup {
@@ -460,6 +513,33 @@
 }
 
 @media screen and (max-width: 768px) {
+  section.blockchain {
+    height: 1350px;
+    margin-bottom: 40px;
+  }
+
+  .hero-bottom {
+    margin-top: 210px;
+  }
+  .hero-bottom, .blockchain-bottom {
+    .container {
+      width: 100vw!important;
+      padding-top: 4vh!important;
+
+      .rellax {
+        -webkit-transform: none!important;
+        -moz-transform: none!important;
+        -ms-transform: none!important;
+        -o-transform: none!important;
+        transform: none!important;
+      }
+
+      .home-video, .blockchain-video {
+        width: 100vw;
+        height: 60vw;
+      }
+    }
+  }
   .roadmap .carroussel-container .carroussel-inner .slide {
     .half-page {
       margin: 20px 0 !important;
@@ -470,9 +550,7 @@
       }
     }
   }
-  .container {
-    width: calc(100% - 30px) !important;
-  }
+
 
   section.team-advisors {
     .advisor {
@@ -552,26 +630,6 @@
       }
       form {
         max-width: 320px!important;
-      }
-    }
-    .hero-bottom {
-      margin-top: 210px;
-      .container {
-        width: 100vw!important;
-        padding-top: 4vh;
-        
-        .rellax {
-          -webkit-transform: none!important;
-          -moz-transform: none!important;
-          -ms-transform: none!important;
-          -o-transform: none!important;
-          transform: none!important;
-        }
-
-        .home-video {
-          width: 100vw;
-          height: 60vw;
-        }
       }
     }
     .counter-container {

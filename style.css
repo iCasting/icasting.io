@@ -450,6 +450,8 @@ p.mobile-message {
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+    .hero .square img {
+      display: none; }
     .hero .square.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       .hero .square.active .dots {
@@ -535,6 +537,19 @@ section.blockchain {
       display: table-cell; }
       section.blockchain .selling-points span.img {
         width: 50px; }
+        section.blockchain .selling-points span.img div {
+          height: 30px;
+          width: 30px;
+          background: #df1f36;
+          border-radius: 15px;
+          text-align: center; }
+        section.blockchain .selling-points span.img svg {
+          fill: transparent;
+          stroke-width: 3px;
+          stroke: white;
+          max-width: 15px;
+          margin-top: 9px;
+          margin-left: -1px; }
       section.blockchain .selling-points span img {
         max-width: 20px;
         margin-right: 30px; }
@@ -608,6 +623,8 @@ section.blockchain {
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
     transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+    section.blockchain .blockchainsquare img {
+      display: inline; }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
       section.blockchain .blockchainsquare.active .dots {
@@ -622,7 +639,7 @@ section.blockchain {
       opacity: 1;
       mix-blend-mode: darken;
       transition: transform 0.4s cubic-bezier(1, 0, 0.16, 1);
-      transition-delay: .7  5s;
+      transition-delay: .75s;
       transform: translate(100%, 50%); }
 
 .close-hero-video, .close-blockchain-video {
@@ -1487,21 +1504,57 @@ section.team-advisors {
 @media screen and (max-width: 968px) {
   section.about {
     margin-top: 50px; }
-    section.about .small .btn, section.about .numbers, section.about .table {
+    section.about .small .btn, section.about .numbers, section.about .table, section.about .center .btn {
       display: none; }
 
   .hero-img {
     display: none; }
 
   .blockchainsquare {
-    left: -30px;
-    width: 120vw !important; }
+    left: 0px;
+    width: 100% !important; }
     .blockchainsquare .dots {
       display: none !important; }
 
+  .blockchain .container:first-of-type {
+    width: 100% !important; }
+  .blockchain .container.table .btn {
+    display: none; }
+  .blockchain .container .selling-points {
+    max-width: unset; }
+    .blockchain .container .selling-points span.img div {
+      background: white; }
+    .blockchain .container .selling-points span.img svg {
+      fill: transparent;
+      stroke-width: 3px;
+      stroke: #df1f36; }
+    .blockchain .container .selling-points span:nth-of-type(2) {
+      font-size: 20px;
+      line-height: 26px; }
   .blockchain .container .left, .blockchain .container .right {
     display: block;
-    width: 100%; }
+    width: 100%;
+    color: white; }
+  .blockchain .container .right {
+    width: calc(100% - 60px);
+    margin: 0 auto; }
+  .blockchain .container .blockchainsquare {
+    height: 700px; }
+    .blockchain .container .blockchainsquare img {
+      mix-blend-mode: darken;
+      vertical-align: bottom;
+      display: block;
+      position: absolute;
+      width: auto;
+      height: 750px;
+      margin-top: -50px;
+      right: 0; }
+  .blockchain .blockchain-bottom.rellax {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important; }
 
   .signup {
     display: none; }
@@ -1585,14 +1638,31 @@ section.team-advisors {
       .network .twirly.mobile {
         display: block; } }
 @media screen and (max-width: 768px) {
+  section.blockchain {
+    height: 1350px;
+    margin-bottom: 40px; }
+
+  .hero-bottom {
+    margin-top: 210px; }
+
+  .hero-bottom .container, .blockchain-bottom .container {
+    width: 100vw !important;
+    padding-top: 4vh !important; }
+    .hero-bottom .container .rellax, .blockchain-bottom .container .rellax {
+      -webkit-transform: none !important;
+      -moz-transform: none !important;
+      -ms-transform: none !important;
+      -o-transform: none !important;
+      transform: none !important; }
+    .hero-bottom .container .home-video, .hero-bottom .container .blockchain-video, .blockchain-bottom .container .home-video, .blockchain-bottom .container .blockchain-video {
+      width: 100vw;
+      height: 60vw; }
+
   .roadmap .carroussel-container .carroussel-inner .slide .half-page {
     margin: 20px 0 !important;
     width: calc(100% - 30px); }
     .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
       display: none; }
-
-  .container {
-    width: calc(100% - 30px) !important; }
 
   section.team-advisors .advisor {
     width: 100%;
@@ -1645,20 +1715,6 @@ section.team-advisors {
     line-height: 24px; }
   section.hero .signup.mobile form {
     max-width: 320px !important; }
-  section.hero .hero-bottom {
-    margin-top: 210px; }
-    section.hero .hero-bottom .container {
-      width: 100vw !important;
-      padding-top: 4vh; }
-      section.hero .hero-bottom .container .rellax {
-        -webkit-transform: none !important;
-        -moz-transform: none !important;
-        -ms-transform: none !important;
-        -o-transform: none !important;
-        transform: none !important; }
-      section.hero .hero-bottom .container .home-video {
-        width: 100vw;
-        height: 60vw; }
   section.hero .counter-container #clockdiv {
     margin-bottom: 30px; }
     section.hero .counter-container #clockdiv .clock-entity:after {
