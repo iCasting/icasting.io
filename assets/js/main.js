@@ -61,25 +61,57 @@ $.fn.isInViewport = function() {
 function checkViewPort() {
   $('.number-container').each(function () {
     if ($(this).isInViewport()) {
-      if (!$(this).hasClass("active")) {
+      if (!$(this).hasClass('active')) {
         $(this).addClass('active');
         animateCounters(this);
       }
     }
   });
-  if ($('.blockchainsquare').isInViewport()) {
-    $('.blockchainsquare').addClass('active');
+
+  var blockchainsquare = $('.blockchainsquare');
+  if (blockchainsquare.isInViewport()) {
+    blockchainsquare.addClass('active');
   }
-  if ($('.square').isInViewport()) {
-    $('.square').addClass('active');
+
+  var square = $('.square');
+  if (square.isInViewport()) {
+    square.addClass('active');
   }
-  if ($('.data-slider').isInViewport()) {
-    $('.data-slider').addClass('active');
+
+  var dataSlider = $('.data-slider');
+  if (dataSlider.isInViewport()) {
+    dataSlider.addClass('active');
   }
-  if ($('.membercontainer').isInViewport()) {
-    $('.membercontainer').addClass('active');
+
+  var membercontainer = $('.membercontainer');
+  if (membercontainer.isInViewport()) {
+    membercontainer.addClass('active');
   }
 };
+
+$(window).scroll(function(){
+  var element = $('.social.fixed');
+  var fixed_position = element.offset().top;
+  var fixed_height = element.height();
+
+  var checkpos = function(id){
+    var elementToCross = $('#' + id + '.div-to-cross');
+    var toCross_position = elementToCross.offset().top;
+    var toCross_height = elementToCross.height();
+
+    var fixedtgt = $(".social.fixed");
+
+    if (fixed_position + fixed_height  < toCross_position) {
+      fixedtgt.removeClass('active');
+    } else if (fixed_position > toCross_position + toCross_height) {
+      fixedtgt.removeClass('active');
+    } else {
+      fixedtgt.addClass('active');
+    }
+  };
+
+  checkpos("redblock");
+});
 
 function animateCounters(el) {
   $(el).prop('Counter', 0).animate({
@@ -130,40 +162,71 @@ $(document).ready(function() {
   $('.data-slider li').each(function(){
     var data = $(this).data('percent');
   });
+
+  $('.menu a').on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== '') {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      var number = $(hash).offset().top - 50;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: number
+      }, 800);
+    }
+  });
 });
 
 $('#playbtn').click(function() {
-  $('.home-video').toggleClass('active');
-  $('.hero-video').toggleClass('active');
+  var homeVideo = $('.home-video');
+  var heroVideo = $('.hero-video');
+
+  homeVideo.toggleClass('active');
+  heroVideo.toggleClass('active');
   $('.close-hero-video').toggleClass('active');
+
   var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
-  $(".hero-video").attr("src",videosrc);
+  heroVideo.attr("src",videosrc);
 });
 
 $('.close-hero-video').click(function() {
-  $('.home-video').toggleClass('active');
+  var homeVideo = $('.home-video');
+  var heroVideo = $('.hero-video');
+
+  homeVideo.toggleClass('active');
   $(this).toggleClass('active');
-  $('.hero-video').toggleClass('active');
-  $(".hero-video").attr("src",'');
+  heroVideo.toggleClass('active');
+  heroVideo.attr("src",'');
 });
 
 $('#playbtn-blockchain').click(function() {
-  $('.blockchain-video').toggleClass('active');
+  var blockchainVideo = $('.blockchain-video');
+
+  blockchainVideo.toggleClass('active');
   $('.close-blockchain-video').toggleClass('active');
   var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
-  $(".blockchain-video").attr("src",videosrc);
+  blockchainVideo.attr("src",videosrc);
 });
 
 $('.close-blockchain-video').click(function() {
+  var blockchainVideo = $('.blockchain-video');
+
   $(this).toggleClass('active');
-  $('.blockchain-video').toggleClass('active');
-  $(".blockchain-video").attr("src",'');
+  blockchainVideo.toggleClass('active');
+  blockchainVideo.attr("src",'');
 });
 
 $('.hamburger').click(function() {
   $(this).toggleClass('active');
   $('.mobile-nav').toggleClass('active');
-})
+});
 
 function flipCoins() {
   var time = 0;
@@ -415,18 +478,20 @@ $(function() {
 });
 
 
-$("form.mailSubscribe").on("submit", function() {
+$('form.mailSubscribe').on('submit', function() {
   var timeOut = Math.random() * 3;
-  console.log(timeOut);
+
   $('.loading').toggleClass('active');
+
   setTimeout(function(){
     $('.loading').removeClass('active');
     $( ".form-msg" )
       .html( "Thanks for subscribing! Please check your inbox to complete the subscription." );
   }, timeOut * 1000);
+
   setTimeout(function(){
     $('.loading').removeClass('active');
     $( ".form-msg" )
       .html('');
   }, timeOut * 3500);
-})
+});

@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .social.fixed {
+    display: none;
+  }
+
   .data {
     .half-page {
       &.right {

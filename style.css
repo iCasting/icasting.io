@@ -125,6 +125,39 @@ footer {
     text-align: center;
     font-size: 14px; }
 
+.social.fixed {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 100; }
+  .social.fixed a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #00112a;
+    position: relative;
+    display: block;
+    margin-top: 8px;
+    transition: all .2s ease-in-out; }
+    .social.fixed a img {
+      max-height: 13px;
+      max-width: 13px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .social.fixed a img.dark {
+        display: none; }
+    .social.fixed a:hover {
+      background: #df1f36;
+      transform: scale(1.2); }
+  .social.fixed.active a {
+    background: white; }
+    .social.fixed.active a img {
+      display: none; }
+      .social.fixed.active a img.dark {
+        display: block; }
+
 input[type="text"], input[type="email"], textarea {
   box-shadow: 0px 8px 21px 0px rgba(179, 195, 219, 0.55);
   padding: 21px 30px !important;
@@ -1334,6 +1367,9 @@ section.team-advisors {
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -50px; } }
 @media screen and (max-width: 1024px) {
+  .social.fixed {
+    display: none; }
+
   .data .half-page.right ul li {
     width: 300px; }
 
