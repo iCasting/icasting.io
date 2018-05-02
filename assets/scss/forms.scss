@@ -17,6 +17,7 @@ input[type="submit"] {
   letter-spacing: 2px;
   transition: all .2s ease-in-out;
   cursor: pointer;
+  font-family: $primary-font-family;
 
   &:hover {
     background: $primary-color !important;

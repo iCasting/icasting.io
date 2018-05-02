@@ -175,7 +175,8 @@ input[type="submit"] {
   font-size: 14px !important;
   letter-spacing: 2px;
   transition: all .2s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif; }
   input[type="submit"]:hover {
     background: #df1f36 !important;
     color: white; }
