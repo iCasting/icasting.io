@@ -27,7 +27,7 @@ header {
     header .menu .desktop-nav ul {
       list-style: none;
       display: block;
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
       header .menu .desktop-nav ul li {
         display: inline-block;
         padding: 5px 20px; }
@@ -159,7 +159,7 @@ footer {
         display: block; }
 
 input[type="text"], input[type="email"], textarea {
-  box-shadow: 0px 8px 21px 0px rgba(179, 195, 219, 0.55);
+  box-shadow: 0 8px 21px 0 rgba(179, 195, 219, 0.55);
   padding: 21px 30px !important;
   border: none;
   border-radius: 31px;
@@ -328,7 +328,7 @@ a {
     .btn.arrow:hover {
       padding-right: 30px; }
       .btn.arrow:hover:after {
-        right: 0px;
+        right: 0;
         opacity: 0; }
   .btn.red {
     background: #df1f36;
@@ -360,7 +360,7 @@ p.mobile-message {
   .hero .hero-text .text-contents p.pretitle {
     color: #df1f36;
     font-size: 16px;
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .hero .hero-text .text-contents h1 {
     font-size: 56px;
     line-height: 62px;
@@ -373,7 +373,7 @@ p.mobile-message {
   .hero .signup {
     margin-top: 100px; }
     .hero .signup p {
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
     .hero .signup .gform_wrapper {
       margin-top: -20px; }
     .hero .signup form {
@@ -427,18 +427,18 @@ p.mobile-message {
     padding-top: 15vh; }
     .hero .hero-bottom .container img.hero-img {
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       right: calc(-760px + 45vw);
       max-width: 760px; }
   .hero .home-video {
-    height: 500px;
+    height: 422px;
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -612,14 +612,14 @@ section.blockchain {
     section.blockchain .blockchain-bottom .container {
       padding-top: 15vh; }
   section.blockchain .blockchain-video {
-    height: 500px;
+    height: 422px;
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -738,7 +738,6 @@ section.tokenization {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0;
       top: 50%;
       transform: translateY(-50%); }
     section.tokenization .column-large svg {
@@ -891,7 +890,7 @@ section.team-advisors {
       margin-top: 20px; }
       section.team-advisors .membercontainer .memberdetails h3 {
         font-size: 20px;
-        margin-bottom: 0px; }
+        margin-bottom: 0; }
       section.team-advisors .membercontainer .memberdetails p.job-title {
         font-weight: 300; }
   section.team-advisors .advisors {
@@ -1403,7 +1402,7 @@ section.team-advisors {
 
   header {
     background: white;
-    box-shadow: 0px 8px 22px 0px rgba(3, 29, 71, 0.16); }
+    box-shadow: 0 8px 22px 0 rgba(3, 29, 71, 0.16); }
     header .menu .desktop-nav, header .menu .header-buttons {
       display: none; }
     header .menu a.logo {
@@ -1549,7 +1548,7 @@ section.team-advisors {
     display: none; }
 
   .blockchainsquare {
-    left: 0px;
+    left: 0;
     width: 100% !important; }
     .blockchainsquare .dots {
       display: none !important; }

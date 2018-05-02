@@ -24,6 +24,7 @@
       width: calc(100% / 3);
       max-width: unset;
     }
+
     .advisor {
       width: 50%;
       max-width: unset;
@@ -82,9 +83,11 @@
         }
       }
     }
+
     .container {
       .square {
         height: 45vh!important;
+
         img {
           mix-blend-mode: darken;
           vertical-align: bottom;
@@ -96,6 +99,7 @@
         }
       }
     }
+
     .counter-container {
       #clockdiv {
         .clock-entity {
@@ -108,6 +112,7 @@
         }
       }
     }
+
     .hero-bottom {
       .container {
         img.hero-img {
@@ -121,15 +126,18 @@
       .desktop-nav, .header-buttons {
         display: none;
       }
+
       a.logo {
         display: block;
         text-align: center;
         max-width: 200px;
         margin: 0 auto;
+
         img {
           margin: 0 auto;
         }
       }
+
       .hamburger {
         height: 40px;
         width: 40px;
@@ -184,6 +192,7 @@
           }
         }
       }
+
       .tlnt-logo {
         height: 40px;
         width: 40px;
@@ -254,8 +263,9 @@
     }
 
     background: white;
-    box-shadow: 0px 8px 22px 0px rgba(3, 29, 71, 0.16);
+    box-shadow: 0 8px 22px 0 rgba(3, 29, 71, 0.16);
   }
+
   section.tokenization {
     .container.table {
       display: flex;
@@ -263,14 +273,17 @@
       text-align: center;
       margin-bottom: 40px;
     }
+
     .column-small, .column-large {
       display: block;
       width: 100%;
       text-align: center;
     }
+
     .text-left {
       display: none;
     }
+
     .selling-point-container {
       margin: 0 auto;
       width: 100%;
@@ -280,9 +293,11 @@
         display: none;
       }
     }
+
     .mobile-message {
       display: block;
     }
+
     .column-large {
       margin-bottom: 100px;
       position: relative;
@@ -295,12 +310,10 @@
         right: 0;
         transform: translateY(-50%);
       }
+
       img.icasting-people {
         z-index: 99;
       }
-    }
-    .flip-coins {
-
     }
   }
 }
@@ -313,39 +326,47 @@
       display: none;
     }
   }
+
   .hero-img {
     display: none;
   }
+
   .blockchainsquare {
-    left: 0px;
+    left: 0;
     width: 100%!important;
 
     .dots {
       display: none!important;
     }
   }
+
   .blockchain {
     .container {
       &:first-of-type {
         width: 100%!important;
       }
+
       &.table {
         .btn {
           display: none;
         }
       }
+
       .selling-points {
         max-width: unset;
+
         span.img {
           div {
             background: white;
           }
+
           svg {
             fill: transparent;
             stroke-width: 3px;
             stroke: $primary-color;
           }
         }
+
         span {
           &:nth-of-type(2) {
             font-size: 20px;
@@ -353,15 +374,18 @@
           }
         }
       }
+
       .left, .right {
         display: block;
         width: 100%;
         color: white;
       }
+
       .right {
         width: calc(100% - 60px);
         margin: 0 auto;
       }
+
       .blockchainsquare {
         height: 700px;
 
@@ -378,6 +402,7 @@
         }
       }
     }
+
     .blockchain-bottom.rellax {
       -webkit-transform: none!important;
       -moz-transform: none!important;
@@ -386,9 +411,11 @@
       transform: none!important;
     }
   }
+
   .signup {
     display: none;
   }
+
   .signup {
     &.mobile {
       margin-top: 100px;
@@ -418,17 +445,21 @@
       }
     }
   }
+
   section.hero {
     .container.first {
       padding: 5vh 0;
+
       .left, .right {
         display: block;
         width: 100%;
         text-align: center!important;
       }
+
       .left {
         height: 40vh;
       }
+
       .square {
         top: 40vh;
         left: -10vw;
@@ -436,6 +467,7 @@
         height: 35vh;
       }
     }
+
     .hero-text {
       .text-contents {
         p {
@@ -444,17 +476,19 @@
       }
       .signup {
         margin-top: 50px;
+
         form {
           margin: 0 auto;
         }
       }
     }
+
     .hero-bottom {
       .btn {
         display: inline-block;
       }
-      .container {
 
+      .container {
         img.hero-img {
           left: -10vw;
           max-width: 550px;
@@ -463,6 +497,7 @@
       }
     }
   }
+
   section.team-advisors {
     .membercontainer {
       width: 50%;
@@ -526,6 +561,7 @@
   .hero-bottom {
     margin-top: 210px;
   }
+
   .hero-bottom, .blockchain-bottom {
     .container {
       width: 100vw!important;
@@ -545,6 +581,7 @@
       }
     }
   }
+
   .roadmap .carroussel-container {
     padding: 40px 0 113px;
 
@@ -618,12 +655,14 @@
       &.first {
         padding: 0;
       }
+
       .square {
         top: 35vh!important;
         height: 450px !important;
         -webkit-box-shadow: unset;
         -moz-box-shadow: unset;
         box-shadow: unset;
+
         img {
           left: -25%;
           height: 500px;
@@ -632,23 +671,28 @@
         }
       }
     }
+
     .signup.mobile {
       p {
         font-size: 18px;
         line-height: 24px;
       }
+
       form {
         max-width: 320px!important;
       }
     }
+
     .counter-container {
       #clockdiv {
         margin-bottom: 30px;
+
         .clock-entity {
           &:after {
             right: -6px;
             top: 4px;
           }
+
           .counter {
             height: 32px;
             width: 29px;
@@ -658,31 +702,37 @@
         }
       }
     }
+
     .hero-text {
       .text-contents {
         h1 {
           font-size: 36px;
           line-height: 44px;
         }
+
         p.pretitle {
           margin-bottom: 3px;
         }
       }
     }
   }
+
   section.team-advisors {
     .membercontainer {
       width: 100%;
       max-width: unset;
     }
   }
+
   section.tokenization {
     .column-large {
       height: 400px;
+
       .flip-coins {
         .flipper {
           height: 70px;
           width: 70px;
+
           img {
             height: 70px;
             width: 70px;
@@ -723,10 +773,12 @@
   section.tokenization {
     .column-large {
       height: 250px;
+
       .flip-coins {
         .flipper {
           height: 40px;
           width: 40px;
+
           img {
             height: 40px;
             width: 40px;

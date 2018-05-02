@@ -135,10 +135,12 @@ a {
       transition: all .2s ease-in-out;
       opacity: 1;
     }
+
     &:hover {
       padding-right: 30px;
+
       &:after {
-        right: 0px;
+        right: 0;
         opacity: 0;
       }
     }
