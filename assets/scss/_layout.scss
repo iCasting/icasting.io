@@ -146,11 +146,13 @@ a {
 
   &.red {
     background: $primary-color;
+    border: 1px solid $primary-color;
     color: white;
 
     &:hover {
+      background: transparent;
+      border: 1px solid white;
       color: white;
-      background: $primary-color;
     }
   }
 }

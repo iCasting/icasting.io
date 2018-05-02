@@ -299,10 +299,12 @@ a {
         opacity: 0; }
   .btn.red {
     background: #df1f36;
+    border: 1px solid #df1f36;
     color: white; }
     .btn.red:hover {
-      color: white;
-      background: #df1f36; }
+      background: transparent;
+      border: 1px solid white;
+      color: white; }
 
 p.mobile-message {
   display: none; }
@@ -435,10 +437,15 @@ p.mobile-message {
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all .2s ease-in-out; }
         .hero .home-video .play .button img {
           max-width: 40px;
           margin-top: 23px; }
+        .hero .home-video .play .button:hover {
+          transform: scale(1.1); }
+        .hero .home-video .play .button:active {
+          transform: scale(0.9); }
   .hero .square {
     background: #df1f36;
     height: 80%;
@@ -610,10 +617,15 @@ section.blockchain {
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all .2s ease-in-out; }
         section.blockchain .blockchain-video .play .button img {
           max-width: 40px;
           margin-top: 23px; }
+        section.blockchain .blockchain-video .play .button:hover {
+          transform: scale(1.1); }
+        section.blockchain .blockchain-video .play .button:active {
+          transform: scale(0.9); }
   section.blockchain .blockchainsquare {
     background: #df1f36;
     height: 80%;
@@ -648,8 +660,8 @@ section.blockchain {
 
 .close-hero-video, .close-blockchain-video {
   position: absolute;
-  right: -9px;
-  top: -30px;
+  right: -7px;
+  top: -35px;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -804,12 +816,15 @@ section.team-advisors {
         display: block;
         z-index: 99;
         text-align: center;
-        box-shadow: 1px 14px 27px 0px rgba(8, 23, 47, 0.31); }
+        box-shadow: 1px 14px 27px 0 rgba(8, 23, 47, 0.31);
+        transition: all .2s ease-in-out; }
         section.team-advisors .membercontainer .memberimage a img {
           height: 20px;
           width: 21px;
           margin-top: 50%;
           transform: translate(0, -50%); }
+        section.team-advisors .membercontainer .memberimage a:hover {
+          transform: scale(1.1); }
       section.team-advisors .membercontainer .memberimage img.photo {
         position: absolute;
         bottom: 0;
@@ -848,12 +863,13 @@ section.team-advisors {
         font-weight: 300; }
   section.team-advisors .advisors {
     margin: 100px auto 50px; }
+  section.team-advisors .table {
+    margin-top: 30px; }
   section.team-advisors .advisor {
     display: table-cell;
     width: 25%;
     max-width: 420px;
     text-align: left;
-    margin-bottom: 25px;
     position: relative; }
     section.team-advisors .advisor span {
       vertical-align: middle;
@@ -1089,11 +1105,11 @@ section.team-advisors {
       background-position: bottom;
       background-size: 100% 100%;
       z-index: 0;
-      align-items: center; }
+      align-items: center;
+      left: 50%;
+      transform: translateX(-50%); }
       .roadmap .bottom-background svg path:nth-child(2) {
         mix-blend-mode: darken; }
-      .roadmap .bottom-background svg path#swirlTo1, .roadmap .bottom-background svg path#swirlTo2, .roadmap .bottom-background svg path#swirlTo3, .roadmap .bottom-background svg path#swirlTo4, .roadmap .bottom-background svg path#swirlBack1, .roadmap .bottom-background svg path#swirlBack2, .roadmap .bottom-background svg path#swirlBack3, .roadmap .bottom-background svg path#swirlBack4 {
-        display: none; }
 
 .network {
   position: relative;
@@ -1126,10 +1142,7 @@ section.team-advisors {
         position: absolute;
         text-align: center;
         width: 14.35%;
-        cursor: pointer;
         transition: all .2s ease-in-out; }
-        .network .twirly .overlay .overlay-item:hover {
-          transform: scale(1.05); }
         .network .twirly .overlay .overlay-item img {
           margin-bottom: -60px; }
         .network .twirly .overlay .overlay-item p {
@@ -1535,6 +1548,7 @@ section.team-advisors {
       display: block;
       position: absolute;
       width: auto;
+      max-width: initial;
       height: 750px;
       margin-top: -50px;
       right: 0; }
@@ -1647,11 +1661,13 @@ section.team-advisors {
       width: 100vw;
       height: 60vw; }
 
-  .roadmap .carroussel-container .carroussel-inner .slide .half-page {
-    margin: 20px 0 !important;
-    width: calc(100% - 30px); }
-    .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
-      display: none; }
+  .roadmap .carroussel-container {
+    padding: 40px 0 113px; }
+    .roadmap .carroussel-container .carroussel-inner .slide .half-page {
+      margin: 20px 0 !important;
+      width: calc(100% - 30px); }
+      .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
+        display: none; }
 
   section.team-advisors .advisor {
     width: 100%;
@@ -1668,9 +1684,9 @@ section.team-advisors {
       .data .half-page.right {
         position: relative;
         height: auto;
-        width: calc(100% + 30px);
+        width: calc(100% + 60px);
         margin-bottom: 0 !important;
-        margin-left: -15px !important; }
+        margin-left: -30px !important; }
         .data .half-page.right ul {
           margin: 30px auto 60px;
           position: relative;
@@ -1680,7 +1696,7 @@ section.team-advisors {
           .data .half-page.right ul li {
             margin: 10px auto 50px;
             max-width: 500px;
-            width: calc(100% - 30px);
+            width: calc(100% - 60px);
             box-sizing: border-box; }
             .data .half-page.right ul li p {
               text-align: left;
@@ -1755,6 +1771,44 @@ section.team-advisors {
         width: 40px; }
 
   .network .twirly .overlay .overlay-item img {
-    margin-bottom: -30px; } }
+    margin-bottom: -30px; }
+
+  .pagecontents {
+    margin-top: 110px; }
+
+  section.about {
+    margin-top: 0; }
+
+  section.blockchain {
+    height: 1030px;
+    margin-bottom: 0; }
+    section.blockchain .blockchain-video {
+      margin-bottom: 0; }
+
+  section.hero {
+    height: auto; }
+    section.hero .hero-text .text-contents p.pretitle {
+      margin: 0;
+      line-height: 1; }
+    section.hero .hero-text .text-contents h1 {
+      font-size: 26px;
+      line-height: 30px; }
+    section.hero .hero-text .text-contents p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: -15px; }
+    section.hero .counter-container h2 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 20px; }
+    section.hero .counter-container #clockdiv .clock-entity {
+      width: calc(23%); }
+      section.hero .counter-container #clockdiv .clock-entity .counter {
+        width: 21px; }
+
+  .roadmap .carroussel-container .carroussel-inner .slide ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0; } }
 
 /*# sourceMappingURL=style.css.map */

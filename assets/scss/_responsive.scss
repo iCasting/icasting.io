@@ -367,6 +367,7 @@
           display: block;
           position: absolute;
           width: auto;
+          max-width: initial;
           height: 750px;
           margin-top: -50px;
           right: 0;
@@ -540,13 +541,17 @@
       }
     }
   }
-  .roadmap .carroussel-container .carroussel-inner .slide {
-    .half-page {
-      margin: 20px 0 !important;
-      width: calc(100% - 30px);
+  .roadmap .carroussel-container {
+    padding: 40px 0 113px;
 
-      &.right {
-        display: none;
+    .carroussel-inner .slide {
+      .half-page {
+        margin: 20px 0 !important;
+        width: calc(100% - 30px);
+
+        &.right {
+          display: none;
+        }
       }
     }
   }
@@ -574,9 +579,9 @@
       &.right {
         position: relative;
         height: auto;
-        width: calc(100% + 30px);
+        width: calc(100% + 60px);
         margin-bottom: 0 !important;
-        margin-left: -15px !important;
+        margin-left: -30px !important;
 
         ul {
           margin: 30px auto 60px;
@@ -588,7 +593,7 @@
           li {
             margin: 10px auto 50px;
             max-width: 500px;
-            width: calc(100% - 30px);
+            width: calc(100% - 60px);
             box-sizing: border-box;
 
             p {
@@ -731,5 +736,66 @@
     img {
       margin-bottom: -30px;
     }
+  }
+
+  .pagecontents {
+    margin-top: 110px;
+  }
+
+  section.about {
+    margin-top: 0;
+  }
+
+  section.blockchain {
+    height: 1030px;
+    margin-bottom: 0;
+
+    .blockchain-video {
+      margin-bottom: 0;
+    }
+  }
+
+  section.hero {
+    height: auto;
+
+    .hero-text .text-contents {
+      p.pretitle {
+        margin: 0;
+        line-height: 1;
+      }
+
+      h1 {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: -15px;
+      }
+    }
+
+    .counter-container {
+      h2 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+
+      #clockdiv .clock-entity {
+        width: calc(23%);
+
+        .counter {
+          width: 21px;
+        }
+      }
+    }
+  }
+
+  .roadmap .carroussel-container .carroussel-inner .slide ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
   }
 }

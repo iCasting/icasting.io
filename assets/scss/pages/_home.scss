@@ -175,9 +175,19 @@
         text-align: center;
         cursor: pointer;
 
+        transition: all .2s ease-in-out;
+
         img {
           max-width: 40px;
           margin-top: 23px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(.9);
         }
       }
     }
@@ -414,9 +424,19 @@ section.blockchain {
         text-align: center;
         cursor: pointer;
 
+        transition: all .2s ease-in-out;
+
         img {
           max-width: 40px;
           margin-top: 23px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(.9);
         }
       }
     }
@@ -466,8 +486,8 @@ section.blockchain {
 
 .close-hero-video, .close-blockchain-video {
   position: absolute;
-  right: -9px;
-  top: -30px;
+  right: -7px;
+  top: -35px;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -697,13 +717,19 @@ section.team-advisors {
         display: block;
         z-index: 99;
         text-align: center;
-        box-shadow: 1px 14px 27px 0px rgba(8, 23, 47, 0.31);
+        box-shadow: 1px 14px 27px 0 rgba(8, 23, 47, 0.31);
+
+        transition: all .2s ease-in-out;
 
         img {
           height: 20px;
           width: 21px;
           margin-top: 50%;
           transform: translate(0,-50%);
+        }
+
+        &:hover {
+          transform: scale(1.1);
         }
       }
 
@@ -758,12 +784,15 @@ section.team-advisors {
     margin: 100px auto 50px;
   }
 
+  .table {
+    margin-top: 30px;
+  }
+
   .advisor {
     display: table-cell;
     width: 25%;
     max-width: 420px;
     text-align: left;
-    margin-bottom: 25px;
     position: relative;
 
     span {
