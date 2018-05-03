@@ -1,3 +1,7 @@
+// Init Rellax
+var rellax = new Rellax('.rellax');
+
+// Calculate the time remaining till endtime/
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -13,6 +17,7 @@ function getTimeRemaining(endtime) {
   };
 }
 
+// Initialize clock to count down with the correct date set
 function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
   var daySpan = clock.querySelector('.day');
@@ -45,9 +50,11 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
+// Set the deadline date
 var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
 initializeClock('clockdiv', deadline);
 
+// True/false if element is in viewport
 $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top;
   var elementBottom = elementTop + $(this).outerHeight();
@@ -58,6 +65,7 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+// Add active to some of the sections when they reach the viewport to start an animation
 function checkViewPort() {
   $('.number-container').each(function () {
     if ($(this).isInViewport()) {
@@ -89,6 +97,7 @@ function checkViewPort() {
   }
 };
 
+// Added scrolling function to social icons over 'redblock'
 $(window).scroll(function(){
   var element = $('.social.fixed');
   var fixed_position = element.offset().top;
@@ -110,9 +119,11 @@ $(window).scroll(function(){
     }
   };
 
-  checkpos("redblock");
+  checkpos('redblock');
 });
 
+
+// Add animation to the counter function in the header
 function animateCounters(el) {
   $(el).prop('Counter', 0).animate({
     Counter: $(el).text()
@@ -126,39 +137,44 @@ function animateCounters(el) {
 }
 
 $(document).ready(function() {
+  // Check viewPort height/width on init and resize/scroll
   checkViewPort();
-  $(window).on("scroll resize",function(e){
+  $(window).on('scroll resize',function(){
     checkViewPort();
   });
 
+  // Calculate the carrousels on init and change of window size
   setCarroussel();
   setTeamCarousel();
-
   $(window).resize(function() {
     setCarroussel();
     setTeamCarousel();
   });
 
+  // Left and right click for the Roadmap carorusel
   $('.buttons .right').click(function(){
     slideCarroussel('right');
   });
-
   $('.buttons .left').click(function(){
     slideCarroussel('left');
   });
 
+  // Set the Roadmap caroussel on item click
   $('.carroussel-navigation ul li img, .carroussel-navigation ul li .dot').click(function(){
     slideCarroussel($(this).parent().data('slide'));
   });
 
-  $('.flipper').hover(
-    function(){ $(this).toggleClass('flip') }
-  );
-
+  // Set interval for the flipCoins function
   window.setInterval(function(){
     flipCoins();
   }, Math.floor((Math.random() * 5000) + 2000));
 
+  // Flip the coins exta on hover
+  $('.flipper').hover(
+    function(){ $(this).toggleClass('flip') }
+  );
+
+  // Added animated scrolling to menu items
   $('.menu a').on('click', function(event) {
     if (this.hash !== '') {
       event.preventDefault();
@@ -174,6 +190,8 @@ $(document).ready(function() {
   });
 });
 
+// Play and setSrc for hero video
+var rellax = new Rellax('.rellax');
 $('#playbtn').click(function() {
   var homeVideo = $('.home-video');
   var heroVideo = $('.hero-video');
@@ -186,6 +204,7 @@ $('#playbtn').click(function() {
   heroVideo.attr("src",videosrc);
 });
 
+// Close hero video in the header
 $('.close-hero-video').click(function() {
   var homeVideo = $('.home-video');
   var heroVideo = $('.hero-video');
@@ -196,6 +215,7 @@ $('.close-hero-video').click(function() {
   heroVideo.attr("src",'');
 });
 
+// Play and setSrc for blockChain video
 $('#playbtn-blockchain').click(function() {
   var blockchainVideo = $('.blockchain-video');
 
@@ -205,6 +225,7 @@ $('#playbtn-blockchain').click(function() {
   blockchainVideo.attr("src",videosrc);
 });
 
+// Close blockChain video
 $('.close-blockchain-video').click(function() {
   var blockchainVideo = $('.blockchain-video');
 
@@ -213,11 +234,13 @@ $('.close-blockchain-video').click(function() {
   blockchainVideo.attr("src",'');
 });
 
+// Responsive hamburger menu open/close
 $('.hamburger').click(function() {
   $(this).toggleClass('active');
   $('.mobile-nav').toggleClass('active');
 });
 
+// FlipCoins function for the tokenization
 function flipCoins() {
   var time = 0;
   $('.flipper').each(function() {
@@ -229,6 +252,7 @@ function flipCoins() {
   });
 }
 
+// Calculate the width and amount of the roadmap carrousel
 function setCarroussel() {
   var slideElement = $('.slide');
   var innerElement = $('.carroussel-inner');
@@ -254,6 +278,7 @@ function setCarroussel() {
   }
 }
 
+// Set the SVG for the Roadmap caroussel to the new coordinates
 var swirlCounter = 0;
 function animateSwirl() {
   if (swirlCounter === 0) {
@@ -329,6 +354,7 @@ function animateSwirl() {
   }
 }
 
+// Function to slide the caroussel
 function slideCarroussel(direction) {
   var slideElement = $('.slide');
   var innerElement = $('.carroussel-inner');
@@ -404,8 +430,7 @@ function slideCarroussel(direction) {
   }
 }
 
-var rellax = new Rellax('.rellax');
-
+// Calculate width and amount of the team caroussel
 function setTeamCarousel() {
   var slideElement = $('.membercontainer');
   var innerElement = $('.team-carousel-inner');
@@ -443,6 +468,7 @@ function setTeamCarousel() {
   });
 }
 
+// Functions for mobile swiping both the caroussels
 $(function() {
   $('.team-carousel-inner').swipe( {
     swipe:function(event, direction) {
@@ -481,6 +507,8 @@ $(function() {
   });
 });
 
+
+// Mailchimp mail subscribing callback
 $('form.mailSubscribe').on('submit', function() {
   var timeOut = Math.random() * 3;
 
