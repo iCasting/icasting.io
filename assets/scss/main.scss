@@ -1,19 +1,22 @@
-/* Main CSS file for iCasting.io theme */
-
 /*
-Theme Name: iCasting.io
 Author: IQ-Media B.V.
 */
 
+/* Main SCSS files */
 @import 'variables';
 @import 'header';
 @import 'footer';
 @import 'forms';
 @import 'layout';
 
-@import 'pages/home';
-@import 'pages/roadmap';
-@import 'pages/network';
-@import 'pages/data';
+/* Per section */
+@import 'sections/hero';
+@import 'sections/blockchain';
+@import 'sections/tokenization';
+@import 'sections/team';
+@import 'sections/data';
+@import 'sections/network';
+@import 'sections/roadmap';
 
+/* Responsive */
 @import 'responsive';

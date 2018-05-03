@@ -42,13 +42,35 @@
         position: absolute;
         text-align: center;
         width: 14.35%;
-        //cursor: pointer;
+        text-shadow:
+          /* first layer at 1px */
+          -1px -1px 0px #f6fcfe,
+          0px -1px 0px #f6fcfe,
+          1px -1px 0px #f6fcfe,
+          -1px  0px 0px #f6fcfe,
+          1px  0px 0px #f6fcfe,
+          -1px  1px 0px #f6fcfe,
+          0px  1px 0px #f6fcfe,
+          1px  1px 0px #f6fcfe,
+            /* second layer at 2px */
+          -2px -2px 0px #f6fcfe,
+          -1px -2px 0px #f6fcfe,
+          0px -2px 0px #f6fcfe,
+          1px -2px 0px #f6fcfe,
+          2px -2px 0px #f6fcfe,
+          2px -1px 0px #f6fcfe,
+          2px  0px 0px #f6fcfe,
+          2px  1px 0px #f6fcfe,
+          2px  2px 0px #f6fcfe,
+          1px  2px 0px #f6fcfe,
+          0px  2px 0px #f6fcfe,
+          -1px  2px 0px #f6fcfe,
+          -2px  2px 0px #f6fcfe,
+          -2px  1px 0px #f6fcfe,
+          -2px  0px 0px #f6fcfe,
+          -2px -1px 0px #f6fcfe;
 
         transition: all .2s ease-in-out;
-
-        &:hover {
-          //transform: scale(1.05);
-        }
 
         img {
           margin-bottom: -60px;
@@ -67,6 +89,7 @@
         img {
           max-width: 500px;
           width: 100%;
+          position: relative;
         }
 
         &.casting-platform { top: -16%; left: 6.5%; }

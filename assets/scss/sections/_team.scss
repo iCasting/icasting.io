@@ -1,0 +1,230 @@
+section.team-advisors {
+  padding: 10vh 0;
+
+  span.team-right, span.team-left {
+    background: white;
+    width: 30px;
+    height: 30px;
+    display: none;
+    border-radius: 50%;
+    border: 1px solid #00112a;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+
+    &:hover {
+      background: $text-color;
+
+      svg {
+        fill: white;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+    }
+  }
+
+  span.team-right {
+    right: -50px;
+  }
+
+  span.team-left {
+    left: -50px;
+  }
+
+  h2 {
+    font-weight: $font-weight-light;
+  }
+
+  p.advisor-subtitle {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+  }
+
+  .team-carousel-inner {
+    position: relative;
+    left: 0;
+    transition: all .5s ease-in-out;
+    white-space: nowrap;
+  }
+
+  .membercontainer {
+    display: inline-block;
+    width: 360px;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(2) {
+      .square {
+        transition-delay: .6s!important;
+      }
+    }
+    &:nth-of-type(3) {
+      .square {
+        transition-delay: .7s!important;
+      }
+    }
+    &:nth-of-type(4) {
+      .square {
+        transition-delay: .8s!important;
+      }
+    }
+
+    &.active {
+      .square {
+        transform: translateX(0)!important;
+      }
+    }
+
+    .memberimage {
+      width: 100%;
+      max-width: 280px;
+      position: relative;
+      height: 420px;
+
+      a {
+        background: $text-color;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        top: 13%;
+        left: 5%;
+        border-radius: 25px;
+        display: block;
+        z-index: 99;
+        text-align: center;
+        box-shadow: 1px 14px 27px 0 rgba(8, 23, 47, 0.31);
+
+        transition: all .2s ease-in-out;
+
+        img {
+          height: 20px;
+          width: 21px;
+          margin-top: 50%;
+          transform: translate(0,-50%);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      img.photo {
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        height: 420px;
+        right: 0;
+      }
+
+      .square {
+        background: $primary-color;
+        height: 90%;
+        width: 240px;
+        position: absolute;
+        z-index: 99;
+        mix-blend-mode: darken;
+        transition: transform .8s cubic-bezier(1,0,.16,1);
+        transition-delay: .5s;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+
+        .dots {
+          position: absolute;
+          height: 51%;
+          width: 100%;
+          background: url(assets/img/dotted_pattern.png);
+          display: block;
+          vertical-align: middle;
+          transform: translateY(50%);
+          opacity: 1;
+          mix-blend-mode: darken;
+          transition: transform .8s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        }
+      }
+    }
+
+    .memberdetails {
+      margin-top: 20px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      p.job-title {
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+
+  .advisors {
+    margin: 100px auto 50px;
+  }
+
+  .table {
+    margin-top: 30px;
+  }
+
+  .advisor {
+    display: table-cell;
+    width: 25%;
+    max-width: 420px;
+    text-align: left;
+    position: relative;
+
+    span {
+      vertical-align: middle;
+      display: table-cell;
+
+      &.img {
+        width: 110px;
+      }
+
+      img.advisor-img {
+        box-shadow: 14px 23px 73px 0px rgba(4, 30, 53, 0.17);
+        max-width: 86px;
+        border-radius: 60px;
+      }
+    }
+
+    p {
+      margin-bottom: -4px;
+      font-size: 14px;
+      opacity: .8;
+    }
+
+    a.linkedin {
+      height: 32px;
+      width: 32px;
+      border-radius: 16px;
+      background: $text-color;
+      position: absolute;
+      bottom: 3px;
+      left: 62px;
+      text-align: center;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        bottom: 6px;
+      }
+
+      img {
+        width: 14px;
+        margin-top: 30%;
+      }
+    }
+  }
+}

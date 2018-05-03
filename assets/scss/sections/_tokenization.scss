@@ -1,0 +1,103 @@
+section.tokenization {
+  background: #f8fcfe;
+  padding: 10vh 0;
+
+  .container {
+    h2 {
+      margin-bottom: 100px;
+    }
+  }
+
+  .table {
+    margin-bottom: 100px;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .column-small {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+  }
+
+  .column-large {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+
+    img.icasting-people {
+      max-width: 490px;
+      margin: 0 auto;
+      display: block;
+      width: 90%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    svg {
+      max-width: 400px;
+      margin: 0 auto;
+      display: block;
+      width: 75%;
+      overflow: visible;
+    }
+  }
+
+  .flip-coins {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+      max-width: 90px;
+    }
+  }
+
+  .flip-container {
+    perspective: 1000px;
+
+    .flipper.flip {
+      transform: rotateY(-180deg);
+    }
+
+    .flipper {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      height: 90px;
+      width: 90px;
+      display: inline-block;
+    }
+
+    .front, .back {
+      backface-visibility: hidden;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+  }
+}
