@@ -1,3 +1,5 @@
+install: skip
+script: skip
 deploy:
   - provider: s3
     skip_cleanup: true
