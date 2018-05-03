@@ -1508,6 +1508,16 @@ section.team-advisors {
     section.tokenization .column-large img.icasting-people {
       z-index: 99; } }
 @media screen and (max-width: 968px) {
+  .rellax {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important; }
+
+  .hero-bottom {
+    margin-top: 210px; }
+
   section.about {
     margin-top: 50px; }
     section.about .small .btn, section.about .numbers, section.about .table, section.about .center .btn {
@@ -1647,9 +1657,6 @@ section.team-advisors {
   section.blockchain {
     height: 1350px;
     margin-bottom: 40px; }
-
-  .hero-bottom {
-    margin-top: 210px; }
 
   .hero-bottom .container, .blockchain-bottom .container {
     width: 100vw !important;

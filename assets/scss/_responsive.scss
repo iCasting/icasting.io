@@ -302,6 +302,16 @@
 }
 
 @media screen and (max-width: 968px) {
+  .rellax {
+    -webkit-transform: none!important;
+    -moz-transform: none!important;
+    -ms-transform: none!important;
+    -o-transform: none!important;
+    transform: none!important;
+  }
+  .hero-bottom {
+    margin-top: 210px;
+  }
   section.about {
     margin-top: 50px;
 
@@ -516,10 +526,6 @@
   section.blockchain {
     height: 1350px;
     margin-bottom: 40px;
-  }
-
-  .hero-bottom {
-    margin-top: 210px;
   }
   .hero-bottom, .blockchain-bottom {
     .container {
