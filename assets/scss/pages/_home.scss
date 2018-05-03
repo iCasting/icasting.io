@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 150vh;
+
   .container.first {
     padding: 15vh 0;
     height: auto;
@@ -9,24 +10,28 @@
       position: relative;
       z-index: 81;
     }
+
     .left {
       position: relative;
       z-index: 81;
     }
   }
+
   .hero-text {
     .text-contents {
       p.pretitle {
         color: $primary-color;
         font-size: 16px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
+
       h1 {
         font-size: 56px;
         line-height: 62px;
         font-weight: $font-weight-light;
         margin-bottom: 20px;
       }
+
       p {
         font-weight: $font-weight-light;
         max-width: 500px;
@@ -37,12 +42,15 @@
 
   .signup {
     margin-top: 100px;
+
     p {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
+
     .gform_wrapper {
       margin-top: -20px;
     }
+
     form {
       height: 46px;
       border-radius: 3px;
@@ -71,6 +79,7 @@
     #clockdiv {
       display: block;
       margin-bottom: 40px;
+
       .clock-entity {
         display: inline-block;
         width: calc(20%);
@@ -111,27 +120,29 @@
       }
     }
   }
+
   .hero-bottom {
     .container {
       padding-top: 15vh;
 
       img.hero-img {
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         right: calc(-760px + 45vw);
         max-width: 760px;
       }
     }
   }
+
   .home-video {
-    height: 500px;
+    height: 422px; // full screen video size
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all .5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -175,13 +186,24 @@
         text-align: center;
         cursor: pointer;
 
+        transition: all .2s ease-in-out;
+
         img {
           max-width: 40px;
           margin-top: 23px;
         }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(.9);
+        }
       }
     }
   }
+
   .square {
     background: $primary-color;
     height: 80%;
@@ -228,9 +250,11 @@
 section.about {
   position: relative;
   z-index: 99;
+
   h2 {
     font-weight: $font-weight-light;
   }
+
   p.about-content {
     font-size: 16px;
     line-height: 25px;
@@ -242,9 +266,11 @@ section.about {
   .numbers {
     margin-top: 10vh;
     margin-bottom: 50px;
+
     img {
       max-width: 192px;
     }
+
     h2 {
       font-size: 28px;
       line-height: 32px;
@@ -288,14 +314,17 @@ section.blockchain {
   position: relative;
   height: 130vh;
   margin-bottom: 150px;
+
   .table {
     padding: 25vh 0 15vh;
     height: auto;
   }
+
   .right {
     position: relative;
     z-index: 99;
   }
+
   h2 {
     font-weight: $font-weight-light;
     width: 100%;
@@ -341,6 +370,7 @@ section.blockchain {
       }
     }
   }
+
   .btn {
     margin-top: 30px;
   }
@@ -352,6 +382,7 @@ section.blockchain {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+
     img.hero-img {
       position: absolute;
       bottom: 100px;
@@ -359,19 +390,21 @@ section.blockchain {
       left: calc(-1000px + 45vw);
 
     }
+
     .container {
       padding-top: 15vh;
     }
   }
+
   .blockchain-video {
-    height: 500px;
+    height: 422px; // full screen video size
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all .5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -414,9 +447,19 @@ section.blockchain {
         text-align: center;
         cursor: pointer;
 
+        transition: all .2s ease-in-out;
+
         img {
           max-width: 40px;
           margin-top: 23px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(.9);
         }
       }
     }
@@ -466,8 +509,8 @@ section.blockchain {
 
 .close-hero-video, .close-blockchain-video {
   position: absolute;
-  right: -9px;
-  top: -30px;
+  right: -7px;
+  top: -35px;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -516,6 +559,7 @@ section.tokenization {
     width: 25%;
     vertical-align: top;
   }
+
   .column-large {
     display: table-cell;
     width: 50%;
@@ -529,7 +573,6 @@ section.tokenization {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -625,17 +668,19 @@ section.team-advisors {
       width: 10px;
     }
   }
+
   span.team-right {
     right: -50px;
   }
+
   span.team-left {
     left: -50px;
   }
-  .teammembers {
-  }
+
   h2 {
     font-weight: $font-weight-light;
   }
+
   p.advisor-subtitle {
     width: 100%;
     max-width: 700px;
@@ -697,13 +742,19 @@ section.team-advisors {
         display: block;
         z-index: 99;
         text-align: center;
-        box-shadow: 1px 14px 27px 0px rgba(8, 23, 47, 0.31);
+        box-shadow: 1px 14px 27px 0 rgba(8, 23, 47, 0.31);
+
+        transition: all .2s ease-in-out;
 
         img {
           height: 20px;
           width: 21px;
           margin-top: 50%;
           transform: translate(0,-50%);
+        }
+
+        &:hover {
+          transform: scale(1.1);
         }
       }
 
@@ -742,12 +793,15 @@ section.team-advisors {
         }
       }
     }
+
     .memberdetails {
       margin-top: 20px;
+
       h3 {
         font-size: 20px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
+
       p.job-title {
         font-weight: $font-weight-light;
       }
@@ -758,12 +812,15 @@ section.team-advisors {
     margin: 100px auto 50px;
   }
 
+  .table {
+    margin-top: 30px;
+  }
+
   .advisor {
     display: table-cell;
     width: 25%;
     max-width: 420px;
     text-align: left;
-    margin-bottom: 25px;
     position: relative;
 
     span {

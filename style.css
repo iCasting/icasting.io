@@ -27,7 +27,7 @@ header {
     header .menu .desktop-nav ul {
       list-style: none;
       display: block;
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
       header .menu .desktop-nav ul li {
         display: inline-block;
         padding: 5px 20px; }
@@ -125,8 +125,41 @@ footer {
     text-align: center;
     font-size: 14px; }
 
+.social.fixed {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 100; }
+  .social.fixed a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #00112a;
+    position: relative;
+    display: block;
+    margin-top: 8px;
+    transition: all .2s ease-in-out; }
+    .social.fixed a img {
+      max-height: 13px;
+      max-width: 13px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .social.fixed a img.dark {
+        display: none; }
+    .social.fixed a:hover {
+      background: #df1f36;
+      transform: scale(1.2); }
+  .social.fixed.active a {
+    background: white; }
+    .social.fixed.active a img {
+      display: none; }
+      .social.fixed.active a img.dark {
+        display: block; }
+
 input[type="text"], input[type="email"], textarea {
-  box-shadow: 0px 8px 21px 0px rgba(179, 195, 219, 0.55);
+  box-shadow: 0 8px 21px 0 rgba(179, 195, 219, 0.55);
   padding: 21px 30px !important;
   border: none;
   border-radius: 31px;
@@ -142,7 +175,8 @@ input[type="submit"] {
   font-size: 14px !important;
   letter-spacing: 2px;
   transition: all .2s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif; }
   input[type="submit"]:hover {
     background: #df1f36 !important;
     color: white; }
@@ -295,14 +329,16 @@ a {
     .btn.arrow:hover {
       padding-right: 30px; }
       .btn.arrow:hover:after {
-        right: 0px;
+        right: 0;
         opacity: 0; }
   .btn.red {
     background: #df1f36;
+    border: 1px solid #df1f36;
     color: white; }
     .btn.red:hover {
-      color: white;
-      background: #df1f36; }
+      background: transparent;
+      border: 1px solid white;
+      color: white; }
 
 p.mobile-message {
   display: none; }
@@ -325,7 +361,7 @@ p.mobile-message {
   .hero .hero-text .text-contents p.pretitle {
     color: #df1f36;
     font-size: 16px;
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .hero .hero-text .text-contents h1 {
     font-size: 56px;
     line-height: 62px;
@@ -338,7 +374,7 @@ p.mobile-message {
   .hero .signup {
     margin-top: 100px; }
     .hero .signup p {
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
     .hero .signup .gform_wrapper {
       margin-top: -20px; }
     .hero .signup form {
@@ -392,18 +428,18 @@ p.mobile-message {
     padding-top: 15vh; }
     .hero .hero-bottom .container img.hero-img {
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       right: calc(-760px + 45vw);
       max-width: 760px; }
   .hero .home-video {
-    height: 500px;
+    height: 422px;
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -435,10 +471,15 @@ p.mobile-message {
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all .2s ease-in-out; }
         .hero .home-video .play .button img {
           max-width: 40px;
           margin-top: 23px; }
+        .hero .home-video .play .button:hover {
+          transform: scale(1.1); }
+        .hero .home-video .play .button:active {
+          transform: scale(0.9); }
   .hero .square {
     background: #df1f36;
     height: 80%;
@@ -572,14 +613,14 @@ section.blockchain {
     section.blockchain .blockchain-bottom .container {
       padding-top: 15vh; }
   section.blockchain .blockchain-video {
-    height: 500px;
+    height: 422px;
     max-width: 750px;
     margin: 0 auto;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;
-    box-shadow: 0px 50px 76px 0px rgba(0, 17, 42, 0.34);
+    box-shadow: 0 50px 76px 0 rgba(0, 17, 42, 0.34);
     text-align: center;
     display: table;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -610,10 +651,15 @@ section.blockchain {
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all .2s ease-in-out; }
         section.blockchain .blockchain-video .play .button img {
           max-width: 40px;
           margin-top: 23px; }
+        section.blockchain .blockchain-video .play .button:hover {
+          transform: scale(1.1); }
+        section.blockchain .blockchain-video .play .button:active {
+          transform: scale(0.9); }
   section.blockchain .blockchainsquare {
     background: #df1f36;
     height: 80%;
@@ -648,8 +694,8 @@ section.blockchain {
 
 .close-hero-video, .close-blockchain-video {
   position: absolute;
-  right: -9px;
-  top: -30px;
+  right: -7px;
+  top: -35px;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -693,7 +739,6 @@ section.tokenization {
       position: absolute;
       left: 0;
       right: 0;
-      top: 0;
       top: 50%;
       transform: translateY(-50%); }
     section.tokenization .column-large svg {
@@ -804,12 +849,15 @@ section.team-advisors {
         display: block;
         z-index: 99;
         text-align: center;
-        box-shadow: 1px 14px 27px 0px rgba(8, 23, 47, 0.31); }
+        box-shadow: 1px 14px 27px 0 rgba(8, 23, 47, 0.31);
+        transition: all .2s ease-in-out; }
         section.team-advisors .membercontainer .memberimage a img {
           height: 20px;
           width: 21px;
           margin-top: 50%;
           transform: translate(0, -50%); }
+        section.team-advisors .membercontainer .memberimage a:hover {
+          transform: scale(1.1); }
       section.team-advisors .membercontainer .memberimage img.photo {
         position: absolute;
         bottom: 0;
@@ -843,17 +891,18 @@ section.team-advisors {
       margin-top: 20px; }
       section.team-advisors .membercontainer .memberdetails h3 {
         font-size: 20px;
-        margin-bottom: 0px; }
+        margin-bottom: 0; }
       section.team-advisors .membercontainer .memberdetails p.job-title {
         font-weight: 300; }
   section.team-advisors .advisors {
     margin: 100px auto 50px; }
+  section.team-advisors .table {
+    margin-top: 30px; }
   section.team-advisors .advisor {
     display: table-cell;
     width: 25%;
     max-width: 420px;
     text-align: left;
-    margin-bottom: 25px;
     position: relative; }
     section.team-advisors .advisor span {
       vertical-align: middle;
@@ -1063,8 +1112,7 @@ section.team-advisors {
   .roadmap .bottom-background {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    overflow: hidden; }
+    width: 100%; }
     .roadmap .bottom-background ul {
       margin: 0;
       padding: 0; }
@@ -1085,33 +1133,17 @@ section.team-advisors {
       min-width: 1800px;
       width: 100%;
       height: auto;
-      overflow: hidden;
       position: absolute;
       bottom: 7px;
       background-position: bottom;
       background-size: 100% 100%;
       z-index: 0;
-      align-items: center; }
+      align-items: center;
+      left: 50%;
+      transform: translateX(-50%); }
       .roadmap .bottom-background svg path:nth-child(2) {
         mix-blend-mode: darken; }
-      .roadmap .bottom-background svg path#swirlTo1, .roadmap .bottom-background svg path#swirlTo2, .roadmap .bottom-background svg path#swirlTo3, .roadmap .bottom-background svg path#swirlTo4, .roadmap .bottom-background svg path#swirlBack1, .roadmap .bottom-background svg path#swirlBack2, .roadmap .bottom-background svg path#swirlBack3, .roadmap .bottom-background svg path#swirlBack4 {
-        display: none; }
-      .roadmap .bottom-background svg.active path.swirlTo2 {
-        display: none; }
-      .roadmap .bottom-background svg.active path:nth-child(1) {
-        animation-delay: .1s; }
-      .roadmap .bottom-background svg.active path:nth-child(2) {
-        animation-delay: .3s; }
-      .roadmap .bottom-background svg.active path:nth-child(3) {
-        animation-delay: .1s; }
-      .roadmap .bottom-background svg.active path:nth-child(4) {
-        animation-delay: .05s; }
 
-@-webkit-keyframes swirl {
-  50% {
-    transform: scale(1.1); }
-  100% {
-    transform: scale(1); } }
 .network {
   position: relative;
   width: 100%;
@@ -1143,10 +1175,7 @@ section.team-advisors {
         position: absolute;
         text-align: center;
         width: 14.35%;
-        cursor: pointer;
         transition: all .2s ease-in-out; }
-        .network .twirly .overlay .overlay-item:hover {
-          transform: scale(1.05); }
         .network .twirly .overlay .overlay-item img {
           margin-bottom: -60px; }
         .network .twirly .overlay .overlay-item p {
@@ -1338,6 +1367,9 @@ section.team-advisors {
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -50px; } }
 @media screen and (max-width: 1024px) {
+  .social.fixed {
+    display: none; }
+
   .data .half-page.right ul li {
     width: 300px; }
 
@@ -1371,7 +1403,7 @@ section.team-advisors {
 
   header {
     background: white;
-    box-shadow: 0px 8px 22px 0px rgba(3, 29, 71, 0.16); }
+    box-shadow: 0 8px 22px 0 rgba(3, 29, 71, 0.16); }
     header .menu .desktop-nav, header .menu .header-buttons {
       display: none; }
     header .menu a.logo {
@@ -1527,7 +1559,7 @@ section.team-advisors {
     display: none; }
 
   .blockchainsquare {
-    left: 0px;
+    left: 0;
     width: 100% !important; }
     .blockchainsquare .dots {
       display: none !important; }
@@ -1562,6 +1594,7 @@ section.team-advisors {
       display: block;
       position: absolute;
       width: auto;
+      max-width: initial;
       height: 750px;
       margin-top: -50px;
       right: 0; }
@@ -1671,11 +1704,13 @@ section.team-advisors {
       width: 100vw;
       height: 60vw; }
 
-  .roadmap .carroussel-container .carroussel-inner .slide .half-page {
-    margin: 20px 0 !important;
-    width: calc(100% - 30px); }
-    .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
-      display: none; }
+  .roadmap .carroussel-container {
+    padding: 40px 0 113px; }
+    .roadmap .carroussel-container .carroussel-inner .slide .half-page {
+      margin: 20px 0 !important;
+      width: calc(100% - 30px); }
+      .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
+        display: none; }
 
   section.team-advisors .advisor {
     width: 100%;
@@ -1692,9 +1727,9 @@ section.team-advisors {
       .data .half-page.right {
         position: relative;
         height: auto;
-        width: calc(100% + 30px);
+        width: calc(100% + 60px);
         margin-bottom: 0 !important;
-        margin-left: -15px !important; }
+        margin-left: -30px !important; }
         .data .half-page.right ul {
           margin: 30px auto 60px;
           position: relative;
@@ -1704,7 +1739,7 @@ section.team-advisors {
           .data .half-page.right ul li {
             margin: 10px auto 50px;
             max-width: 500px;
-            width: calc(100% - 30px);
+            width: calc(100% - 60px);
             box-sizing: border-box; }
             .data .half-page.right ul li p {
               text-align: left;
@@ -1779,6 +1814,44 @@ section.team-advisors {
         width: 40px; }
 
   .network .twirly .overlay .overlay-item img {
-    margin-bottom: -30px; } }
+    margin-bottom: -30px; }
+
+  .pagecontents {
+    margin-top: 110px; }
+
+  section.about {
+    margin-top: 0; }
+
+  section.blockchain {
+    height: 1030px;
+    margin-bottom: 0; }
+    section.blockchain .blockchain-video {
+      margin-bottom: 0; }
+
+  section.hero {
+    height: auto; }
+    section.hero .hero-text .text-contents p.pretitle {
+      margin: 0;
+      line-height: 1; }
+    section.hero .hero-text .text-contents h1 {
+      font-size: 26px;
+      line-height: 30px; }
+    section.hero .hero-text .text-contents p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: -15px; }
+    section.hero .counter-container h2 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 20px; }
+    section.hero .counter-container #clockdiv .clock-entity {
+      width: calc(23%); }
+      section.hero .counter-container #clockdiv .clock-entity .counter {
+        width: 21px; }
+
+  .roadmap .carroussel-container .carroussel-inner .slide ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0; } }
 
 /*# sourceMappingURL=style.css.map */

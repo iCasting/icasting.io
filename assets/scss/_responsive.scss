@@ -24,6 +24,7 @@
       width: calc(100% / 3);
       max-width: unset;
     }
+
     .advisor {
       width: 50%;
       max-width: unset;
@@ -39,6 +40,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .social.fixed {
+    display: none;
+  }
+
   .data {
     .half-page {
       &.right {
@@ -78,9 +83,11 @@
         }
       }
     }
+
     .container {
       .square {
         height: 45vh!important;
+
         img {
           mix-blend-mode: darken;
           vertical-align: bottom;
@@ -92,6 +99,7 @@
         }
       }
     }
+
     .counter-container {
       #clockdiv {
         .clock-entity {
@@ -104,6 +112,7 @@
         }
       }
     }
+
     .hero-bottom {
       .container {
         img.hero-img {
@@ -250,7 +259,7 @@
     }
 
     background: white;
-    box-shadow: 0px 8px 22px 0px rgba(3, 29, 71, 0.16);
+    box-shadow: 0 8px 22px 0 rgba(3, 29, 71, 0.16);
   }
   section.tokenization {
     .container.table {
@@ -291,12 +300,10 @@
         right: 0;
         transform: translateY(-50%);
       }
+
       img.icasting-people {
         z-index: 99;
       }
-    }
-    .flip-coins {
-
     }
   }
 }
@@ -319,39 +326,47 @@
       display: none;
     }
   }
+
   .hero-img {
     display: none;
   }
+
   .blockchainsquare {
-    left: 0px;
+    left: 0;
     width: 100%!important;
 
     .dots {
       display: none!important;
     }
   }
+
   .blockchain {
     .container {
       &:first-of-type {
         width: 100%!important;
       }
+
       &.table {
         .btn {
           display: none;
         }
       }
+
       .selling-points {
         max-width: unset;
+
         span.img {
           div {
             background: white;
           }
+
           svg {
             fill: transparent;
             stroke-width: 3px;
             stroke: $primary-color;
           }
         }
+
         span {
           &:nth-of-type(2) {
             font-size: 20px;
@@ -359,15 +374,18 @@
           }
         }
       }
+
       .left, .right {
         display: block;
         width: 100%;
         color: white;
       }
+
       .right {
         width: calc(100% - 60px);
         margin: 0 auto;
       }
+
       .blockchainsquare {
         height: 700px;
 
@@ -527,6 +545,11 @@
     height: 1350px;
     margin-bottom: 40px;
   }
+
+  .hero-bottom {
+    margin-top: 210px;
+  }
+
   .hero-bottom, .blockchain-bottom {
     .container {
       width: 100vw!important;
@@ -546,13 +569,18 @@
       }
     }
   }
-  .roadmap .carroussel-container .carroussel-inner .slide {
-    .half-page {
-      margin: 20px 0 !important;
-      width: calc(100% - 30px);
 
-      &.right {
-        display: none;
+  .roadmap .carroussel-container {
+    padding: 40px 0 113px;
+
+    .carroussel-inner .slide {
+      .half-page {
+        margin: 20px 0 !important;
+        width: calc(100% - 30px);
+
+        &.right {
+          display: none;
+        }
       }
     }
   }
@@ -580,9 +608,9 @@
       &.right {
         position: relative;
         height: auto;
-        width: calc(100% + 30px);
+        width: calc(100% + 60px);
         margin-bottom: 0 !important;
-        margin-left: -15px !important;
+        margin-left: -30px !important;
 
         ul {
           margin: 30px auto 60px;
@@ -594,7 +622,7 @@
           li {
             margin: 10px auto 50px;
             max-width: 500px;
-            width: calc(100% - 30px);
+            width: calc(100% - 60px);
             box-sizing: border-box;
 
             p {
@@ -720,10 +748,12 @@
   section.tokenization {
     .column-large {
       height: 250px;
+
       .flip-coins {
         .flipper {
           height: 40px;
           width: 40px;
+
           img {
             height: 40px;
             width: 40px;
@@ -737,5 +767,66 @@
     img {
       margin-bottom: -30px;
     }
+  }
+
+  .pagecontents {
+    margin-top: 110px;
+  }
+
+  section.about {
+    margin-top: 0;
+  }
+
+  section.blockchain {
+    height: 1030px;
+    margin-bottom: 0;
+
+    .blockchain-video {
+      margin-bottom: 0;
+    }
+  }
+
+  section.hero {
+    height: auto;
+
+    .hero-text .text-contents {
+      p.pretitle {
+        margin: 0;
+        line-height: 1;
+      }
+
+      h1 {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: -15px;
+      }
+    }
+
+    .counter-container {
+      h2 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+
+      #clockdiv .clock-entity {
+        width: calc(23%);
+
+        .counter {
+          width: 21px;
+        }
+      }
+    }
+  }
+
+  .roadmap .carroussel-container .carroussel-inner .slide ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
   }
 }

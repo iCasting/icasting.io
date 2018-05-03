@@ -11,6 +11,7 @@ header {
       vertical-align: middle;
       margin-right: 60px;
       position: relative;
+
       img {
         max-width: 135px;
         display: block;
@@ -18,6 +19,7 @@ header {
         outline: 0;
       }
     }
+
     .desktop-nav {
       display: inline-block;
       vertical-align: middle;
@@ -26,7 +28,7 @@ header {
       ul {
         list-style: none;
         display: block;
-        margin-bottom: 0px;
+        margin-bottom: 0;
 
         li {
           display: inline-block;
@@ -35,6 +37,7 @@ header {
           a {
             color: black;
             transition: color .2s ease-in-out;
+
             &:hover {
               color: $primary-color;
             }
@@ -42,6 +45,7 @@ header {
         }
       }
     }
+
     .header-buttons {
       line-height: 75px;
       display: inline-block;
