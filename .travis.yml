@@ -1,0 +1,19 @@
+deploy:
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: "$awskey"
+    secret_access_key: "$awssecret"
+    bucket: "dev.icasting.io"
+    acl: public_read
+    region: eu-west-1
+    on:
+      branch: dev
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: "$awskey"
+    secret_access_key: "$awssecret"
+    bucket: "icasting.io"
+    acl: public_read
+    region: eu-west-1
+    on:
+      tags: true
