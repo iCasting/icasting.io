@@ -425,7 +425,7 @@ p.mobile-message {
           display: inline-block;
           border-radius: 5px; }
   .hero .hero-bottom .container {
-    padding-top: 15vh; }
+    padding-top: 25vh; }
     .hero .hero-bottom .container img.hero-img {
       position: absolute;
       bottom: 0;
@@ -506,7 +506,6 @@ p.mobile-message {
       background: url("assets/img/dotted_pattern.png");
       display: block;
       vertical-align: middle;
-      transform: translateY(50%);
       opacity: 1;
       mix-blend-mode: darken;
       transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);

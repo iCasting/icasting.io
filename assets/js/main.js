@@ -95,6 +95,11 @@ function checkViewPort() {
   if (membercontainer.isInViewport()) {
     membercontainer.addClass('active');
   }
+
+  var roadmap = $('.roadmap');
+  if (roadmap.isInViewport()) {
+    animateSwirl();
+  }
 };
 
 // Added scrolling function to social icons over 'redblock'
@@ -175,7 +180,7 @@ $(document).ready(function() {
   );
 
   // Added animated scrolling to menu items
-  $('.menu a').on('click', function(event) {
+  $('.menu a, .btn.arrow').on('click', function(event) {
     if (this.hash !== '') {
       event.preventDefault();
 
@@ -186,12 +191,20 @@ $(document).ready(function() {
       $('html, body').animate({
         scrollTop: number
       }, 800);
+
+      if (hash === '#video') {
+        var blockchainVideo = $('.blockchain-video');
+
+        blockchainVideo.toggleClass('active');
+        $('.close-blockchain-video').toggleClass('active');
+        var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
+        blockchainVideo.attr("src",videosrc);
+      }
     }
   });
 });
 
 // Play and setSrc for hero video
-var rellax = new Rellax('.rellax');
 $('#playbtn').click(function() {
   var homeVideo = $('.home-video');
   var heroVideo = $('.hero-video');
