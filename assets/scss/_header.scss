@@ -56,6 +56,11 @@ header {
         padding: 11px 25px;
         letter-spacing: 0;
         display: unset;
+        background: white;
+
+        &:hover {
+          background: $primary-color;
+        }
       }
     }
   }

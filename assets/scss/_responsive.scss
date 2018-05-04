@@ -37,6 +37,11 @@
       margin-bottom: -50px;
     }
   }
+
+  .hero .counter-container #clockdiv .clock-entity .counter,
+  .hero .counter-container #clockdivMobile .clock-entity .counter{
+    width: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -73,54 +78,6 @@
     }
   }
 
-  section.hero {
-    .hero-text {
-      .text-contents {
-        p.pretitle {
-          font-size: 16px;
-          margin-bottom: 10px;
-          font-weight: $font-weight-medium;
-        }
-      }
-    }
-
-    .container {
-      .square {
-        height: 45vh!important;
-
-        img {
-          mix-blend-mode: darken;
-          vertical-align: bottom;
-          display: block;
-          position: absolute;
-          width: auto;
-          height: 50vh;
-          margin-top: -5vh;
-        }
-      }
-    }
-
-    .counter-container {
-      #clockdiv {
-        .clock-entity {
-          .counter {
-            height: 37px;
-            width: 39px;
-            font-size: 30px;
-            padding-top: 17px;
-          }
-        }
-      }
-    }
-
-    .hero-bottom {
-      .container {
-        img.hero-img {
-          display: none;
-        }
-      }
-    }
-  }
   header {
     .menu {
       .desktop-nav, .header-buttons {
@@ -291,14 +248,12 @@
     .column-large {
       margin-bottom: 100px;
       position: relative;
-      height: 40vh;
+      height: auto;
 
       svg {
-        position: absolute;
-        top: 50%;
+        position: relative;
         left: 0;
         right: 0;
-        transform: translateY(-50%);
       }
 
       img.icasting-people {
@@ -309,6 +264,55 @@
 }
 
 @media screen and (max-width: 968px) {
+  section.hero {
+    .hero-text {
+      .text-contents {
+        p.pretitle {
+          font-size: 16px;
+          margin-bottom: 10px;
+          font-weight: $font-weight-medium;
+        }
+      }
+    }
+
+    .container {
+      .square {
+        padding: 50px 0 80px;
+
+        img {
+          mix-blend-mode: darken;
+          vertical-align: bottom;
+          display: block;
+          position: absolute;
+          width: auto;
+          height: 50vh;
+          margin-top: -5vh;
+        }
+      }
+    }
+
+    .counter-container {
+      #clockdiv, #clockdivMobile {
+        .clock-entity {
+          .counter {
+            height: 37px;
+            width: 39px;
+            font-size: 30px;
+            padding-top: 17px;
+          }
+        }
+      }
+    }
+
+    .hero-bottom {
+      .container {
+        img.hero-img {
+          display: none;
+        }
+      }
+    }
+  }
+
   .rellax {
     -webkit-transform: none!important;
     -moz-transform: none!important;
@@ -317,14 +321,22 @@
     transform: none!important;
   }
   .hero-bottom {
-    margin-top: 210px;
+    margin-top: 75px;
+
+    .container {
+      padding-top: 100px !important;
+    }
   }
   section.about {
-    margin-top: 50px;
+    margin: 75px 0 10px;
 
     .small .btn, .numbers, .table, .center .btn{
       display: none;
     }
+  }
+
+  section.tokenization {
+    padding: 75px 0 50px;
   }
 
   .hero-img {
@@ -455,15 +467,41 @@
         display: block;
         width: 100%;
         text-align: center!important;
+        
+        &.right {
+          display: none;
+        }
       }
       .left {
-        height: 45vh;
+        height: auto;
       }
       .square {
-        top: 40vh;
-        left: -10vw;
-        width: 110vw;
-        height: 35vh;
+        margin-top: 7.5vh;
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+
+        .mobile {
+          position: relative;
+          display: block;
+          z-index: 10;
+          bottom: inherit;
+        }
+
+        .signup {
+          margin-top: 50px;
+        }
+
+        img {
+          bottom: 0;
+        }
+
+        .dots {
+          top: 0;
+          position: absolute;
+        }
       }
     }
     .hero-text {
@@ -556,12 +594,22 @@
   }
 
   section.blockchain {
-    height: 1350px;
+    height: auto;
     margin-bottom: 40px;
   }
 
+  .hero {
+    .text-contents {
+      padding: 0 30px;
+    }
+  }
+
   .hero-bottom {
-    margin-top: 230px;
+    margin-top: 50px;
+  }
+
+  .blockchain-bottom {
+    margin-top: 150px;
   }
 
   .hero-bottom, .blockchain-bottom {
@@ -656,15 +704,20 @@
 }
 
 @media screen and (max-width: 550px) {
+  .blockchain-bottom {
+    margin-top: 50px;
+  }
+
   section.hero {
     .container {
       &.first {
         padding: 0;
       }
       .square {
-        top: 40vh! important;
-        height: 450px !important;
+        height: auto;
         box-shadow: none;
+        padding: 50px 0 30px;
+
         img {
           left: -25%;
           height: 500px;
@@ -680,10 +733,29 @@
       }
       form {
         max-width: 320px!important;
+        height: auto;
+
+        #mc_embed_signup_scroll .button {
+          position: relative;
+          width: 100% !important;
+          box-sizing: border-box;
+          top: 0;
+          right: 0;
+          margin-top: 20px;
+          text-align: center;
+          background: transparent;
+          border-color: white;
+          color: white;
+
+          &:hover {
+            color: $text-color !important;
+            background: white !important;
+          }
+        }
       }
     }
     .counter-container {
-      #clockdiv {
+      #clockdiv, #clockdivMobile {
         margin-bottom: 30px;
         .clock-entity {
           &:after {
@@ -761,6 +833,10 @@
 }
 
 @media screen and (max-width: 400px) {
+  .blockchain-bottom {
+    margin-top: 0;
+  }
+
   section.tokenization {
     .column-large {
       height: 250px;
@@ -830,7 +906,7 @@
         margin-bottom: 20px;
       }
 
-      #clockdiv .clock-entity {
+      #clockdiv .clock-entity, #clockdivMobile .clock-entity {
         width: calc(23%);
 
         .counter {

@@ -1,5 +1,5 @@
 // Init Rellax
-var rellax = new Rellax('.rellax');
+//var rellax = new Rellax('.rellax');
 
 // Calculate the time remaining till endtime/
 function getTimeRemaining(endtime) {
@@ -53,6 +53,7 @@ function initializeClock(id, endtime) {
 // Set the deadline date
 var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
 initializeClock('clockdiv', deadline);
+initializeClock('clockdivMobile', deadline);
 
 // True/false if element is in viewport
 $.fn.isInViewport = function() {
@@ -65,6 +66,7 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+var roadmapCounter = 0;
 // Add active to some of the sections when they reach the viewport to start an animation
 function checkViewPort() {
   $('.number-container').each(function () {
@@ -98,7 +100,13 @@ function checkViewPort() {
 
   var roadmap = $('.roadmap');
   if (roadmap.isInViewport()) {
-    animateSwirl();
+    roadmapCounter++;
+
+    if (roadmapCounter === 1) {
+      setTimeout(function(){
+        animateSwirl();
+      }, 1000);
+    }
   }
 };
 
@@ -127,7 +135,6 @@ $(window).scroll(function(){
   checkpos('redblock');
 });
 
-
 // Add animation to the counter function in the header
 function animateCounters(el) {
   $(el).prop('Counter', 0).animate({
@@ -136,7 +143,9 @@ function animateCounters(el) {
     duration: 2000,
     easing: 'swing',
     step: function (now) {
-      $(el).text(Math.ceil(now));
+      $(el).text(
+        Math.ceil(now).toLocaleString('nl')
+      );
     }
   })
 }
