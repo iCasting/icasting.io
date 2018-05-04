@@ -1889,14 +1889,12 @@ section.team-advisors {
     width: 100%;
     max-width: unset; }
 
-  section.tokenization .column-large {
-    height: 400px; }
-    section.tokenization .column-large .flip-coins .flipper {
+  section.tokenization .column-large .flip-coins .flipper {
+    height: 70px;
+    width: 70px; }
+    section.tokenization .column-large .flip-coins .flipper img {
       height: 70px;
       width: 70px; }
-      section.tokenization .column-large .flip-coins .flipper img {
-        height: 70px;
-        width: 70px; }
 
   footer .half-page.left form #mc_embed_signup_scroll .button {
     position: relative;
@@ -1913,14 +1911,12 @@ section.team-advisors {
   .blockchain-bottom {
     margin-top: 0; }
 
-  section.tokenization .column-large {
-    height: 250px; }
-    section.tokenization .column-large .flip-coins .flipper {
+  section.tokenization .column-large .flip-coins .flipper {
+    height: 40px;
+    width: 40px; }
+    section.tokenization .column-large .flip-coins .flipper img {
       height: 40px;
       width: 40px; }
-      section.tokenization .column-large .flip-coins .flipper img {
-        height: 40px;
-        width: 40px; }
 
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -30px; }
