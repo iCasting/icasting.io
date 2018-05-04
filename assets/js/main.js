@@ -151,6 +151,14 @@ function animateCounters(el) {
 }
 
 $(document).ready(function() {
+  function isIEorEDGE(){
+    return navigator.appName == 'Microsoft Internet Explorer' || (navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') > -1);
+  }
+
+  if (isIEorEDGE()) {
+    $('html').addClass('ie');
+  }
+
   // Check viewPort height/width on init and resize/scroll
   checkViewPort();
   $(window).on('scroll resize',function(){

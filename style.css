@@ -348,6 +348,19 @@ p.mobile-message {
 .mobile-nav, .tlnt-logo, .hamburger, .signup.mobile, .hero-bottom .btn {
   display: none; }
 
+.ie section.team-advisors .membercontainer .memberimage .square {
+  opacity: .8; }
+  .ie section.team-advisors .membercontainer .memberimage .square .dots {
+    opacity: .25; }
+.ie section.blockchain .blockchainsquare,
+.ie .hero .square {
+  opacity: .9; }
+  .ie section.blockchain .blockchainsquare .dots,
+  .ie .hero .square .dots {
+    opacity: .25; }
+.ie svg circle {
+  display: none; }
+
 /* Per section */
 .hero {
   position: relative; }
