@@ -16,6 +16,10 @@
       left: 50px;
     }
   }
+
+  .hero img.hero-img {
+    right: calc(50vw - 900px);
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -45,6 +49,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+
   .social.fixed {
     display: none;
   }
@@ -589,6 +597,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 60px);
+  }
+
   .close-hero-video, .close-blockchain-video, .close-hero-video, .close-blockchain-video {
     right: 0;
   }

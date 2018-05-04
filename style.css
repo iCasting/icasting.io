@@ -283,7 +283,7 @@ iframe {
   max-width: 1440px;
   margin: 0 auto;
   height: 100%;
-  width: calc(100% - 60px);
+  width: calc(100% - 200px);
   position: relative; }
   .container.small {
     max-width: 1024px; }
@@ -368,7 +368,8 @@ p.mobile-message {
     position: absolute;
     bottom: 0;
     right: calc(50vw - 1100px);
-    max-width: 760px; }
+    max-width: 760px;
+    max-height: 165vh; }
   .hero .container.first {
     padding: 15vh 0;
     height: auto; }
@@ -534,7 +535,7 @@ p.mobile-message {
 section.about {
   position: relative;
   z-index: 99;
-  margin: 200px 0; }
+  margin: 300px 0; }
   section.about h2 {
     font-weight: 300; }
   section.about p.about-content {
@@ -544,7 +545,7 @@ section.about {
     margin: 0 auto;
     margin-bottom: 50px; }
   section.about .numbers {
-    margin-top: 10vh; }
+    margin-top: 20vh; }
     section.about .numbers img {
       max-width: 192px; }
     section.about .numbers h2 {
@@ -1391,7 +1392,10 @@ section.team-advisors {
     left: 0; }
   section.team-advisors span.team-right {
     right: unset;
-    left: 50px; } }
+    left: 50px; }
+
+  .hero img.hero-img {
+    right: calc(50vw - 900px); } }
 @media screen and (max-width: 1250px) {
   section.team-advisors .membercontainer {
     width: calc(100% / 3);
@@ -1408,6 +1412,9 @@ section.team-advisors {
   .hero .counter-container #clockdivMobile .clock-entity .counter {
     width: 40px; } }
 @media screen and (max-width: 1024px) {
+  .container {
+    width: calc(100% - 100px); }
+
   .social.fixed {
     display: none; }
 
@@ -1753,6 +1760,9 @@ section.team-advisors {
       .network .twirly.mobile {
         display: block; } }
 @media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 60px); }
+
   .close-hero-video, .close-blockchain-video, .close-hero-video, .close-blockchain-video {
     right: 0; }
 

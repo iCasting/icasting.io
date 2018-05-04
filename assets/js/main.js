@@ -1,5 +1,5 @@
 // Init Rellax
-//var rellax = new Rellax('.rellax');
+new Rellax('.rellax');
 
 // Calculate the time remaining till endtime/
 function getTimeRemaining(endtime) {

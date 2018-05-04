@@ -6,6 +6,7 @@
     bottom: 0;
     right: calc(50vw - 1100px);
     max-width: 760px;
+    max-height: 165vh;
   }
 
   .container.first {
@@ -256,7 +257,7 @@
 section.about {
   position: relative;
   z-index: 99;
-  margin: 200px 0;
+  margin: 300px 0;
 
   h2 {
     font-weight: $font-weight-light;
@@ -271,7 +272,7 @@ section.about {
   }
 
   .numbers {
-    margin-top: 10vh;
+    margin-top: 20vh;
 
     img {
       max-width: 192px;
