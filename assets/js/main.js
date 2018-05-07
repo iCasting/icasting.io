@@ -51,9 +51,9 @@ function initializeClock(id, endtime) {
 }
 
 // Set the deadline date
-var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
-initializeClock('clockdiv', deadline);
-initializeClock('clockdivMobile', deadline);
+// var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
+// initializeClock('clockdiv', deadline);
+// initializeClock('clockdivMobile', deadline);
 
 // True/false if element is in viewport
 $.fn.isInViewport = function() {

@@ -412,12 +412,24 @@ p.mobile-message {
       .hero .signup form label {
         display: none; }
   .hero .counter-container {
-    text-align: center; }
+    text-align: center;
+    min-height: 100px; }
     .hero .counter-container h2 {
       color: white;
       font-size: 34px;
       line-height: 40px;
       margin-bottom: 30px; }
+    .hero .counter-container h3 {
+      color: white;
+      padding-left: 50px;
+      font-size: 38px;
+      line-height: 52px;
+      margin-bottom: 30px;
+      font-weight: 300; }
+    .hero .counter-container.mobile h3 {
+      font-size: 32px;
+      line-height: 40px;
+      padding: 0 20px; }
     .hero .counter-container .btn {
       box-shadow: 0 8px 21px 0 rgba(0, 0, 0, 0.2); }
     .hero .counter-container #clockdiv, .hero .counter-container #clockdivMobile {
@@ -1908,9 +1920,6 @@ section.team-advisors {
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -40px; } }
 @media screen and (max-width: 400px) {
-  .blockchain-bottom {
-    margin-top: 0; }
-
   section.tokenization .column-large .flip-coins .flipper {
     height: 40px;
     width: 40px; }
@@ -1958,5 +1967,8 @@ section.team-advisors {
     font-size: 14px;
     line-height: 1.6;
     margin: 5px 0; } }
+@media screen and (max-width: 350px) {
+  .blockchain-bottom {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

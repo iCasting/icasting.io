@@ -844,10 +844,6 @@
 }
 
 @media screen and (max-width: 400px) {
-  .blockchain-bottom {
-    margin-top: 0;
-  }
-
   section.tokenization {
     .column-large {
       .flip-coins {
@@ -929,5 +925,11 @@
     font-size: 14px;
     line-height: 1.6;
     margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .blockchain-bottom {
+    margin-top: 0;
   }
 }
