@@ -2,17 +2,17 @@
   section.team-advisors {
     .membercontainer {
       width: 25%;
-      max-width: unset;
+      max-width: inherit;
     }
 
     span.team-left, span.team-right {
-      top: unset;
+      top: inherit;
       bottom: -30px;
       left: 0;
     }
 
     span.team-right {
-      right: unset;
+      right: inherit;
       left: 50px;
     }
   }
@@ -26,12 +26,12 @@
   section.team-advisors {
     .membercontainer {
       width: calc(100% / 3);
-      max-width: unset;
+      max-width: inherit;
     }
 
     .advisor {
       width: 50%;
-      max-width: unset;
+      max-width: inherit;
       display: inline-block;
     }
   }
@@ -245,6 +245,8 @@
       margin: 0 auto;
       width: 100%;
       max-width: 400px;
+      opacity: 1 !important;
+      transform: none !important;
       
       &:nth-of-type(4), &:nth-of-type(5) {
         display: none;
@@ -372,25 +374,27 @@
         }
       }
 
-      .selling-points {
-        max-width: unset;
+      .selling-points-list {
+        .selling-points {
+          max-width: inherit;
 
-        span.img {
-          div {
-            background: white;
+          span.img {
+            div {
+              background: white;
+            }
+
+            svg {
+              fill: transparent;
+              stroke-width: 3px;
+              stroke: $primary-color;
+            }
           }
 
-          svg {
-            fill: transparent;
-            stroke-width: 3px;
-            stroke: $primary-color;
-          }
-        }
-
-        span {
-          &:nth-of-type(2) {
-            font-size: 20px;
-            line-height: 26px;
+          span {
+            &:nth-of-type(2) {
+              font-size: 20px;
+              line-height: 26px;
+            }
           }
         }
       }
@@ -458,7 +462,7 @@
         margin: 0 auto!important;
 
         .email {
-          box-shadow: unset;
+          box-shadow: inherit;
         }
       }
 
@@ -537,7 +541,7 @@
         img.hero-img {
           left: -10vw;
           max-width: 550px;
-          right: unset;
+          right: inherit;
         }
       }
     }
@@ -545,7 +549,7 @@
   section.team-advisors {
     .membercontainer {
       width: 50%;
-      max-width: unset;
+      max-width: inherit;
     }
   }
 
@@ -667,7 +671,7 @@
   section.team-advisors {
     .advisor {
       width: 100%;
-      max-width: unset;
+      max-width: inherit;
     }
   }
 
@@ -798,7 +802,7 @@
   section.team-advisors {
     .membercontainer {
       width: 100%;
-      max-width: unset;
+      max-width: inherit;
     }
   }
   section.tokenization {
@@ -839,6 +843,41 @@
   .network .twirly .overlay .overlay-item {
     img {
       margin-bottom: -40px;
+    }
+  }
+
+  section.team-advisors {
+    .membercontainer .memberimage {
+      width: 100%;
+      max-width: 100%;
+
+      .square {
+        width: 100%;
+      }
+    }
+
+    span.team-left {
+      top: 40%;
+      left: 20px;
+    }
+
+    span.team-right {
+      top: 40%;
+      right: 20px;
+      left: inherit;
+    }
+
+    span.team-right, span.team-left {
+      background: transparent;
+      border-color: white;
+      z-index: 10000;
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 15px;
+        fill: white;
+      }
     }
   }
 }

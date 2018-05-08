@@ -184,6 +184,20 @@ section.team-advisors {
     max-width: 420px;
     text-align: left;
     position: relative;
+    opacity: 0;
+
+    transition: all .3s ease-in-out;
+    transition-delay: .5s;
+
+    &:nth-of-type(2) {
+      transition-delay: .7s !important;
+    }
+    &:nth-of-type(3) {
+      transition-delay: .9s !important;
+    }
+    &:nth-of-type(4) {
+      transition-delay: 1.1s !important;
+    }
 
     span {
       vertical-align: middle;
@@ -194,7 +208,7 @@ section.team-advisors {
       }
 
       img.advisor-img {
-        box-shadow: 14px 23px 73px 0px rgba(4, 30, 53, 0.17);
+        box-shadow: 14px 23px 73px 0 rgba(4, 30, 53, 0.17);
         max-width: 86px;
         border-radius: 60px;
       }
@@ -225,6 +239,12 @@ section.team-advisors {
         width: 14px;
         margin-top: 30%;
       }
+    }
+  }
+
+  &.active {
+    .advisor {
+      opacity: 1;
     }
   }
 }

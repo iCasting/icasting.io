@@ -98,6 +98,22 @@ function checkViewPort() {
     membercontainer.addClass('active');
   }
 
+  var teamAdvisors = $('.team-advisors');
+  if (teamAdvisors.isInViewport()) {
+    teamAdvisors.addClass('active');
+  }
+
+  var sellingPointsList = $('.selling-points-list');
+  if (sellingPointsList.isInViewport()) {
+    sellingPointsList.addClass('active');
+  }
+
+  var sellingPointsRight = $('.selling-points-right');
+  if (sellingPointsRight.isInViewport()) {
+    sellingPointsRight.addClass('active');
+    $('.selling-points-left').addClass('active');
+  }
+
   var roadmap = $('.roadmap');
   if (roadmap.isInViewport()) {
     roadmapCounter++;
