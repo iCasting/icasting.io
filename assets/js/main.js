@@ -477,62 +477,62 @@ function slideCarroussel(direction) {
 }
 
 // Calculate width and amount of the team caroussel
-function setTeamCarousel() {
-  var slideElement = $('.membercontainer');
-  var innerElement = $('.team-carousel-inner');
-  var teamRight = $('.team-right');
-  var teamLeft = $('.team-left');
-  var containerWidth;
-
-  if ($(window).width() < 1440) {
-    containerWidth = (($(window).width() - 60));
-  } else {
-    containerWidth = 1440;
-  }
-  var countSlides = slideElement.length;
-  var slideWidth = slideElement.width();
-
-  var totalSlideWidth = parseInt(countSlides * slideWidth);
-
-  if (totalSlideWidth > containerWidth) {
-    teamRight.css('display', 'block');
-    teamLeft.css('display', 'block');
-  }
-
-  teamRight.click(function() {
-    var currentPos = parseInt($(innerElement).css('left'), 10);
-    if  ((Math.abs(currentPos) + (parseInt(containerWidth))) < totalSlideWidth ) {
-      $(innerElement).css('left', (currentPos - containerWidth) + 'px');
-    }
-  });
-
-  teamLeft.click(function() {
-    var currentPos = parseInt($(innerElement).css('left'), 10);
-    if (currentPos < 0 ) {
-      $(innerElement).css('left', (currentPos + containerWidth) + 'px');
-    }
-  });
-}
+// function setTeamCarousel() {
+//   var slideElement = $('.membercontainer');
+//   var innerElement = $('.team-carousel-inner');
+//   var teamRight = $('.team-right');
+//   var teamLeft = $('.team-left');
+//   var containerWidth;
+//
+//   if ($(window).width() < 1440) {
+//     containerWidth = (($(window).width() - 60));
+//   } else {
+//     containerWidth = 1440;
+//   }
+//   var countSlides = slideElement.length;
+//   var slideWidth = slideElement.width();
+//
+//   var totalSlideWidth = parseInt(countSlides * slideWidth);
+//
+//   if (totalSlideWidth > containerWidth) {
+//     teamRight.css('display', 'block');
+//     teamLeft.css('display', 'block');
+//   }
+//
+//   teamRight.click(function() {
+//     var currentPos = parseInt($(innerElement).css('left'), 10);
+//     if  ((Math.abs(currentPos) + (parseInt(containerWidth))) < totalSlideWidth ) {
+//       $(innerElement).css('left', (currentPos - containerWidth) + 'px');
+//     }
+//   });
+//
+//   teamLeft.click(function() {
+//     var currentPos = parseInt($(innerElement).css('left'), 10);
+//     if (currentPos < 0 ) {
+//       $(innerElement).css('left', (currentPos + containerWidth) + 'px');
+//     }
+//   });
+// }
 
 // Functions for mobile swiping both the caroussels
 $(function() {
-  $('.team-carousel-inner').swipe( {
-    swipe:function(event, direction) {
-      if (direction === 'left') {
-        $('.team-right').trigger('click');
-      } else if (direction === 'right') {
-        $('.team-left').trigger('click');
-      } else if (direction === 'down') {
-        $('html, body').animate({
-          scrollTop: '-=300'
-        }, 300);
-      } else if (direction === 'up') {
-        $('html, body').animate({
-          scrollTop: '+=300'
-        }, 300);
-      }
-    }, threshold: 10
-  });
+  // $('.team-carousel-inner').swipe( {
+  //   swipe:function(event, direction) {
+  //     if (direction === 'left') {
+  //       $('.team-right').trigger('click');
+  //     } else if (direction === 'right') {
+  //       $('.team-left').trigger('click');
+  //     } else if (direction === 'down') {
+  //       $('html, body').animate({
+  //         scrollTop: '-=300'
+  //       }, 300);
+  //     } else if (direction === 'up') {
+  //       $('html, body').animate({
+  //         scrollTop: '+=300'
+  //       }, 300);
+  //     }
+  //   }, threshold: 10
+  // });
 
   $('.carroussel-inner').swipe( {
     swipe:function(event, direction) {
