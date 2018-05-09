@@ -295,12 +295,6 @@ section.about {
     img {
       max-width: 192px;
     }
-
-    h2 {
-      font-size: 28px;
-      line-height: 32px;
-      font-weight: $font-weight-bold;
-    }
   }
 
   .table {
@@ -375,6 +369,25 @@ section.about {
         -2px  0px 0px white,
         -2px -1px 0px white;
     }
+  }
 
+  .dark {
+    .counter-single {
+      .counter-number {
+        color: $text-color;
+        font-size: 38px;
+        margin-bottom: 10px;
+
+        .number-container {
+          top: 0;
+          font-size: 38px;
+        }
+      }
+
+      &:nth-child(2) {
+        border-left: 1px solid rgba($text-color, .2);
+        border-right: 1px solid rgba($text-color, .2);
+      }
+    }
   }
 }

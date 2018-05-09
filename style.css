@@ -560,10 +560,6 @@ section.about {
     margin-top: 20vh; }
     section.about .numbers img {
       max-width: 192px; }
-    section.about .numbers h2 {
-      font-size: 28px;
-      line-height: 32px;
-      font-weight: 700; }
   section.about .table {
     border-collapse: separate;
     border-spacing: 10px;
@@ -596,6 +592,16 @@ section.about {
       max-width: 250px;
       margin: 0 auto;
       text-shadow: -1px -1px 0px white, 0px -1px 0px white, 1px -1px 0px white, -1px 0px 0px white, 1px 0px 0px white, -1px 1px 0px white, 0px 1px 0px white, 1px 1px 0px white, -2px -2px 0px white, -1px -2px 0px white, 0px -2px 0px white, 1px -2px 0px white, 2px -2px 0px white, 2px -1px 0px white, 2px 0px 0px white, 2px 1px 0px white, 2px 2px 0px white, 1px 2px 0px white, 0px 2px 0px white, -1px 2px 0px white, -2px 2px 0px white, -2px 1px 0px white, -2px 0px 0px white, -2px -1px 0px white; }
+  section.about .dark .counter-single .counter-number {
+    color: #00112a;
+    font-size: 38px;
+    margin-bottom: 10px; }
+    section.about .dark .counter-single .counter-number .number-container {
+      top: 0;
+      font-size: 38px; }
+  section.about .dark .counter-single:nth-child(2) {
+    border-left: 1px solid rgba(0, 17, 42, 0.2);
+    border-right: 1px solid rgba(0, 17, 42, 0.2); }
 
 section.blockchain {
   position: relative; }

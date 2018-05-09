@@ -159,9 +159,15 @@ function animateCounters(el) {
     duration: 2000,
     easing: 'swing',
     step: function (now) {
-      $(el).text(
-        Math.ceil(now).toLocaleString('nl')
-      );
+      if (now < 10000 && $.isNumeric(now)) {
+        $(el).text(
+          Math.ceil(now)
+        );
+      } else if ($.isNumeric(now)) {
+        $(el).text(
+          Math.ceil(now).toLocaleString('nl')
+        );
+      }
     }
   })
 }
