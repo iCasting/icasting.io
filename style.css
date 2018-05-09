@@ -861,7 +861,7 @@ section.tokenization-community {
     margin-bottom: 50px; }
 
 section.team-advisors {
-  padding: 10vh 0; }
+  padding: 100px 0; }
   section.team-advisors span.team-right, section.team-advisors span.team-left {
     background: white;
     width: 30px;
@@ -893,28 +893,49 @@ section.team-advisors {
   section.team-advisors p.advisor-subtitle {
     width: 100%;
     max-width: 700px; }
+  section.team-advisors .show-more {
+    cursor: pointer;
+    color: #df1f36;
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+    section.team-advisors .show-more svg {
+      fill: #df1f36;
+      transform: rotate(-90deg);
+      width: 15px;
+      transition: all .2s ease-in-out; }
+    section.team-advisors .show-more.active svg {
+      transform: rotate(90deg); }
+    section.team-advisors .show-more:hover {
+      text-decoration: underline; }
   section.team-advisors .team-carousel-inner {
     position: relative;
     left: 0;
     transition: all .5s ease-in-out; }
   section.team-advisors .membercontainer {
-    display: inline-block;
+    max-width: 350px;
     width: calc(25% - 52.5px);
     position: relative;
     margin-bottom: 30px;
-    vertical-align: top; }
-    section.team-advisors .membercontainer:nth-child(4n+3) {
-      margin: 0 70px 0 35px; }
+    vertical-align: top;
+    display: none; }
+    section.team-advisors .membercontainer:nth-child(-n+4) {
+      display: inline-block !important;
+      opacity: 1 !important; }
     section.team-advisors .membercontainer:nth-child(4n+2) {
-      margin: 0 35px 0 70px; }
-    section.team-advisors .membercontainer:nth-of-type(2) .square {
-      transition-delay: 0.6s !important; }
-    section.team-advisors .membercontainer:nth-of-type(3) .square {
-      transition-delay: 0.7s !important; }
-    section.team-advisors .membercontainer:nth-of-type(4) .square {
-      transition-delay: 0.8s !important; }
+      margin: 0 35px 30px 70px; }
+      section.team-advisors .membercontainer:nth-child(4n+2) .square {
+        transition-delay: 0.6s !important; }
+    section.team-advisors .membercontainer:nth-child(4n+3) {
+      margin: 0 70px 30px 35px; }
+      section.team-advisors .membercontainer:nth-child(4n+3) .square {
+        transition-delay: 0.7s !important; }
+    section.team-advisors .membercontainer:nth-child(4n+4) .square {
+      transition-delay: .8s !important; }
     section.team-advisors .membercontainer.active .square {
       transform: translateX(0) !important; }
+    section.team-advisors .membercontainer:hover .memberimage .square {
+      transform: translateX(-110%) !important; }
     section.team-advisors .membercontainer .memberimage {
       width: 100%;
       position: relative;
@@ -1019,6 +1040,7 @@ section.team-advisors {
   section.team-advisors .table {
     margin-top: 30px; }
   section.team-advisors .advisor {
+    max-width: 350px;
     width: calc(25% - 52.5px);
     text-align: left;
     position: relative;
@@ -1123,7 +1145,6 @@ section.team-advisors {
     transform: translate(0, 50%) !important; }
 
 .data {
-  margin: 100px 0 0;
   position: relative; }
   .data .half-page {
     width: calc(50% - 100px);
@@ -1537,27 +1558,18 @@ section.team-advisors {
 
 /* Responsive */
 @media screen and (max-width: 1520px) {
-  section.team-advisors .membercontainer {
-    width: 25%;
-    max-width: inherit; }
-  section.team-advisors span.team-left, section.team-advisors span.team-right {
-    top: inherit;
-    bottom: -30px;
-    left: 0; }
-  section.team-advisors span.team-right {
-    right: inherit;
-    left: 50px; }
-
   .hero img.hero-img {
     right: calc(50vw - 900px); } }
 @media screen and (max-width: 1250px) {
-  section.team-advisors .membercontainer {
-    width: calc(100% / 3);
-    max-width: inherit; }
+  section.team-advisors .membercontainer,
   section.team-advisors .advisor {
-    width: 50%;
-    max-width: inherit;
-    display: inline-block; }
+    width: calc(25% - 22.5px); }
+    section.team-advisors .membercontainer:nth-child(4n+2),
+    section.team-advisors .advisor:nth-child(4n+2) {
+      margin: 0 15px 30px 30px; }
+    section.team-advisors .membercontainer:nth-child(4n+3),
+    section.team-advisors .advisor:nth-child(4n+3) {
+      margin: 0 30px 30px 15px; }
 
   .network .twirly .overlay .overlay-item img {
     margin-bottom: -50px; }
@@ -1720,6 +1732,17 @@ section.team-advisors {
     section.tokenization .column-large img.icasting-people {
       z-index: 99; } }
 @media screen and (max-width: 968px) {
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: calc(50% - 15px);
+    margin: 0 0 30px 0 !important; }
+    section.team-advisors .membercontainer:nth-child(odd),
+    section.team-advisors .advisor:nth-child(odd) {
+      margin: 0 15px 30px 0 !important; }
+    section.team-advisors .membercontainer:nth-child(even),
+    section.team-advisors .advisor:nth-child(even) {
+      margin: 0 0 30px 15px !important; }
+
   section.hero .hero-text .text-contents p.pretitle {
     font-size: 16px;
     margin-bottom: 10px;
@@ -1884,10 +1907,6 @@ section.team-advisors {
     max-width: 550px;
     right: inherit; }
 
-  section.team-advisors .membercontainer {
-    width: 50%;
-    max-width: inherit; }
-
   footer {
     padding: 5vh 0; }
     footer .half-page {
@@ -1957,10 +1976,6 @@ section.team-advisors {
       width: calc(100% - 30px); }
       .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
         display: none; }
-
-  section.team-advisors .advisor {
-    width: 100%;
-    max-width: inherit; }
 
   .data {
     margin: 0; }
@@ -2041,9 +2056,20 @@ section.team-advisors {
   section.hero .hero-text .text-contents p.pretitle {
     margin-bottom: 3px; }
 
-  section.team-advisors .membercontainer {
+  .team-carousel-inner, .team-advisors .table {
+    text-align: center; }
+
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
     width: 100%;
-    max-width: inherit; }
+    margin: 0 auto 30px !important;
+    text-align: left; }
+    section.team-advisors .membercontainer:nth-child(odd),
+    section.team-advisors .advisor:nth-child(odd) {
+      margin: 0 auto 30px !important; }
+    section.team-advisors .membercontainer:nth-child(even),
+    section.team-advisors .advisor:nth-child(even) {
+      margin: 0 auto 30px !important; }
 
   section.tokenization .column-large .flip-coins .flipper {
     height: 70px;

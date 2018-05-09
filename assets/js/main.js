@@ -93,9 +93,9 @@ function checkViewPort() {
     dataSlider.addClass('active');
   }
 
-  var membercontainer = $('.membercontainer');
+  var membercontainer = $('.team-carousel-inner');
   if (membercontainer.isInViewport()) {
-    membercontainer.addClass('active');
+    $('.membercontainer').addClass('active');
   }
 
   var teamAdvisors = $('.team-advisors');
@@ -183,10 +183,10 @@ $(document).ready(function() {
 
   // Calculate the carrousels on init and change of window size
   setCarroussel();
-  setTeamCarousel();
+  //setTeamCarousel();
   $(window).resize(function() {
     setCarroussel();
-    setTeamCarousel();
+    //setTeamCarousel();
   });
 
   // Left and right click for the Roadmap carorusel
@@ -233,6 +233,18 @@ $(document).ready(function() {
         var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
         blockchainVideo.attr("src",videosrc);
       }
+    }
+  });
+
+  $('.show-more').click(function(){
+    if ($(this).hasClass('active')) {
+      $('.membercontainer').fadeOut();
+
+      $('.show-more').removeClass('active').find('p').text('Show all');
+    } else {
+      $('.membercontainer').fadeIn().css('display', 'inline-block');
+
+      $('.show-more').addClass('active').find('p').text('Show less');
     }
   });
 });
@@ -477,42 +489,42 @@ function slideCarroussel(direction) {
 }
 
 // Calculate width and amount of the team caroussel
-// function setTeamCarousel() {
-//   var slideElement = $('.membercontainer');
-//   var innerElement = $('.team-carousel-inner');
-//   var teamRight = $('.team-right');
-//   var teamLeft = $('.team-left');
-//   var containerWidth;
-//
-//   if ($(window).width() < 1440) {
-//     containerWidth = (($(window).width() - 60));
-//   } else {
-//     containerWidth = 1440;
-//   }
-//   var countSlides = slideElement.length;
-//   var slideWidth = slideElement.width();
-//
-//   var totalSlideWidth = parseInt(countSlides * slideWidth);
-//
-//   if (totalSlideWidth > containerWidth) {
-//     teamRight.css('display', 'block');
-//     teamLeft.css('display', 'block');
-//   }
-//
-//   teamRight.click(function() {
-//     var currentPos = parseInt($(innerElement).css('left'), 10);
-//     if  ((Math.abs(currentPos) + (parseInt(containerWidth))) < totalSlideWidth ) {
-//       $(innerElement).css('left', (currentPos - containerWidth) + 'px');
-//     }
-//   });
-//
-//   teamLeft.click(function() {
-//     var currentPos = parseInt($(innerElement).css('left'), 10);
-//     if (currentPos < 0 ) {
-//       $(innerElement).css('left', (currentPos + containerWidth) + 'px');
-//     }
-//   });
-// }
+function setTeamCarousel() {
+  var slideElement = $('.membercontainer');
+  var innerElement = $('.team-carousel-inner');
+  var teamRight = $('.team-right');
+  var teamLeft = $('.team-left');
+  var containerWidth;
+
+  if ($(window).width() < 1440) {
+    containerWidth = (($(window).width() - 60));
+  } else {
+    containerWidth = 1440;
+  }
+  var countSlides = slideElement.length;
+  var slideWidth = slideElement.width();
+
+  var totalSlideWidth = parseInt(countSlides * slideWidth);
+
+  if (totalSlideWidth > containerWidth) {
+    teamRight.css('display', 'block');
+    teamLeft.css('display', 'block');
+  }
+
+  teamRight.click(function() {
+    var currentPos = parseInt($(innerElement).css('left'), 10);
+    if  ((Math.abs(currentPos) + (parseInt(containerWidth))) < totalSlideWidth ) {
+      $(innerElement).css('left', (currentPos - containerWidth) + 'px');
+    }
+  });
+
+  teamLeft.click(function() {
+    var currentPos = parseInt($(innerElement).css('left'), 10);
+    if (currentPos < 0 ) {
+      $(innerElement).css('left', (currentPos + containerWidth) + 'px');
+    }
+  });
+}
 
 // Functions for mobile swiping both the caroussels
 $(function() {

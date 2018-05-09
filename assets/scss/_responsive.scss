@@ -1,21 +1,21 @@
 @media screen and (max-width: 1520px) {
-  section.team-advisors {
-    .membercontainer {
-      width: 25%;
-      max-width: inherit;
-    }
-
-    span.team-left, span.team-right {
-      top: inherit;
-      bottom: -30px;
-      left: 0;
-    }
-
-    span.team-right {
-      right: inherit;
-      left: 50px;
-    }
-  }
+  //section.team-advisors {
+  //  .membercontainer {
+  //    width: 25%;
+  //    max-width: inherit;
+  //  }
+  //
+  //  span.team-left, span.team-right {
+  //    top: inherit;
+  //    bottom: -30px;
+  //    left: 0;
+  //  }
+  //
+  //  span.team-right {
+  //    right: inherit;
+  //    left: 50px;
+  //  }
+  //}
 
   .hero img.hero-img {
     right: calc(50vw - 900px);
@@ -23,16 +23,16 @@
 }
 
 @media screen and (max-width: 1250px) {
-  section.team-advisors {
-    .membercontainer {
-      width: calc(100% / 3);
-      max-width: inherit;
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: calc(25% - 22.5px);
+
+    &:nth-child(4n+2) {
+      margin: 0 15px 30px 30px;
     }
 
-    .advisor {
-      width: 50%;
-      max-width: inherit;
-      display: inline-block;
+    &:nth-child(4n+3) {
+      margin: 0 30px 30px 15px;
     }
   }
 
@@ -274,6 +274,20 @@
 }
 
 @media screen and (max-width: 968px) {
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: calc(50% - 15px);
+    margin: 0 0 30px 0 !important;
+
+    &:nth-child(odd) {
+      margin: 0 15px 30px 0 !important;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 30px 15px !important;
+    }
+  }
+
   section.hero {
     .hero-text {
       .text-contents {
@@ -546,12 +560,6 @@
       }
     }
   }
-  section.team-advisors {
-    .membercontainer {
-      width: 50%;
-      max-width: inherit;
-    }
-  }
 
   footer {
     padding: 5vh 0;
@@ -664,14 +672,6 @@
           display: none;
         }
       }
-    }
-  }
-
-
-  section.team-advisors {
-    .advisor {
-      width: 100%;
-      max-width: inherit;
     }
   }
 
@@ -799,12 +799,26 @@
       }
     }
   }
-  section.team-advisors {
-    .membercontainer {
-      width: 100%;
-      max-width: inherit;
+
+  .team-carousel-inner, .team-advisors .table {
+    text-align: center;
+  }
+
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: 100%;
+    margin: 0 auto 30px !important;
+    text-align: left;
+
+    &:nth-child(odd) {
+      margin: 0 auto 30px !important;
+    }
+
+    &:nth-child(even) {
+      margin: 0 auto 30px !important;
     }
   }
+
   section.tokenization {
     .column-large {
       .flip-coins {

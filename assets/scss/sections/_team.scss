@@ -1,5 +1,5 @@
 section.team-advisors {
-  padding: 10vh 0;
+  padding: 100px 0;
 
   span.team-right, span.team-left {
     background: white;
@@ -48,6 +48,32 @@ section.team-advisors {
     max-width: 700px;
   }
 
+  .show-more {
+    cursor: pointer;
+    color: $primary-color;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    svg {
+      fill: $primary-color;
+      transform: rotate(-90deg);
+      width: 15px;
+
+      transition: all .2s ease-in-out;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .team-carousel-inner {
     position: relative;
     left: 0;
@@ -55,39 +81,51 @@ section.team-advisors {
   }
 
   .membercontainer {
-    display: inline-block;
+    max-width: 350px;
     width: calc(25% - 52.5px);
     position: relative;
     margin-bottom: 30px;
     vertical-align: top;
+    display: none;
 
-    &:nth-child(4n+3) {
-      margin: 0 70px 0 35px;
+    &:nth-child(-n+4) {
+      display: inline-block !important;
+      opacity: 1 !important;
     }
 
     &:nth-child(4n+2) {
-      margin: 0 35px 0 70px;
-    }
+      margin: 0 35px 30px 70px;
 
-    &:nth-of-type(2) {
       .square {
         transition-delay: .6s!important;
       }
     }
-    &:nth-of-type(3) {
+
+    &:nth-child(4n+3) {
+      margin: 0 70px 30px 35px;
+
       .square {
         transition-delay: .7s!important;
       }
     }
-    &:nth-of-type(4) {
+
+    &:nth-child(4n+4) {
       .square {
-        transition-delay: .8s!important;
+        transition-delay: .8s !important;
       }
     }
 
     &.active {
       .square {
-        transform: translateX(0)!important;
+        transform: translateX(0) !important;
+      }
+    }
+
+    &:hover {
+      .memberimage {
+        .square {
+          transform: translateX(-110%) !important;
+        }
       }
     }
 
@@ -225,6 +263,7 @@ section.team-advisors {
   }
 
   .advisor {
+    max-width: 350px;
     width: calc(25% - 52.5px);
     text-align: left;
     position: relative;
