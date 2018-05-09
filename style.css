@@ -982,9 +982,8 @@ section.team-advisors {
           transform: scale(1.1); }
       section.team-advisors .membercontainer .memberimage img.photo {
         position: absolute;
-        width: auto;
-        min-height: 100%;
-        max-height: 110%;
+        width: 100%;
+        height: auto;
         right: 0;
         top: 50%;
         transform: translateY(-50%); }
@@ -1000,17 +999,6 @@ section.team-advisors {
         bottom: 0;
         left: 0;
         transform: translateX(-100%); }
-        section.team-advisors .membercontainer .memberimage .square .dots {
-          position: absolute;
-          height: 55%;
-          width: 65%;
-          background: url(assets/img/dotted_pattern.png);
-          display: block;
-          vertical-align: middle;
-          transform: translateY(50%);
-          opacity: 1;
-          mix-blend-mode: darken;
-          transition: transform 0.8s cubic-bezier(0.6, 0.04, 0.98, 0.335); }
     section.team-advisors .membercontainer .memberdetails {
       margin-top: 20px; }
       section.team-advisors .membercontainer .memberdetails h3 {

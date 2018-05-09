@@ -177,11 +177,13 @@ section.team-advisors {
         }
       }
 
+      // Moet nog aangepast wanneer foto's uitgeknipt zijn
       img.photo {
         position: absolute;
-        width: auto;
-        min-height: 100%;
-        max-height: 110%;
+        width: 100%; // auto
+        height: auto; // mag weg straks
+        //min-height: 100%;
+        //max-height: 110%;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -200,18 +202,18 @@ section.team-advisors {
         left: 0;
         transform: translateX(-100%);
 
-        .dots {
-          position: absolute;
-          height: 55%;
-          width: 65%;
-          background: url(assets/img/dotted_pattern.png);
-          display: block;
-          vertical-align: middle;
-          transform: translateY(50%);
-          opacity: 1;
-          mix-blend-mode: darken;
-          transition: transform .8s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-        }
+        //.dots {
+        //  position: absolute;
+        //  height: 55%;
+        //  width: 65%;
+        //  background: url(assets/img/dotted_pattern.png);
+        //  display: block;
+        //  vertical-align: middle;
+        //  transform: translateY(50%);
+        //  opacity: 1;
+        //  mix-blend-mode: darken;
+        //  transition: transform .8s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        //}
       }
     }
 
