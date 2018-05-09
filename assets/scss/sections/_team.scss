@@ -141,7 +141,7 @@ section.team-advisors {
         content: '';
         position: absolute;
         width: 300px;
-        height: 110%;
+        height: 115%;
         right: 0;
         top: 45%;
         transform: translate(5%, -50%);
@@ -234,9 +234,21 @@ section.team-advisors {
       p {
         font-size: 14px;
         max-height: 150px;
-        overflow: auto;
         padding-bottom: 50px;
+        overflow: hidden;
         box-sizing: border-box;
+
+        transition: all 1s ease-in-out;
+      }
+
+      &.open {
+        p {
+          max-height: 2000px;
+        }
+
+        &:after, &:before {
+          display: none;
+        }
       }
 
       &:after {
@@ -250,6 +262,33 @@ section.team-advisors {
         background: -webkit-linear-gradient(top, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+      }
+
+      &:before {
+        opacity: 0;
+        cursor: pointer;
+        z-index: 10;
+        content: 'Read full bio';
+        padding: 5px 20px;
+        border-radius: 25px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        width: 85px;
+        top: 50%;
+        left: 50%;
+        background: $primary-color;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        box-shadow: 5px 10px 20px 0 rgba(black, .15);
+
+        transition: all .2s ease-in-out;
+      }
+
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
       }
     }
   }
@@ -335,7 +374,7 @@ section.team-advisors {
           content: '';
           position: absolute;
           width: 300px;
-          height: 110%;
+          height: 115%;
           right: 0;
           top: 45%;
           transform: translate(5%, -50%);
@@ -351,9 +390,21 @@ section.team-advisors {
         p {
           font-size: 14px;
           max-height: 150px;
-          overflow: auto;
           padding-bottom: 50px;
+          overflow: hidden;
           box-sizing: border-box;
+
+          transition: all 1s ease-in-out;
+        }
+
+        &.open {
+          p {
+            max-height: 2000px;
+          }
+
+          &:after, &:before {
+            display: none;
+          }
         }
 
         &:after {
@@ -367,6 +418,33 @@ section.team-advisors {
           background: -webkit-linear-gradient(top, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
           background: linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        }
+
+        &:before {
+          opacity: 0;
+          cursor: pointer;
+          z-index: 10;
+          content: 'Read full bio';
+          padding: 5px 20px;
+          border-radius: 25px;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          width: 85px;
+          top: 50%;
+          left: 50%;
+          background: $primary-color;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          box-shadow: 5px 10px 20px 0 rgba(black, .15);
+
+          transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
         }
       }
     }

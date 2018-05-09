@@ -953,7 +953,7 @@ section.team-advisors {
         content: '';
         position: absolute;
         width: 300px;
-        height: 110%;
+        height: 115%;
         right: 0;
         top: 45%;
         transform: translate(5%, -50%);
@@ -1023,9 +1023,14 @@ section.team-advisors {
       section.team-advisors .membercontainer .description p {
         font-size: 14px;
         max-height: 150px;
-        overflow: auto;
         padding-bottom: 50px;
-        box-sizing: border-box; }
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all 1s ease-in-out; }
+      section.team-advisors .membercontainer .description.open p {
+        max-height: 2000px; }
+      section.team-advisors .membercontainer .description.open:after, section.team-advisors .membercontainer .description.open:before {
+        display: none; }
       section.team-advisors .membercontainer .description:after {
         content: '';
         height: 50px;
@@ -1041,6 +1046,26 @@ section.team-advisors {
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
         /* IE6-9 */ }
+      section.team-advisors .membercontainer .description:before {
+        opacity: 0;
+        cursor: pointer;
+        z-index: 10;
+        content: 'Read full bio';
+        padding: 5px 20px;
+        border-radius: 25px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        width: 85px;
+        top: 50%;
+        left: 50%;
+        background: #df1f36;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.15);
+        transition: all .2s ease-in-out; }
+      section.team-advisors .membercontainer .description:hover:before {
+        opacity: 1; }
   section.team-advisors .advisors {
     margin: 100px auto 50px; }
   section.team-advisors .table {
@@ -1096,7 +1121,7 @@ section.team-advisors {
           content: '';
           position: absolute;
           width: 300px;
-          height: 110%;
+          height: 115%;
           right: 0;
           top: 45%;
           transform: translate(5%, -50%);
@@ -1108,9 +1133,14 @@ section.team-advisors {
         section.team-advisors .advisor span .description p {
           font-size: 14px;
           max-height: 150px;
-          overflow: auto;
           padding-bottom: 50px;
-          box-sizing: border-box; }
+          overflow: hidden;
+          box-sizing: border-box;
+          transition: all 1s ease-in-out; }
+        section.team-advisors .advisor span .description.open p {
+          max-height: 2000px; }
+        section.team-advisors .advisor span .description.open:after, section.team-advisors .advisor span .description.open:before {
+          display: none; }
         section.team-advisors .advisor span .description:after {
           content: '';
           height: 50px;
@@ -1126,6 +1156,26 @@ section.team-advisors {
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
           /* IE6-9 */ }
+        section.team-advisors .advisor span .description:before {
+          opacity: 0;
+          cursor: pointer;
+          z-index: 10;
+          content: 'Read full bio';
+          padding: 5px 20px;
+          border-radius: 25px;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          width: 85px;
+          top: 50%;
+          left: 50%;
+          background: #df1f36;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.15);
+          transition: all .2s ease-in-out; }
+        section.team-advisors .advisor span .description:hover:before {
+          opacity: 1; }
     section.team-advisors .advisor p {
       font-size: 16px; }
     section.team-advisors .advisor a.linkedin {

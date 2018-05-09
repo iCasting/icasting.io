@@ -247,11 +247,27 @@ $(document).ready(function() {
       $('.membercontainer').fadeOut();
 
       $('.show-more').removeClass('active').find('p').text('Show all');
+
+      var number = $('#team-scroll').offset().top - 50;
+
+      $('html, body').animate({
+        scrollTop: number
+      }, 800);
     } else {
       $('.membercontainer').fadeIn().css('display', 'inline-block');
 
       $('.show-more').addClass('active').find('p').text('Show less');
     }
+  });
+
+  $('.description').click(function(){
+    $('.description').removeClass('open');
+
+    $(this).addClass('open');
+  });
+
+  $('.description.close').click(function(){
+    $(this).addClass('open');
   });
 });
 
