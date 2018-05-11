@@ -242,7 +242,7 @@ $(document).ready(function() {
 
         blockchainVideo.toggleClass('active');
         $('.close-blockchain-video').toggleClass('active');
-        var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
+        var videosrc = "https://www.youtube.com/embed/MrPVryavPI4?modestbranding=1&rel=0&autoplay=1";
         blockchainVideo.attr("src",videosrc);
       }
     }
@@ -277,6 +277,11 @@ $(document).ready(function() {
   });
 });
 
+$('.mobile-nav a').click(function() {
+  $('.hamburger').toggleClass('active');
+  $('.mobile-nav').toggleClass('active');
+})
+
 // Play and setSrc for hero video
 $('#playbtn').click(function() {
   var homeVideo = $('.home-video');
@@ -307,7 +312,7 @@ $('#playbtn-blockchain').click(function() {
 
   blockchainVideo.toggleClass('active');
   $('.close-blockchain-video').toggleClass('active');
-  var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
+  var videosrc = "https://www.youtube.com/embed/MrPVryavPI4?modestbranding=1&rel=0&autoplay=1";
   blockchainVideo.attr("src",videosrc);
 });
 
