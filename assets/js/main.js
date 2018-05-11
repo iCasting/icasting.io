@@ -326,7 +326,7 @@ $('.close-blockchain-video').on('touchstart click', function() {
 });
 
 // Responsive hamburger menu open/close
-$('.hamburger').on('touchstart click', function() {
+$('.hamburger').on('click', function() {
   $(this).toggleClass('active');
   $('.mobile-nav').toggleClass('active');
 });
