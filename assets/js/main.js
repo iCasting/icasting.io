@@ -81,11 +81,17 @@ function checkViewPort() {
   var blockchainsquare = $('.blockchainsquare');
   if (blockchainsquare.isInViewport()) {
     blockchainsquare.addClass('active');
+    setTimeout(function() {
+      blockchainsquare.addClass('darken');
+    }, 1000);
   }
 
   var square = $('.square');
   if (square.isInViewport()) {
     square.addClass('active');
+    setTimeout(function() {
+      square.addClass('darken');
+    }, 1000);
   }
 
   var dataSlider = $('.data-slider');

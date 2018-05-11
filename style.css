@@ -520,16 +520,19 @@ p.mobile-message {
     position: absolute;
     top: 10%;
     z-index: 80;
-    mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     left: 50%;
-    transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
+    transition: all 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
+    mix-blend-mode: multiply;
     transform: translate(50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     .hero .square img {
       display: none; }
     .hero .square.active {
-      transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+      transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
+      height: 81%; }
+      .hero .square.active.darken {
+        mix-blend-mode: darken; }
       .hero .square.active .dots {
         transform: translate(0%, 50%) matrix(1, 0, 0, 1, 0, 0); }
     .hero .square .dots {
@@ -721,7 +724,7 @@ section.blockchain {
     position: absolute;
     top: 10%;
     z-index: 99;
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     right: 60%;
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
@@ -731,6 +734,8 @@ section.blockchain {
       display: none; }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+      section.blockchain .blockchainsquare.active.darken {
+        mix-blend-mode: darken; }
       section.blockchain .blockchainsquare.active .dots {
         transform: translate(-10%, 50%) matrix(1, 0, 0, 1, 0, 0); }
     section.blockchain .blockchainsquare .dots {
