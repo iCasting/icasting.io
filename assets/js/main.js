@@ -202,10 +202,10 @@ $(document).ready(function() {
   });
 
   // Left and right click for the Roadmap carorusel
-  $('.buttons .right').click(function(){
+  $('.buttons .right').on('touchstart click', function() {
     slideCarroussel('right');
   });
-  $('.buttons .left').click(function(){
+  $('.buttons .left').on('touchstart click', function() {
     slideCarroussel('left');
   });
 
@@ -225,7 +225,7 @@ $(document).ready(function() {
   );
 
   // Added animated scrolling to menu items
-  $('.menu a, .btn.arrow').on('click', function(event) {
+  $('.menu a, .btn.arrow').on('click touchstart', function(event) {
     if (this.hash !== '') {
       event.preventDefault();
 
@@ -248,7 +248,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.show-more').click(function(){
+  $('.show-more').on('touchstart click', function() {
     if ($(this).hasClass('active')) {
       $('.membercontainer').fadeOut();
 
@@ -266,7 +266,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.description').click(function(){
+  $('.description').on('touchstart click', function() {
     $('.description').removeClass('open');
 
     $(this).addClass('open');
@@ -277,13 +277,13 @@ $(document).ready(function() {
   });
 });
 
-$('.mobile-nav a').click(function() {
+$('.mobile-nav a').on('touchstart click', function() {
   $('.hamburger').toggleClass('active');
   $('.mobile-nav').toggleClass('active');
 })
 
 // Play and setSrc for hero video
-$('#playbtn').click(function() {
+$('#playbtn').on('touchstart click', function() {
   var homeVideo = $('.home-video');
   var heroVideo = $('.hero-video');
 
@@ -296,7 +296,7 @@ $('#playbtn').click(function() {
 });
 
 // Close hero video in the header
-$('.close-hero-video').click(function() {
+$('.close-hero-video').on('touchstart click', function() {
   var homeVideo = $('.home-video');
   var heroVideo = $('.hero-video');
 
@@ -307,7 +307,7 @@ $('.close-hero-video').click(function() {
 });
 
 // Play and setSrc for blockChain video
-$('#playbtn-blockchain').click(function() {
+$('#playbtn-blockchain').on('touchstart click', function() {
   var blockchainVideo = $('.blockchain-video');
 
   blockchainVideo.toggleClass('active');
@@ -317,7 +317,7 @@ $('#playbtn-blockchain').click(function() {
 });
 
 // Close blockChain video
-$('.close-blockchain-video').click(function() {
+$('.close-blockchain-video').on('touchstart click', function() {
   var blockchainVideo = $('.blockchain-video');
 
   $(this).toggleClass('active');
@@ -326,7 +326,7 @@ $('.close-blockchain-video').click(function() {
 });
 
 // Responsive hamburger menu open/close
-$('.hamburger').click(function() {
+$('.hamburger').on('touchstart click', function() {
   $(this).toggleClass('active');
   $('.mobile-nav').toggleClass('active');
 });
@@ -544,14 +544,14 @@ function setTeamCarousel() {
     teamLeft.css('display', 'block');
   }
 
-  teamRight.click(function() {
+  teamRight.on('touchstart click', function() {
     var currentPos = parseInt($(innerElement).css('left'), 10);
     if  ((Math.abs(currentPos) + (parseInt(containerWidth))) < totalSlideWidth ) {
       $(innerElement).css('left', (currentPos - containerWidth) + 'px');
     }
   });
 
-  teamLeft.click(function() {
+  teamLeft.on('touchstart click', function() {
     var currentPos = parseInt($(innerElement).css('left'), 10);
     if (currentPos < 0 ) {
       $(innerElement).css('left', (currentPos + containerWidth) + 'px');
