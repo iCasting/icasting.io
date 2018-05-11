@@ -275,6 +275,8 @@ $(document).ready(function() {
   $('.description.close').click(function(){
     $(this).addClass('open');
   });
+
+
 });
 
 $('.mobile-nav a').on('touchstart click', function() {
