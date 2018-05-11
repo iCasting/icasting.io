@@ -875,6 +875,22 @@ section.tokenization-community {
 
 section.team-advisors {
   padding: 100px 0; }
+  section.team-advisors .close-description {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: -60px;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    visibility: hidden;
+    cursor: pointer; }
+    section.team-advisors .close-description svg {
+      stroke: #df1f36;
+      stroke-width: 11px;
+      height: 15px;
+      width: 15px;
+      margin-top: 10px; }
   section.team-advisors span.team-right, section.team-advisors span.team-left {
     background: white;
     width: 30px;
@@ -937,14 +953,8 @@ section.team-advisors {
       opacity: 1 !important; }
     section.team-advisors .membercontainer:nth-child(4n+2) {
       margin: 0 35px 30px 70px; }
-      section.team-advisors .membercontainer:nth-child(4n+2) .square {
-        transition-delay: 0.6s !important; }
     section.team-advisors .membercontainer:nth-child(4n+3) {
       margin: 0 70px 30px 35px; }
-      section.team-advisors .membercontainer:nth-child(4n+3) .square {
-        transition-delay: 0.7s !important; }
-    section.team-advisors .membercontainer:nth-child(4n+4) .square {
-      transition-delay: .8s !important; }
     section.team-advisors .membercontainer.active .square {
       transform: translateX(0) !important; }
     section.team-advisors .membercontainer:hover .memberimage .square {
@@ -1002,12 +1012,12 @@ section.team-advisors {
         z-index: 99;
         mix-blend-mode: darken;
         transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
-        transition-delay: .5s;
         bottom: 0;
         left: 0;
         transform: translateX(-100%); }
     section.team-advisors .membercontainer .memberdetails {
-      margin-top: 20px; }
+      margin-top: 20px;
+      position: relative; }
       section.team-advisors .membercontainer .memberdetails h3 {
         font-size: 20px;
         margin-bottom: 0; }
@@ -1022,10 +1032,15 @@ section.team-advisors {
         overflow: hidden;
         box-sizing: border-box;
         transition: all 1s ease-in-out; }
-      section.team-advisors .membercontainer .description.open p {
-        max-height: 2000px; }
-      section.team-advisors .membercontainer .description.open:after, section.team-advisors .membercontainer .description.open:before {
-        display: none; }
+      section.team-advisors .membercontainer .description.open {
+        cursor: pointer; }
+        section.team-advisors .membercontainer .description.open p {
+          max-height: 2000px; }
+        section.team-advisors .membercontainer .description.open .close-description {
+          opacity: 1;
+          visibility: visible; }
+        section.team-advisors .membercontainer .description.open:after, section.team-advisors .membercontainer .description.open:before {
+          display: none; }
       section.team-advisors .membercontainer .description:after {
         content: '';
         height: 50px;
@@ -1134,6 +1149,9 @@ section.team-advisors {
           transition: all 1s ease-in-out; }
         section.team-advisors .advisor span .description.open p {
           max-height: 2000px; }
+        section.team-advisors .advisor span .description.open .close-description {
+          opacity: 1;
+          visibility: visible; }
         section.team-advisors .advisor span .description.open:after, section.team-advisors .advisor span .description.open:before {
           display: none; }
         section.team-advisors .advisor span .description:after {

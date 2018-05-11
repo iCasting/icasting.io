@@ -266,15 +266,19 @@ $(document).ready(function() {
     }
   });
 
-  $('.description').on('touchstart click', function() {
+
+
+  $('.description').click(function(){
     $('.description').removeClass('open');
-
     $(this).addClass('open');
   });
 
-  $('.description.close').click(function(){
-    $(this).addClass('open');
+  $('.close-description').click(function(){
+    setTimeout(function() {
+      $('.description').removeClass('open');
+    }, 50);
   });
+
 });
 
 $('.mobile-nav a').on('touchstart click', function() {
