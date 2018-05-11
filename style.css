@@ -1086,7 +1086,7 @@ section.team-advisors {
         position: relative;
         overflow: hidden;
         margin-bottom: 30px;
-        box-shadow: 40px 40px 70px 0 rgba(0, 0, 0, 0.15); }
+        box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.05); }
         section.team-advisors .advisor span.img .dots {
           position: absolute;
           height: 55%;
