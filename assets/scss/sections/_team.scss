@@ -1,6 +1,26 @@
 section.team-advisors {
   padding: 100px 0;
 
+  .close-description {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: -60px;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    visibility: hidden;
+    cursor: pointer;
+
+    svg {
+      stroke: $primary-color;
+      stroke-width: 11px;
+      height: 15px;
+      width: 15px;
+      margin-top: 10px;
+    }
+  }
+
   span.team-right, span.team-left {
     background: white;
     width: 30px;
@@ -218,26 +238,6 @@ section.team-advisors {
       p.job-title {
         font-weight: $font-weight-light;
       }
-
-      .close-description {
-        height: 30px;
-        width: 30px;
-        position: absolute;
-        right: -15px;
-        top: -60px;
-        opacity: 0;
-        transition: opacity .25s ease-in-out;
-        cursor: pointer;
-        visibility: hidden;
-
-        svg {
-          stroke: $primary-color;
-          stroke-width: 11px;
-          height: 15px;
-          width: 15px;
-          margin-top: 10px;
-        }
-      }
     }
 
     .description {
@@ -254,6 +254,7 @@ section.team-advisors {
       }
 
       &.open {
+        cursor: pointer;
         p {
           max-height: 2000px;
         }
@@ -417,6 +418,11 @@ section.team-advisors {
         &.open {
           p {
             max-height: 2000px;
+          }
+
+          .close-description {
+            opacity: 1;
+            visibility: visible;
           }
 
           &:after, &:before {
