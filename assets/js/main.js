@@ -1,5 +1,5 @@
 // Init Rellax
-var rellax = new Rellax('.rellax');
+new Rellax('.rellax');
 
 // Calculate the time remaining till endtime/
 function getTimeRemaining(endtime) {
@@ -51,8 +51,9 @@ function initializeClock(id, endtime) {
 }
 
 // Set the deadline date
-var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
-initializeClock('clockdiv', deadline);
+// var deadline = new Date(2018, 11, 24, 10, 33, 30, 0);
+// initializeClock('clockdiv', deadline);
+// initializeClock('clockdivMobile', deadline);
 
 // True/false if element is in viewport
 $.fn.isInViewport = function() {
@@ -65,6 +66,7 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+var roadmapCounter = 0;
 // Add active to some of the sections when they reach the viewport to start an animation
 function checkViewPort() {
   $('.number-container').each(function () {
@@ -91,14 +93,36 @@ function checkViewPort() {
     dataSlider.addClass('active');
   }
 
-  var membercontainer = $('.membercontainer');
+  var membercontainer = $('.team-carousel-inner');
   if (membercontainer.isInViewport()) {
-    membercontainer.addClass('active');
+    $('.membercontainer').addClass('active');
+  }
+
+  var teamAdvisors = $('.team-advisors');
+  if (teamAdvisors.isInViewport()) {
+    teamAdvisors.addClass('active');
+  }
+
+  var sellingPointsList = $('.selling-points-list');
+  if (sellingPointsList.isInViewport()) {
+    sellingPointsList.addClass('active');
+  }
+
+  var sellingPointsRight = $('.selling-points-right');
+  if (sellingPointsRight.isInViewport()) {
+    sellingPointsRight.addClass('active');
+    $('.selling-points-left').addClass('active');
   }
 
   var roadmap = $('.roadmap');
   if (roadmap.isInViewport()) {
-    animateSwirl();
+    roadmapCounter++;
+
+    if (roadmapCounter === 1) {
+      setTimeout(function(){
+        animateSwirl();
+      }, 1000);
+    }
   }
 };
 
@@ -127,7 +151,6 @@ $(window).scroll(function(){
   checkpos('redblock');
 });
 
-
 // Add animation to the counter function in the header
 function animateCounters(el) {
   $(el).prop('Counter', 0).animate({
@@ -136,12 +159,28 @@ function animateCounters(el) {
     duration: 2000,
     easing: 'swing',
     step: function (now) {
-      $(el).text(Math.ceil(now));
+      if (now < 10000 && $.isNumeric(now)) {
+        $(el).text(
+          Math.ceil(now)
+        );
+      } else if ($.isNumeric(now)) {
+        $(el).text(
+          Math.ceil(now).toLocaleString('nl')
+        );
+      }
     }
   })
 }
 
 $(document).ready(function() {
+  function isIEorEDGE(){
+    return navigator.appName == 'Microsoft Internet Explorer' || (navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') > -1);
+  }
+
+  if (isIEorEDGE()) {
+    $('html').addClass('ie');
+  }
+
   // Check viewPort height/width on init and resize/scroll
   checkViewPort();
   $(window).on('scroll resize',function(){
@@ -150,10 +189,10 @@ $(document).ready(function() {
 
   // Calculate the carrousels on init and change of window size
   setCarroussel();
-  setTeamCarousel();
+  //setTeamCarousel();
   $(window).resize(function() {
     setCarroussel();
-    setTeamCarousel();
+    //setTeamCarousel();
   });
 
   // Left and right click for the Roadmap carorusel
@@ -201,6 +240,34 @@ $(document).ready(function() {
         blockchainVideo.attr("src",videosrc);
       }
     }
+  });
+
+  $('.show-more').click(function(){
+    if ($(this).hasClass('active')) {
+      $('.membercontainer').fadeOut();
+
+      $('.show-more').removeClass('active').find('p').text('Show all');
+
+      var number = $('#team-scroll').offset().top - 50;
+
+      $('html, body').animate({
+        scrollTop: number
+      }, 800);
+    } else {
+      $('.membercontainer').fadeIn().css('display', 'inline-block');
+
+      $('.show-more').addClass('active').find('p').text('Show less');
+    }
+  });
+
+  $('.description').click(function(){
+    $('.description').removeClass('open');
+
+    $(this).addClass('open');
+  });
+
+  $('.description.close').click(function(){
+    $(this).addClass('open');
   });
 });
 
@@ -483,23 +550,23 @@ function setTeamCarousel() {
 
 // Functions for mobile swiping both the caroussels
 $(function() {
-  $('.team-carousel-inner').swipe( {
-    swipe:function(event, direction) {
-      if (direction === 'left') {
-        $('.team-right').trigger('click');
-      } else if (direction === 'right') {
-        $('.team-left').trigger('click');
-      } else if (direction === 'down') {
-        $('html, body').animate({
-          scrollTop: '-=300'
-        }, 300);
-      } else if (direction === 'up') {
-        $('html, body').animate({
-          scrollTop: '+=300'
-        }, 300);
-      }
-    }, threshold: 10
-  });
+  // $('.team-carousel-inner').swipe( {
+  //   swipe:function(event, direction) {
+  //     if (direction === 'left') {
+  //       $('.team-right').trigger('click');
+  //     } else if (direction === 'right') {
+  //       $('.team-left').trigger('click');
+  //     } else if (direction === 'down') {
+  //       $('html, body').animate({
+  //         scrollTop: '-=300'
+  //       }, 300);
+  //     } else if (direction === 'up') {
+  //       $('html, body').animate({
+  //         scrollTop: '+=300'
+  //       }, 300);
+  //     }
+  //   }, threshold: 10
+  // });
 
   $('.carroussel-inner').swipe( {
     swipe:function(event, direction) {

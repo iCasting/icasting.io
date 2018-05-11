@@ -1,6 +1,6 @@
 section.tokenization {
-  background: #f8fcfe;
-  padding: 10vh 0;
+  background: #f6fcfe;
+  padding: 150px 0 100px;
 
   .container {
     h2 {
@@ -18,6 +18,52 @@ section.tokenization {
 
   .text-left {
     text-align: left;
+  }
+
+  .selling-point-container {
+    opacity: 0;
+
+    transition: all .3s ease-in-out;
+    transition-delay: .5s;
+
+    &:nth-of-type(2) {
+      transition-delay: .7s !important;
+    }
+    &:nth-of-type(3) {
+      transition-delay: .9s !important;
+    }
+    &:nth-of-type(4) {
+      transition-delay: 1.1s !important;
+    }
+    &:nth-of-type(5) {
+      transition-delay: 1.3s !important;
+    }
+  }
+
+  .selling-points-left {
+    .selling-point-container {
+      transform: translateX(-50%);
+    }
+
+    &.active {
+      .selling-point-container {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .selling-points-right {
+    .selling-point-container {
+      transform: translateX(50%);
+    }
+
+    &.active {
+      .selling-point-container {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
   }
 
   .column-small {
@@ -99,5 +145,24 @@ section.tokenization {
     .back {
       transform: rotateY(180deg);
     }
+  }
+}
+
+section.tokenization-community {
+  padding: 100px 0;
+  text-align: center;
+
+  .container {
+    max-width: 700px;
+  }
+
+  h2 {
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 50px;
   }
 }

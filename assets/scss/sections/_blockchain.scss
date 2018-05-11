@@ -1,7 +1,6 @@
 section.blockchain {
   position: relative;
-  height: 130vh;
-  margin-bottom: 150px;
+  mix-blend-mode: darken;
 
   .table {
     padding: 25vh 0 15vh;
@@ -20,41 +19,63 @@ section.blockchain {
     margin-bottom: 50px;
   }
 
-  .selling-points {
-    display: table;
-    width: 100%;
-    max-width: 420px;
-    text-align: left;
-    margin-bottom: 25px;
+  .selling-points-list {
+    .selling-points {
+      display: table;
+      width: 100%;
+      max-width: 420px;
+      text-align: left;
+      margin-bottom: 25px;
+      opacity: 0;
 
-    span {
-      vertical-align: middle;
-      display: table-cell;
+      transition: all .3s ease-in-out;
+      transition-delay: .8s;
 
-      &.img {
-        width: 50px;
-
-        div {
-          height: 30px;
-          width: 30px;
-          background: $primary-color;
-          border-radius: 15px;
-          text-align: center;
-        }
-
-        svg {
-          fill: transparent;
-          stroke-width: 3px;
-          stroke: white;
-          max-width: 15px;
-          margin-top: 9px;
-          margin-left: -1px;
-        }
+      &:nth-of-type(2) {
+        transition-delay: 1s !important;
+      }
+      &:nth-of-type(3) {
+        transition-delay: 1.2s !important;
+      }
+      &:nth-of-type(4) {
+        transition-delay: 1.4s !important;
       }
 
-      img {
-        max-width: 20px;
-        margin-right: 30px;
+      span {
+        vertical-align: middle;
+        display: table-cell;
+
+        &.img {
+          width: 50px;
+
+          div {
+            height: 30px;
+            width: 30px;
+            background: $primary-color;
+            border-radius: 15px;
+            text-align: center;
+          }
+
+          svg {
+            fill: transparent;
+            stroke-width: 3px;
+            stroke: white;
+            max-width: 15px;
+            margin-top: 9px;
+            margin-left: -1px;
+          }
+        }
+
+        img {
+          max-width: 20px;
+          margin-right: 30px;
+        }
+      }
+    }
+
+    &.active {
+      .selling-points {
+        opacity: 1;
       }
     }
   }
@@ -64,23 +85,17 @@ section.blockchain {
   }
 
   .blockchain-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 
     img.hero-img {
       position: absolute;
-      bottom: 100px;
+      bottom: 0;
       max-width: 1100px;
       left: calc(-1000px + 45vw);
-
     }
 
     .container {
-      padding-top: 15vh;
+      padding-top: 25vh;
     }
   }
 
@@ -88,7 +103,6 @@ section.blockchain {
     height: 422px; // full screen video size
     max-width: 750px;
     margin: 0 auto;
-    margin-bottom: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     width: 75vw;

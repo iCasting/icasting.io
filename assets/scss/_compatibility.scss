@@ -1,0 +1,24 @@
+.ie {
+  section.team-advisors .membercontainer .memberimage .square {
+    opacity: .8;
+
+    .dots {
+      opacity: .25;
+    }
+  }
+
+  section.blockchain .blockchainsquare,
+  .hero .square {
+    opacity: .9;
+
+    .dots {
+      opacity: .25;
+    }
+  }
+  
+  svg {
+    circle {
+      display: none;
+    }
+  }
+}

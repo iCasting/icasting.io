@@ -1,34 +1,38 @@
 @media screen and (max-width: 1520px) {
-  section.team-advisors {
-    .membercontainer {
-      width: 25%;
-      max-width: unset;
-    }
+  //section.team-advisors {
+  //  .membercontainer {
+  //    width: 25%;
+  //    max-width: inherit;
+  //  }
+  //
+  //  span.team-left, span.team-right {
+  //    top: inherit;
+  //    bottom: -30px;
+  //    left: 0;
+  //  }
+  //
+  //  span.team-right {
+  //    right: inherit;
+  //    left: 50px;
+  //  }
+  //}
 
-    span.team-left, span.team-right {
-      top: unset;
-      bottom: -30px;
-      left: 0;
-    }
-
-    span.team-right {
-      right: unset;
-      left: 50px;
-    }
+  .hero img.hero-img {
+    right: calc(50vw - 900px);
   }
 }
 
 @media screen and (max-width: 1250px) {
-  section.team-advisors {
-    .membercontainer {
-      width: calc(100% / 3);
-      max-width: unset;
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: calc(25% - 22.5px);
+
+    &:nth-child(4n+2) {
+      margin: 0 15px 30px 30px;
     }
 
-    .advisor {
-      width: 50%;
-      max-width: unset;
-      display: inline-block;
+    &:nth-child(4n+3) {
+      margin: 0 30px 30px 15px;
     }
   }
 
@@ -37,9 +41,18 @@
       margin-bottom: -50px;
     }
   }
+
+  .hero .counter-container #clockdiv .clock-entity .counter,
+  .hero .counter-container #clockdivMobile .clock-entity .counter{
+    width: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+
   .social.fixed {
     display: none;
   }
@@ -73,54 +86,6 @@
     }
   }
 
-  section.hero {
-    .hero-text {
-      .text-contents {
-        p.pretitle {
-          font-size: 16px;
-          margin-bottom: 10px;
-          font-weight: $font-weight-medium;
-        }
-      }
-    }
-
-    .container {
-      .square {
-        height: 45vh!important;
-
-        img {
-          mix-blend-mode: darken;
-          vertical-align: bottom;
-          display: block;
-          position: absolute;
-          width: auto;
-          height: 50vh;
-          margin-top: -5vh;
-        }
-      }
-    }
-
-    .counter-container {
-      #clockdiv {
-        .clock-entity {
-          .counter {
-            height: 37px;
-            width: 39px;
-            font-size: 30px;
-            padding-top: 17px;
-          }
-        }
-      }
-    }
-
-    .hero-bottom {
-      .container {
-        img.hero-img {
-          display: none;
-        }
-      }
-    }
-  }
   header {
     .menu {
       .desktop-nav, .header-buttons {
@@ -280,6 +245,8 @@
       margin: 0 auto;
       width: 100%;
       max-width: 400px;
+      opacity: 1 !important;
+      transform: none !important;
       
       &:nth-of-type(4), &:nth-of-type(5) {
         display: none;
@@ -291,14 +258,12 @@
     .column-large {
       margin-bottom: 100px;
       position: relative;
-      height: 40vh;
+      height: auto;
 
       svg {
-        position: absolute;
-        top: 50%;
+        position: relative;
         left: 0;
         right: 0;
-        transform: translateY(-50%);
       }
 
       img.icasting-people {
@@ -309,6 +274,69 @@
 }
 
 @media screen and (max-width: 968px) {
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: calc(50% - 15px);
+    margin: 0 0 30px 0 !important;
+
+    &:nth-child(odd) {
+      margin: 0 15px 30px 0 !important;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 30px 15px !important;
+    }
+  }
+
+  section.hero {
+    .hero-text {
+      .text-contents {
+        p.pretitle {
+          font-size: 16px;
+          margin-bottom: 10px;
+          font-weight: $font-weight-medium;
+        }
+      }
+    }
+
+    .container {
+      .square {
+        padding: 50px 0 80px;
+
+        img {
+          mix-blend-mode: darken;
+          vertical-align: bottom;
+          display: block;
+          position: absolute;
+          width: auto;
+          height: 50vh;
+          margin-top: -5vh;
+        }
+      }
+    }
+
+    .counter-container {
+      #clockdiv, #clockdivMobile {
+        .clock-entity {
+          .counter {
+            height: 37px;
+            width: 39px;
+            font-size: 30px;
+            padding-top: 17px;
+          }
+        }
+      }
+    }
+
+    .hero-bottom {
+      .container {
+        img.hero-img {
+          display: none;
+        }
+      }
+    }
+  }
+
   .rellax {
     -webkit-transform: none!important;
     -moz-transform: none!important;
@@ -317,14 +345,22 @@
     transform: none!important;
   }
   .hero-bottom {
-    margin-top: 210px;
+    margin-top: 75px;
+
+    .container {
+      padding-top: 100px !important;
+    }
   }
   section.about {
-    margin-top: 50px;
+    margin: 75px 0 10px;
 
     .small .btn, .numbers, .table, .center .btn{
       display: none;
     }
+  }
+
+  section.tokenization {
+    padding: 75px 0 50px;
   }
 
   .hero-img {
@@ -352,25 +388,27 @@
         }
       }
 
-      .selling-points {
-        max-width: unset;
+      .selling-points-list {
+        .selling-points {
+          max-width: inherit;
 
-        span.img {
-          div {
-            background: white;
+          span.img {
+            div {
+              background: white;
+            }
+
+            svg {
+              fill: transparent;
+              stroke-width: 3px;
+              stroke: $primary-color;
+            }
           }
 
-          svg {
-            fill: transparent;
-            stroke-width: 3px;
-            stroke: $primary-color;
-          }
-        }
-
-        span {
-          &:nth-of-type(2) {
-            font-size: 20px;
-            line-height: 26px;
+          span {
+            &:nth-of-type(2) {
+              font-size: 20px;
+              line-height: 26px;
+            }
           }
         }
       }
@@ -438,7 +476,7 @@
         margin: 0 auto!important;
 
         .email {
-          box-shadow: unset;
+          box-shadow: inherit;
         }
       }
 
@@ -455,15 +493,41 @@
         display: block;
         width: 100%;
         text-align: center!important;
+        
+        &.right {
+          display: none;
+        }
       }
       .left {
-        height: 45vh;
+        height: auto;
       }
       .square {
-        top: 40vh;
-        left: -10vw;
-        width: 110vw;
-        height: 35vh;
+        margin-top: 7.5vh;
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+
+        .mobile {
+          position: relative;
+          display: block;
+          z-index: 10;
+          bottom: inherit;
+        }
+
+        .signup {
+          margin-top: 50px;
+        }
+
+        img {
+          bottom: 0;
+        }
+
+        .dots {
+          top: 0;
+          position: absolute;
+        }
       }
     }
     .hero-text {
@@ -491,15 +555,9 @@
         img.hero-img {
           left: -10vw;
           max-width: 550px;
-          right: unset;
+          right: inherit;
         }
       }
-    }
-  }
-  section.team-advisors {
-    .membercontainer {
-      width: 50%;
-      max-width: unset;
     }
   }
 
@@ -551,17 +609,31 @@
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 60px);
+  }
+
   .close-hero-video, .close-blockchain-video, .close-hero-video, .close-blockchain-video {
     right: 0;
   }
 
   section.blockchain {
-    height: 1350px;
+    height: auto;
     margin-bottom: 40px;
   }
 
+  .hero {
+    .text-contents {
+      padding: 0 30px;
+    }
+  }
+
   .hero-bottom {
-    margin-top: 230px;
+    margin-top: 50px;
+  }
+
+  .blockchain-bottom {
+    margin-top: 150px;
   }
 
   .hero-bottom, .blockchain-bottom {
@@ -600,14 +672,6 @@
           display: none;
         }
       }
-    }
-  }
-
-
-  section.team-advisors {
-    .advisor {
-      width: 100%;
-      max-width: unset;
     }
   }
 
@@ -656,15 +720,20 @@
 }
 
 @media screen and (max-width: 550px) {
+  .blockchain-bottom {
+    margin-top: 50px;
+  }
+
   section.hero {
     .container {
       &.first {
         padding: 0;
       }
       .square {
-        top: 40vh! important;
-        height: 450px !important;
+        height: auto;
         box-shadow: none;
+        padding: 50px 0 30px;
+
         img {
           left: -25%;
           height: 500px;
@@ -680,10 +749,29 @@
       }
       form {
         max-width: 320px!important;
+        height: auto;
+
+        #mc_embed_signup_scroll .button {
+          position: relative;
+          width: 100% !important;
+          box-sizing: border-box;
+          top: 0;
+          right: 0;
+          margin-top: 20px;
+          text-align: center;
+          background: transparent;
+          border-color: white;
+          color: white;
+
+          &:hover {
+            color: $text-color !important;
+            background: white !important;
+          }
+        }
       }
     }
     .counter-container {
-      #clockdiv {
+      #clockdiv, #clockdivMobile {
         margin-bottom: 30px;
         .clock-entity {
           &:after {
@@ -711,15 +799,28 @@
       }
     }
   }
-  section.team-advisors {
-    .membercontainer {
-      width: 100%;
-      max-width: unset;
+
+  .team-carousel-inner, .team-advisors .table {
+    text-align: center;
+  }
+
+  section.team-advisors .membercontainer,
+  section.team-advisors .advisor {
+    width: 100%;
+    margin: 0 auto 30px !important;
+    text-align: left;
+
+    &:nth-child(odd) {
+      margin: 0 auto 30px !important;
+    }
+
+    &:nth-child(even) {
+      margin: 0 auto 30px !important;
     }
   }
+
   section.tokenization {
     .column-large {
-      height: 400px;
       .flip-coins {
         .flipper {
           height: 70px;
@@ -758,13 +859,46 @@
       margin-bottom: -40px;
     }
   }
+
+  section.team-advisors {
+    .membercontainer .memberimage {
+      width: 100%;
+      max-width: 100%;
+
+      .square {
+        width: 100%;
+      }
+    }
+
+    span.team-left {
+      top: 40%;
+      left: 20px;
+    }
+
+    span.team-right {
+      top: 40%;
+      right: 20px;
+      left: inherit;
+    }
+
+    span.team-right, span.team-left {
+      background: transparent;
+      border-color: white;
+      z-index: 10000;
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 15px;
+        fill: white;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 400px) {
   section.tokenization {
     .column-large {
-      height: 250px;
-
       .flip-coins {
         .flipper {
           height: 40px;
@@ -830,7 +964,7 @@
         margin-bottom: 20px;
       }
 
-      #clockdiv .clock-entity {
+      #clockdiv .clock-entity, #clockdivMobile .clock-entity {
         width: calc(23%);
 
         .counter {
@@ -844,5 +978,11 @@
     font-size: 14px;
     line-height: 1.6;
     margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .blockchain-bottom {
+    margin-top: 0;
   }
 }
