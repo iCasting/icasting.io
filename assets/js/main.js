@@ -260,9 +260,10 @@ $(document).ready(function() {
         scrollTop: number
       }, 800);
     } else {
-      $('.membercontainer').fadeIn().css('display', 'inline-block');
-
-      $('.show-more').addClass('active').find('p').text('Show less');
+      setTimeout(function() {
+        $('.membercontainer').fadeIn().css('display', 'inline-block');
+        $('.show-more').addClass('active').find('p').text('Show less');
+      }, 100);
     }
   });
 
