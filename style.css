@@ -973,6 +973,8 @@ section.team-advisors {
       transform: translateY(-43%); }
     section.team-advisors .membercontainer.mark .memberimage img.photo {
       transform: translateY(-45%); }
+    section.team-advisors .membercontainer.ilona .memberimage img.photo {
+      transform: translateY(-58%); }
     section.team-advisors .membercontainer:nth-child(-n+4) {
       display: inline-block !important;
       opacity: 1 !important; }

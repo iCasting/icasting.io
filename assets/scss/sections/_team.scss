@@ -124,6 +124,14 @@ section.team-advisors {
       }
     }
 
+    &.ilona {
+      .memberimage {
+        img.photo {
+          transform: translateY(-58%);
+        }
+      }
+    }
+
     &:nth-child(-n+4) {
       display: inline-block !important;
       opacity: 1 !important;
