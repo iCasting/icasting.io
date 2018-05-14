@@ -969,6 +969,10 @@ section.team-advisors {
     margin-bottom: 30px;
     vertical-align: top;
     display: none; }
+    section.team-advisors .membercontainer.rick .memberimage img.photo {
+      transform: translateY(-43%); }
+    section.team-advisors .membercontainer.mark .memberimage img.photo {
+      transform: translateY(-45%); }
     section.team-advisors .membercontainer:nth-child(-n+4) {
       display: inline-block !important;
       opacity: 1 !important; }
@@ -977,9 +981,11 @@ section.team-advisors {
     section.team-advisors .membercontainer:nth-child(4n+3) {
       margin: 0 70px 30px 35px; }
     section.team-advisors .membercontainer.active .square {
-      transform: translateX(0) !important; }
+      left: 0 !important;
+      mix-blend-mode: darken !important; }
     section.team-advisors .membercontainer:hover .memberimage .square {
-      transform: translateX(-110%) !important; }
+      left: -350px !important;
+      mix-blend-mode: darken !important; }
     section.team-advisors .membercontainer .memberimage {
       width: 100%;
       position: relative;
@@ -1031,11 +1037,10 @@ section.team-advisors {
         width: 100%;
         position: absolute;
         z-index: 99;
-        mix-blend-mode: darken;
-        transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
+        mix-blend-mode: multiply;
+        transition: left 0.8s cubic-bezier(1, 0, 0.16, 1);
         bottom: 0;
-        left: 0;
-        transform: translateX(-100%); }
+        left: -350px; }
     section.team-advisors .membercontainer .memberdetails {
       margin-top: 20px;
       position: relative; }

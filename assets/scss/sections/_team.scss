@@ -108,6 +108,22 @@ section.team-advisors {
     vertical-align: top;
     display: none;
 
+    &.rick {
+      .memberimage {
+        img.photo {
+          transform: translateY(-43%);
+        }
+      }
+    }
+
+    &.mark {
+      .memberimage {
+        img.photo {
+          transform: translateY(-45%);
+        }
+      }
+    }
+
     &:nth-child(-n+4) {
       display: inline-block !important;
       opacity: 1 !important;
@@ -127,14 +143,16 @@ section.team-advisors {
 
     &.active {
       .square {
-        transform: translateX(0) !important;
+        left: 0!important;
+        mix-blend-mode: darken!important;
       }
     }
 
     &:hover {
       .memberimage {
         .square {
-          transform: translateX(-110%) !important;
+          left: -350px!important;
+          mix-blend-mode: darken!important;
         }
       }
     }
@@ -205,11 +223,10 @@ section.team-advisors {
         width: 100%;
         position: absolute;
         z-index: 99;
-        mix-blend-mode: darken;
-        transition: transform .8s cubic-bezier(1,0,.16,1);
+        mix-blend-mode: multiply;
+        transition: left .8s cubic-bezier(1,0,.16,1);
         bottom: 0;
-        left: 0;
-        transform: translateX(-100%);
+        left: -350px;
 
         //.dots {
         //  position: absolute;
