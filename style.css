@@ -839,27 +839,48 @@ section.tokenization {
     transform: translateY(-50%); }
     section.tokenization .flip-coins img {
       max-width: 90px; }
-  section.tokenization .flip-container {
-    perspective: 1000px; }
-    section.tokenization .flip-container .flipper.flip {
-      transform: rotateY(-180deg); }
-    section.tokenization .flip-container .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-      height: 90px;
-      width: 90px;
-      display: inline-block; }
-    section.tokenization .flip-container .front, section.tokenization .flip-container .back {
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    section.tokenization .flip-container .front {
-      z-index: 2;
-      transform: rotateY(0deg); }
-    section.tokenization .flip-container .back {
-      transform: rotateY(180deg); }
+  section.tokenization .coin-flip {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); }
+  section.tokenization .coin-flip-front,
+  section.tokenization .coin-flip-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    section.tokenization .coin-flip-front img,
+    section.tokenization .coin-flip-back img {
+      max-width: 95%; }
+  section.tokenization .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 1;
+    /* for IE 9 */ }
+  section.tokenization :hover > .coin-flip-front, section.tokenization .flip .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(180deg);
+    transform: perspective(180px) rotateY(180deg); }
+  section.tokenization .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(-180deg);
+    transform: perspective(180px) rotateY(-180deg); }
+  section.tokenization :hover > .coin-flip-back, section.tokenization .flip .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 2;
+    /* for IE 9 */ }
+  section.tokenization .coin-flip {
+    height: 90px;
+    width: 90px; }
 
 section.tokenization-community {
   padding: 100px 0;
@@ -948,6 +969,12 @@ section.team-advisors {
     margin-bottom: 30px;
     vertical-align: top;
     display: none; }
+    section.team-advisors .membercontainer.rick .memberimage img.photo {
+      transform: translateY(-43%); }
+    section.team-advisors .membercontainer.mark .memberimage img.photo {
+      transform: translateY(-45%); }
+    section.team-advisors .membercontainer.ilona .memberimage img.photo {
+      transform: translateY(-58%); }
     section.team-advisors .membercontainer:nth-child(-n+4) {
       display: inline-block !important;
       opacity: 1 !important; }
@@ -956,9 +983,11 @@ section.team-advisors {
     section.team-advisors .membercontainer:nth-child(4n+3) {
       margin: 0 70px 30px 35px; }
     section.team-advisors .membercontainer.active .square {
-      transform: translateX(0) !important; }
+      left: 0 !important;
+      mix-blend-mode: darken !important; }
     section.team-advisors .membercontainer:hover .memberimage .square {
-      transform: translateX(-110%) !important; }
+      left: -350px !important;
+      mix-blend-mode: darken !important; }
     section.team-advisors .membercontainer .memberimage {
       width: 100%;
       position: relative;
@@ -1010,11 +1039,10 @@ section.team-advisors {
         width: 100%;
         position: absolute;
         z-index: 99;
-        mix-blend-mode: darken;
-        transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
+        mix-blend-mode: multiply;
+        transition: left 0.8s cubic-bezier(1, 0, 0.16, 1);
         bottom: 0;
-        left: 0;
-        transform: translateX(-100%); }
+        left: -350px; }
     section.team-advisors .membercontainer .memberdetails {
       margin-top: 20px;
       position: relative; }
@@ -1247,21 +1275,17 @@ section.team-advisors {
       box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
       z-index: 1; }
       .data .half-page.right .data-slider.active li:first-of-type span {
-        width: 8%; }
+        width: 55%; }
       .data .half-page.right .data-slider.active li:nth-of-type(2) span {
-        width: 58%; }
+        width: 4%; }
       .data .half-page.right .data-slider.active li:nth-of-type(3) span {
-        width: 10%; }
+        width: 19%; }
       .data .half-page.right .data-slider.active li:nth-of-type(4) span {
         width: 5%; }
       .data .half-page.right .data-slider.active li:nth-of-type(5) span {
-        width: 3%; }
+        width: 12%; }
       .data .half-page.right .data-slider.active li:nth-of-type(6) span {
         width: 5%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(7) span {
-        width: 3%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(8) span {
-        width: 8%; }
       .data .half-page.right ul {
         list-style: none;
         position: absolute;
@@ -1313,7 +1337,7 @@ section.team-advisors {
     margin: 150px auto 0;
     position: relative;
     max-width: 1300px;
-    width: calc(100% - 100px); }
+    width: calc(100% - 150px); }
     .network .twirly.mobile {
       display: none; }
     .network .twirly .overlay {
@@ -1341,75 +1365,57 @@ section.team-advisors {
           width: 100%;
           position: relative; }
         .network .twirly .overlay .overlay-item.casting-platform {
-          top: -16%;
-          left: 6.5%; }
-        .network .twirly .overlay .overlay-item.casting-platform2 {
-          top: 80%;
-          left: 6.5%; }
+          top: -19%;
+          left: 11.5%; }
         .network .twirly .overlay .overlay-item.talent {
-          top: 32%;
-          left: -6%; }
+          top: 30%;
+          left: -9%; }
         .network .twirly .overlay .overlay-item.blockchain {
-          top: 32%;
-          left: 28%; }
+          top: 30%;
+          left: 33.5%; }
         .network .twirly .overlay .overlay-item.transaction {
-          top: -16%;
-          left: 50.5%; }
-        .network .twirly .overlay .overlay-item.user-profiles {
-          top: 32%;
-          left: 50.5%; }
+          top: -19%;
+          left: 56%; }
         .network .twirly .overlay .overlay-item.smartcontracts {
-          top: 80%;
-          left: 50.5%; }
+          top: 78%;
+          left: 56%; }
         .network .twirly .overlay .overlay-item.ipfs {
-          top: 32%;
-          left: 73.3%; }
+          top: 30%;
+          left: 79%; }
         .network .twirly .overlay .overlay-item.user-profiles2 {
-          top: -16%;
-          left: 93.2%; }
-        .network .twirly .overlay .overlay-item.smartcontracts2 {
-          top: 80%;
+          top: 30%;
           left: 93.2%; }
     .network .twirly svg {
       overflow: visible; }
       .network .twirly svg path {
         stroke-width: .5; }
-        .network .twirly svg path#path3, .network .twirly svg path#path3Mobile {
+        .network .twirly svg path#path1, .network .twirly svg path#path1Mobile, .network .twirly svg path#path7, .network .twirly svg path#path7Mobile, .network .twirly svg path#path8, .network .twirly svg path#path8Mobile {
           stroke-dasharray: 1.5;
           stroke-dashoffset: 50;
           animation: dash 5s linear infinite; }
     .network .twirly.mobile .overlay .overlay-item {
       width: 40%; }
       .network .twirly.mobile .overlay .overlay-item.casting-platform {
-        top: 9%;
-        left: -19.5%; }
-      .network .twirly.mobile .overlay .overlay-item.casting-platform2 {
-        top: 9%;
+        top: 14.5%;
         left: 79.7%; }
       .network .twirly.mobile .overlay .overlay-item.talent {
         top: -4%;
         left: 30%; }
       .network .twirly.mobile .overlay .overlay-item.blockchain {
-        top: 31%;
+        top: 37%;
         left: 30%; }
       .network .twirly.mobile .overlay .overlay-item.transaction {
-        top: 53.6%;
+        top: 59%;
         left: 79.7%; }
-      .network .twirly.mobile .overlay .overlay-item.user-profiles {
-        top: 53.6%;
-        left: 30%; }
       .network .twirly.mobile .overlay .overlay-item.smartcontracts {
-        top: 53.6%;
+        top: 59%;
         left: -19.5%; }
       .network .twirly.mobile .overlay .overlay-item.ipfs {
-        top: 76%;
+        top: 80%;
         left: 30%; }
       .network .twirly.mobile .overlay .overlay-item.user-profiles2 {
         top: 95%;
-        left: -19.5%; }
-      .network .twirly.mobile .overlay .overlay-item.smartcontracts2 {
-        top: 95%;
-        left: 79.7%; }
+        left: 30%; }
 
 @keyframes dash {
   to {
@@ -1488,14 +1494,13 @@ section.team-advisors {
           .roadmap .carroussel-container .carroussel-inner .slide .half-page.right {
             margin-right: 100px;
             background: #00112a;
-            padding: 50px;
+            padding: 50px 50px 30px 50px;
             box-sizing: border-box;
             color: white;
             position: relative; }
             .roadmap .carroussel-container .carroussel-inner .slide .half-page.right h4 {
               font-size: 20px;
-              margin-bottom: 20px;
-              max-width: calc(100% - 50px); }
+              margin-bottom: 20px; }
             .roadmap .carroussel-container .carroussel-inner .slide .half-page.right img {
               max-width: 40px;
               max-height: 30px;
@@ -1568,7 +1573,11 @@ section.team-advisors {
         position: absolute;
         z-index: 30;
         margin-top: -72px;
-        right: 0; }
+        background: white;
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        right: -25px; }
         .roadmap .carroussel-container .carroussel-navigation .buttons span {
           background: white;
           width: 30px;
@@ -1590,6 +1599,14 @@ section.team-advisors {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 10px; }
+        .roadmap .carroussel-container .carroussel-navigation .buttons:before {
+          content: '';
+          height: 1px;
+          background: #00112a;
+          width: 100%;
+          left: 0;
+          position: absolute;
+          top: 16px; }
   .roadmap .bottom-background {
     position: absolute;
     bottom: 0;

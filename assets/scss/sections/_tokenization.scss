@@ -113,38 +113,58 @@ section.tokenization {
     }
   }
 
-  .flip-container {
-    perspective: 1000px;
+  .coin-flip {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .flipper.flip {
-      transform: rotateY(-180deg);
+  .coin-flip-front,
+  .coin-flip-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      max-width: 95%;
     }
+  }
 
-    .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-      height: 90px;
-      width: 90px;
-      display: inline-block;
-    }
+  .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 1; /* for IE 9 */
+  }
+  :hover > .coin-flip-front, .flip .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(180deg);
+    transform: perspective(180px) rotateY(180deg);
+  }
 
-    .front, .back {
-      backface-visibility: hidden;
+  .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(-180deg);
+    transform: perspective(180px) rotateY(-180deg);
+  }
+  :hover > .coin-flip-back, .flip .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 2; /* for IE 9 */
+  }
 
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .front {
-      z-index: 2;
-      transform: rotateY(0deg);
-    }
-
-    .back {
-      transform: rotateY(180deg);
-    }
+  .coin-flip {
+    height: 90px;
+    width: 90px;
   }
 }
 

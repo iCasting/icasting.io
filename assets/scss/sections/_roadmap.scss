@@ -104,7 +104,7 @@
           &.right {
             margin-right: 100px;
             background: $text-color;
-            padding: 50px;
+            padding: 50px 50px 30px 50px;
             box-sizing: border-box;
             color: white;
             position: relative;
@@ -112,7 +112,6 @@
             h4 {
               font-size: 20px;
               margin-bottom: 20px;
-              max-width: calc(100% - 50px);
             }
 
             img {
@@ -211,7 +210,11 @@
         position: absolute;
         z-index: 30;
         margin-top: -72px;
-        right: 0;
+        background: white;
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        right: -25px;
 
         span {
           background: white;
@@ -241,6 +244,16 @@
             transform: translate(-50%, -50%);
             width: 10px;
           }
+        }
+
+        &:before {
+          content: '';
+          height: 1px;
+          background: $text-color;
+          width: 100%;
+          left: 0;
+          position: absolute;
+          top: 16px;
         }
       }
     }

@@ -202,10 +202,10 @@ $(document).ready(function() {
   });
 
   // Left and right click for the Roadmap carorusel
-  $('.buttons .right').on('touchstart click', function() {
+  $('.buttons .right').on('click', function() {
     slideCarroussel('right');
   });
-  $('.buttons .left').on('touchstart click', function() {
+  $('.buttons .left').on('click', function() {
     slideCarroussel('left');
   });
 
@@ -260,9 +260,10 @@ $(document).ready(function() {
         scrollTop: number
       }, 800);
     } else {
-      $('.membercontainer').fadeIn().css('display', 'inline-block');
-
-      $('.show-more').addClass('active').find('p').text('Show less');
+      setTimeout(function() {
+        $('.membercontainer').fadeIn().css('display', 'inline-block');
+        $('.show-more').addClass('active').find('p').text('Show less');
+      }, 100);
     }
   });
 
@@ -338,7 +339,7 @@ $('.hamburger').on('click', function() {
 // FlipCoins function for the tokenization
 function flipCoins() {
   var time = 0;
-  $('.flipper').each(function() {
+  $('.coin-flip').each(function() {
     var self = this;
     setTimeout(function() {
       $(self).toggleClass('flip');
