@@ -1030,6 +1030,7 @@ section.team-advisors {
         position: absolute;
         width: 100%;
         height: auto;
+        min-height: 100%;
         right: 0;
         top: 50%;
         transform: translateY(-50%); }
