@@ -717,6 +717,21 @@
       }
     }
   }
+
+  section.team-advisors {
+    .membercontainer, .advisor span {
+      .description {
+        margin-bottom: 60px;
+
+        &:before {
+          opacity: 1;
+          top: inherit;
+          bottom: -45px;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {

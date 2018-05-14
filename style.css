@@ -811,7 +811,8 @@ section.tokenization {
   section.tokenization .column-large {
     display: table-cell;
     width: 50%;
-    vertical-align: middle; }
+    vertical-align: middle;
+    position: relative; }
     section.tokenization .column-large img.icasting-people {
       max-width: 490px;
       margin: 0 auto;
@@ -1030,6 +1031,7 @@ section.team-advisors {
         position: absolute;
         width: 100%;
         height: auto;
+        min-height: 100%;
         right: 0;
         top: 50%;
         transform: translateY(-50%); }
@@ -1574,10 +1576,10 @@ section.team-advisors {
         z-index: 30;
         margin-top: -72px;
         background: white;
-        height: 30px;
-        width: 120px;
+        height: 33px;
+        width: 100px;
         text-align: center;
-        right: -25px; }
+        right: -15px; }
         .roadmap .carroussel-container .carroussel-navigation .buttons span {
           background: white;
           width: 30px;
@@ -2091,7 +2093,15 @@ section.team-advisors {
             .data .half-page.right ul li p {
               text-align: left;
               top: 40px;
-              left: -15px; } }
+              left: -15px; }
+
+  section.team-advisors .membercontainer .description, section.team-advisors .advisor span .description {
+    margin-bottom: 60px; }
+    section.team-advisors .membercontainer .description:before, section.team-advisors .advisor span .description:before {
+      opacity: 1;
+      top: inherit;
+      bottom: -45px;
+      transform: translate(-50%, 0); } }
 @media screen and (max-width: 550px) {
   .blockchain-bottom {
     margin-top: 50px; }
