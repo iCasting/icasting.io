@@ -2093,7 +2093,15 @@ section.team-advisors {
             .data .half-page.right ul li p {
               text-align: left;
               top: 40px;
-              left: -15px; } }
+              left: -15px; }
+
+  section.team-advisors .membercontainer .description, section.team-advisors .advisor span .description {
+    margin-bottom: 60px; }
+    section.team-advisors .membercontainer .description:before, section.team-advisors .advisor span .description:before {
+      opacity: 1;
+      top: inherit;
+      bottom: -45px;
+      transform: translate(-50%, 0); } }
 @media screen and (max-width: 550px) {
   .blockchain-bottom {
     margin-top: 50px; }
