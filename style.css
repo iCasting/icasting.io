@@ -839,27 +839,48 @@ section.tokenization {
     transform: translateY(-50%); }
     section.tokenization .flip-coins img {
       max-width: 90px; }
-  section.tokenization .flip-container {
-    perspective: 1000px; }
-    section.tokenization .flip-container .flipper.flip {
-      transform: rotateY(-180deg); }
-    section.tokenization .flip-container .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-      height: 90px;
-      width: 90px;
-      display: inline-block; }
-    section.tokenization .flip-container .front, section.tokenization .flip-container .back {
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    section.tokenization .flip-container .front {
-      z-index: 2;
-      transform: rotateY(0deg); }
-    section.tokenization .flip-container .back {
-      transform: rotateY(180deg); }
+  section.tokenization .coin-flip {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); }
+  section.tokenization .coin-flip-front,
+  section.tokenization .coin-flip-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    section.tokenization .coin-flip-front img,
+    section.tokenization .coin-flip-back img {
+      max-width: 95%; }
+  section.tokenization .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 1;
+    /* for IE 9 */ }
+  section.tokenization :hover > .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(180deg);
+    transform: perspective(180px) rotateY(180deg); }
+  section.tokenization .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(-180deg);
+    transform: perspective(180px) rotateY(-180deg); }
+  section.tokenization :hover > .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 2;
+    /* for IE 9 */ }
+  section.tokenization .coin-flip {
+    height: 90px;
+    width: 90px; }
 
 section.tokenization-community {
   padding: 100px 0;
@@ -1247,21 +1268,19 @@ section.team-advisors {
       box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
       z-index: 1; }
       .data .half-page.right .data-slider.active li:first-of-type span {
-        width: 8%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(2) span {
-        width: 58%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(3) span {
-        width: 10%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(4) span {
         width: 5%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(2) span {
+        width: 50%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(3) span {
+        width: 12%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(4) span {
+        width: 4%; }
       .data .half-page.right .data-slider.active li:nth-of-type(5) span {
-        width: 3%; }
+        width: 5%; }
       .data .half-page.right .data-slider.active li:nth-of-type(6) span {
         width: 5%; }
       .data .half-page.right .data-slider.active li:nth-of-type(7) span {
-        width: 3%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(8) span {
-        width: 8%; }
+        width: 19%; }
       .data .half-page.right ul {
         list-style: none;
         position: absolute;

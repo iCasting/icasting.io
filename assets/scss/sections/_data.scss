@@ -47,28 +47,25 @@
       .data-slider.active {
           li {
             &:first-of-type span {
-              width: 8%;
-            }
-            &:nth-of-type(2) span {
-              width: 58%;
-            }
-            &:nth-of-type(3) span {
-              width: 10%;
-            }
-            &:nth-of-type(4) span {
               width: 5%;
             }
+            &:nth-of-type(2) span {
+              width: 50%;
+            }
+            &:nth-of-type(3) span {
+              width: 12%;
+            }
+            &:nth-of-type(4) span {
+              width: 4%;
+            }
             &:nth-of-type(5) span {
-              width: 3%;
+              width: 5%;
             }
             &:nth-of-type(6) span {
               width: 5%;
             }
             &:nth-of-type(7) span {
-              width: 3%;
-            }
-            &:nth-of-type(8) span {
-              width: 8%;
+              width: 19%;
             }
           }
       }
