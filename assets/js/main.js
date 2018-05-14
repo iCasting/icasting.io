@@ -165,11 +165,7 @@ function animateCounters(el) {
     duration: 2000,
     easing: 'swing',
     step: function (now) {
-      if (now < 10000 && $.isNumeric(now)) {
-        $(el).text(
-          Math.ceil(now)
-        );
-      } else if ($.isNumeric(now)) {
+      if ($.isNumeric(now)) {
         $(el).text(
           Math.ceil(now).toLocaleString('nl')
         );
@@ -202,10 +198,10 @@ $(document).ready(function() {
   });
 
   // Left and right click for the Roadmap carorusel
-  $('.buttons .right').on('touchstart click', function() {
+  $('.buttons .right').on('click', function() {
     slideCarroussel('right');
   });
-  $('.buttons .left').on('touchstart click', function() {
+  $('.buttons .left').on('click', function() {
     slideCarroussel('left');
   });
 

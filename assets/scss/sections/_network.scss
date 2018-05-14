@@ -25,7 +25,7 @@
     margin: 150px auto 0;
     position: relative;
     max-width: 1300px;
-    width: calc(100% - 100px);
+    width: calc(100% - 150px);
 
     &.mobile {
       display: none;
@@ -92,16 +92,13 @@
           position: relative;
         }
 
-        &.casting-platform { top: -16%; left: 6.5%; }
-        &.casting-platform2 { top: 80%; left: 6.5%; }
-        &.talent { top: 32%; left: -6%; }
-        &.blockchain { top: 32%; left: 28%; }
-        &.transaction { top: -16%; left: 50.5%; }
-        &.user-profiles { top: 32%; left: 50.5%; }
-        &.smartcontracts { top: 80%; left: 50.5%; }
-        &.ipfs { top: 32%; left: 73.3%; }
-        &.user-profiles2 { top: -16%; left: 93.2%; }
-        &.smartcontracts2 { top: 80%; left: 93.2%; }
+        &.casting-platform { top: -19%; left: 11.5%; }
+        &.talent { top: 30%; left: -9%; }
+        &.blockchain { top: 30%; left: 33.5%; }
+        &.transaction { top: -19%; left: 56%; }
+        &.smartcontracts { top: 78%; left: 56%; }
+        &.ipfs { top: 30%; left: 79%; }
+        &.user-profiles2 { top: 30%; left: 93.2%; }
       }
     }
 
@@ -111,7 +108,7 @@
       path {
         stroke-width: .5;
 
-        &#path3, &#path3Mobile {
+        &#path1, &#path1Mobile, &#path7, &#path7Mobile, &#path8, &#path8Mobile {
           stroke-dasharray: 1.5;
           stroke-dashoffset: 50;
           animation: dash 5s linear infinite;
@@ -124,16 +121,13 @@
         .overlay-item {
           width: 40%;
 
-          &.casting-platform { top: 9%; left: -19.5%; }
-          &.casting-platform2 { top: 9%; left: 79.7%; }
+          &.casting-platform { top: 14.5%; left: 79.7%; }
           &.talent { top: -4%; left: 30%; }
-          &.blockchain { top: 31%; left: 30%; }
-          &.transaction { top: 53.6%; left: 79.7%; }
-          &.user-profiles { top: 53.6%; left: 30%; }
-          &.smartcontracts { top: 53.6%; left: -19.5%; }
-          &.ipfs { top: 76%; left: 30%; }
-          &.user-profiles2 { top: 95%; left: -19.5%; }
-          &.smartcontracts2 { top: 95%; left: 79.7%; }
+          &.blockchain { top: 37%; left: 30%; }
+          &.transaction { top: 59%; left: 79.7%; }
+          &.smartcontracts { top: 59%; left: -19.5%; }
+          &.ipfs { top: 80%; left: 30%; }
+          &.user-profiles2 { top: 95%; left: 30%; }
         }
       }
     }
