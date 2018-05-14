@@ -296,7 +296,7 @@ $('#playbtn').on('touchstart click', function() {
   heroVideo.toggleClass('active');
   $('.close-hero-video').toggleClass('active');
 
-  var videosrc = "https://www.youtube.com/embed/QVcp4DW9v7U?modestbranding=1&rel=0&autoplay=1";
+  var videosrc = "https://www.youtube.com/embed/KCkW5S5CFOg?modestbranding=1&rel=0&autoplay=1";
   heroVideo.attr("src",videosrc);
 });
 
