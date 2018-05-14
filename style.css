@@ -363,7 +363,8 @@ p.mobile-message {
 
 /* Per section */
 .hero {
-  position: relative; }
+  position: relative;
+  mix-blend-mode: darken; }
   .hero img.hero-img {
     position: absolute;
     bottom: 0;
@@ -519,16 +520,19 @@ p.mobile-message {
     position: absolute;
     top: 10%;
     z-index: 80;
-    mix-blend-mode: darken;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     left: 50%;
-    transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
+    transition: all 0.8s cubic-bezier(1, 0, 0.16, 1);
     transition-delay: .5s;
+    mix-blend-mode: multiply;
     transform: translate(50%, 0%) matrix(1, 0, 0, 1, 0, 0); }
     .hero .square img {
       display: none; }
     .hero .square.active {
-      transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+      transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
+      height: 81%; }
+      .hero .square.active.darken {
+        mix-blend-mode: darken; }
       .hero .square.active .dots {
         transform: translate(0%, 50%) matrix(1, 0, 0, 1, 0, 0); }
     .hero .square .dots {
@@ -604,7 +608,8 @@ section.about {
     border-right: 1px solid rgba(0, 17, 42, 0.2); }
 
 section.blockchain {
-  position: relative; }
+  position: relative;
+  mix-blend-mode: darken; }
   section.blockchain .table {
     padding: 25vh 0 15vh;
     height: auto; }
@@ -719,7 +724,7 @@ section.blockchain {
     position: absolute;
     top: 10%;
     z-index: 99;
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
     box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
     right: 60%;
     transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
@@ -729,6 +734,8 @@ section.blockchain {
       display: none; }
     section.blockchain .blockchainsquare.active {
       transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0); }
+      section.blockchain .blockchainsquare.active.darken {
+        mix-blend-mode: darken; }
       section.blockchain .blockchainsquare.active .dots {
         transform: translate(-10%, 50%) matrix(1, 0, 0, 1, 0, 0); }
     section.blockchain .blockchainsquare .dots {
@@ -832,27 +839,48 @@ section.tokenization {
     transform: translateY(-50%); }
     section.tokenization .flip-coins img {
       max-width: 90px; }
-  section.tokenization .flip-container {
-    perspective: 1000px; }
-    section.tokenization .flip-container .flipper.flip {
-      transform: rotateY(-180deg); }
-    section.tokenization .flip-container .flipper {
-      transition: 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-      height: 90px;
-      width: 90px;
-      display: inline-block; }
-    section.tokenization .flip-container .front, section.tokenization .flip-container .back {
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    section.tokenization .flip-container .front {
-      z-index: 2;
-      transform: rotateY(0deg); }
-    section.tokenization .flip-container .back {
-      transform: rotateY(180deg); }
+  section.tokenization .coin-flip {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%); }
+  section.tokenization .coin-flip-front,
+  section.tokenization .coin-flip-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    section.tokenization .coin-flip-front img,
+    section.tokenization .coin-flip-back img {
+      max-width: 95%; }
+  section.tokenization .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 1;
+    /* for IE 9 */ }
+  section.tokenization :hover > .coin-flip-front {
+    -webkit-transform: perspective(180px) rotateY(180deg);
+    transform: perspective(180px) rotateY(180deg); }
+  section.tokenization .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(-180deg);
+    transform: perspective(180px) rotateY(-180deg); }
+  section.tokenization :hover > .coin-flip-back {
+    -webkit-transform: perspective(180px) rotateY(0deg);
+    transform: perspective(180px) rotateY(0deg);
+    z-index: 2;
+    /* for IE 9 */ }
+  section.tokenization .coin-flip {
+    height: 90px;
+    width: 90px; }
 
 section.tokenization-community {
   padding: 100px 0;
@@ -868,6 +896,22 @@ section.tokenization-community {
 
 section.team-advisors {
   padding: 100px 0; }
+  section.team-advisors .close-description {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: -60px;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    visibility: hidden;
+    cursor: pointer; }
+    section.team-advisors .close-description svg {
+      stroke: #df1f36;
+      stroke-width: 11px;
+      height: 15px;
+      width: 15px;
+      margin-top: 10px; }
   section.team-advisors span.team-right, section.team-advisors span.team-left {
     background: white;
     width: 30px;
@@ -930,14 +974,8 @@ section.team-advisors {
       opacity: 1 !important; }
     section.team-advisors .membercontainer:nth-child(4n+2) {
       margin: 0 35px 30px 70px; }
-      section.team-advisors .membercontainer:nth-child(4n+2) .square {
-        transition-delay: 0.6s !important; }
     section.team-advisors .membercontainer:nth-child(4n+3) {
       margin: 0 70px 30px 35px; }
-      section.team-advisors .membercontainer:nth-child(4n+3) .square {
-        transition-delay: 0.7s !important; }
-    section.team-advisors .membercontainer:nth-child(4n+4) .square {
-      transition-delay: .8s !important; }
     section.team-advisors .membercontainer.active .square {
       transform: translateX(0) !important; }
     section.team-advisors .membercontainer:hover .memberimage .square {
@@ -995,12 +1033,12 @@ section.team-advisors {
         z-index: 99;
         mix-blend-mode: darken;
         transition: transform 0.8s cubic-bezier(1, 0, 0.16, 1);
-        transition-delay: .5s;
         bottom: 0;
         left: 0;
         transform: translateX(-100%); }
     section.team-advisors .membercontainer .memberdetails {
-      margin-top: 20px; }
+      margin-top: 20px;
+      position: relative; }
       section.team-advisors .membercontainer .memberdetails h3 {
         font-size: 20px;
         margin-bottom: 0; }
@@ -1015,10 +1053,15 @@ section.team-advisors {
         overflow: hidden;
         box-sizing: border-box;
         transition: all 1s ease-in-out; }
-      section.team-advisors .membercontainer .description.open p {
-        max-height: 2000px; }
-      section.team-advisors .membercontainer .description.open:after, section.team-advisors .membercontainer .description.open:before {
-        display: none; }
+      section.team-advisors .membercontainer .description.open {
+        cursor: pointer; }
+        section.team-advisors .membercontainer .description.open p {
+          max-height: 2000px; }
+        section.team-advisors .membercontainer .description.open .close-description {
+          opacity: 1;
+          visibility: visible; }
+        section.team-advisors .membercontainer .description.open:after, section.team-advisors .membercontainer .description.open:before {
+          display: none; }
       section.team-advisors .membercontainer .description:after {
         content: '';
         height: 50px;
@@ -1084,7 +1127,7 @@ section.team-advisors {
         position: relative;
         overflow: hidden;
         margin-bottom: 30px;
-        box-shadow: 40px 40px 70px 0 rgba(0, 0, 0, 0.15); }
+        box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.05); }
         section.team-advisors .advisor span.img .dots {
           position: absolute;
           height: 55%;
@@ -1127,6 +1170,9 @@ section.team-advisors {
           transition: all 1s ease-in-out; }
         section.team-advisors .advisor span .description.open p {
           max-height: 2000px; }
+        section.team-advisors .advisor span .description.open .close-description {
+          opacity: 1;
+          visibility: visible; }
         section.team-advisors .advisor span .description.open:after, section.team-advisors .advisor span .description.open:before {
           display: none; }
         section.team-advisors .advisor span .description:after {
@@ -1222,21 +1268,19 @@ section.team-advisors {
       box-shadow: 32px 55px 73px 0 rgba(4, 30, 53, 0.17);
       z-index: 1; }
       .data .half-page.right .data-slider.active li:first-of-type span {
-        width: 8%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(2) span {
-        width: 58%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(3) span {
-        width: 10%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(4) span {
         width: 5%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(2) span {
+        width: 50%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(3) span {
+        width: 12%; }
+      .data .half-page.right .data-slider.active li:nth-of-type(4) span {
+        width: 4%; }
       .data .half-page.right .data-slider.active li:nth-of-type(5) span {
-        width: 3%; }
+        width: 5%; }
       .data .half-page.right .data-slider.active li:nth-of-type(6) span {
         width: 5%; }
       .data .half-page.right .data-slider.active li:nth-of-type(7) span {
-        width: 3%; }
-      .data .half-page.right .data-slider.active li:nth-of-type(8) span {
-        width: 8%; }
+        width: 19%; }
       .data .half-page.right ul {
         list-style: none;
         position: absolute;
