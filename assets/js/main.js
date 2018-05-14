@@ -338,7 +338,7 @@ $('.hamburger').on('click', function() {
 // FlipCoins function for the tokenization
 function flipCoins() {
   var time = 0;
-  $('.flipper').each(function() {
+  $('.coin-flip').each(function() {
     var self = this;
     setTimeout(function() {
       $(self).toggleClass('flip');

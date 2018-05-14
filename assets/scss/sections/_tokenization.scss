@@ -147,7 +147,7 @@ section.tokenization {
     transform: perspective(180px) rotateY(0deg);
     z-index: 1; /* for IE 9 */
   }
-  :hover > .coin-flip-front {
+  :hover > .coin-flip-front, .flip .coin-flip-front {
     -webkit-transform: perspective(180px) rotateY(180deg);
     transform: perspective(180px) rotateY(180deg);
   }
@@ -156,7 +156,7 @@ section.tokenization {
     -webkit-transform: perspective(180px) rotateY(-180deg);
     transform: perspective(180px) rotateY(-180deg);
   }
-  :hover > .coin-flip-back {
+  :hover > .coin-flip-back, .flip .coin-flip-back {
     -webkit-transform: perspective(180px) rotateY(0deg);
     transform: perspective(180px) rotateY(0deg);
     z-index: 2; /* for IE 9 */

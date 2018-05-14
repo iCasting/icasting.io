@@ -867,13 +867,13 @@ section.tokenization {
     transform: perspective(180px) rotateY(0deg);
     z-index: 1;
     /* for IE 9 */ }
-  section.tokenization :hover > .coin-flip-front {
+  section.tokenization :hover > .coin-flip-front, section.tokenization .flip .coin-flip-front {
     -webkit-transform: perspective(180px) rotateY(180deg);
     transform: perspective(180px) rotateY(180deg); }
   section.tokenization .coin-flip-back {
     -webkit-transform: perspective(180px) rotateY(-180deg);
     transform: perspective(180px) rotateY(-180deg); }
-  section.tokenization :hover > .coin-flip-back {
+  section.tokenization :hover > .coin-flip-back, section.tokenization .flip .coin-flip-back {
     -webkit-transform: perspective(180px) rotateY(0deg);
     transform: perspective(180px) rotateY(0deg);
     z-index: 2;
