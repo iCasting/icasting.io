@@ -497,23 +497,28 @@ p.mobile-message {
     .hero .home-video:hover {
       transform: scale(1.03); }
     .hero .home-video .play {
-      display: table-cell;
-      vertical-align: middle; }
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer; }
       .hero .home-video .play .button {
-        height: 91px;
-        width: 91px;
+        height: 60px;
+        width: 60px;
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: all .2s ease-in-out; }
         .hero .home-video .play .button img {
-          max-width: 40px;
-          margin-top: 23px; }
-        .hero .home-video .play .button:hover {
-          transform: scale(1.1); }
-        .hero .home-video .play .button:active {
-          transform: scale(0.9); }
+          max-width: 20px;
+          margin-top: 17.5px; }
+      .hero .home-video .play:hover .button {
+        transform: translate(-50%, -50%) scale(1.2); }
+      .hero .home-video .play:active .button {
+        transform: translate(-50%, -50%) scale(0.8); }
   .hero .square {
     background: #df1f36;
     height: 80%;
@@ -701,23 +706,28 @@ section.blockchain {
     section.blockchain .blockchain-video:hover {
       transform: scale(1.03); }
     section.blockchain .blockchain-video .play {
-      display: table-cell;
-      vertical-align: middle; }
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer; }
       section.blockchain .blockchain-video .play .button {
-        height: 91px;
-        width: 91px;
+        height: 60px;
+        width: 60px;
         background: #00112a;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: all .2s ease-in-out; }
         section.blockchain .blockchain-video .play .button img {
-          max-width: 40px;
-          margin-top: 23px; }
-        section.blockchain .blockchain-video .play .button:hover {
-          transform: scale(1.1); }
-        section.blockchain .blockchain-video .play .button:active {
-          transform: scale(0.9); }
+          max-width: 20px;
+          margin-top: 17.5px; }
+      section.blockchain .blockchain-video .play:hover .button {
+        transform: translate(-50%, -50%) scale(1.2); }
+      section.blockchain .blockchain-video .play:active .button {
+        transform: translate(-50%, -50%) scale(0.8); }
   section.blockchain .blockchainsquare {
     background: #df1f36;
     height: 80%;

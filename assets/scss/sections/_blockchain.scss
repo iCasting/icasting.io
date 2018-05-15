@@ -138,30 +138,39 @@ section.blockchain {
     }
 
     .play {
-      display: table-cell;
-      vertical-align: middle;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
 
       .button {
-        height: 91px;
-        width: 91px;
+        height: 60px;
+        width: 60px;
         background: $text-color;
         margin: 0 auto;
         text-align: center;
-        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         transition: all .2s ease-in-out;
 
         img {
-          max-width: 40px;
-          margin-top: 23px;
+          max-width: 20px;
+          margin-top: 17.5px;
         }
+      }
 
-        &:hover {
-          transform: scale(1.1);
+      &:hover {
+        .button {
+          transform: translate(-50%, -50%) scale(1.2);
         }
+      }
 
-        &:active {
-          transform: scale(.9);
+      &:active {
+        .button {
+          transform: translate(-50%, -50%) scale(.8);
         }
       }
     }
