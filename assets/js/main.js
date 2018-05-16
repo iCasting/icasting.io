@@ -281,7 +281,8 @@ $(document).ready(function() {
   });
 
   function pickRandomHeader() {
-    var arr = ['1', '2', '3', '4'];
+    //var arr = ['1', '2', '3', '4'];
+    var arr = ['1', '4'];
 
     var rand = arr[Math.floor(Math.random() * arr.length)];
 
