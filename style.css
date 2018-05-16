@@ -232,6 +232,10 @@ body, html {
   line-height: 25px;
   font-weight: 300; }
 
+.no-scroll {
+  height: 100%;
+  overflow: hidden; }
+
 p {
   margin-bottom: 20px; }
 
@@ -342,6 +346,12 @@ a {
       background: transparent;
       border: 1px solid white;
       color: white; }
+  .btn.white {
+    background: white; }
+    .btn.white img {
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 10px; }
 
 p.mobile-message {
   display: none; }
@@ -1774,7 +1784,7 @@ section.team-advisors {
     header .mobile-nav {
       position: absolute;
       background: #df1f36;
-      height: 100vh;
+      height: calc(100vh - 90px);
       width: 100vw;
       left: 0;
       top: 90px;
@@ -1800,7 +1810,7 @@ section.team-advisors {
           left: 0;
           margin: 0 auto;
           right: 0;
-          top: 45%;
+          top: 50%;
           transform: translateY(-50%);
           text-align: center;
           font-size: 30px;
