@@ -38,6 +38,10 @@ section.tokenization {
     &:nth-of-type(5) {
       transition-delay: 1.3s !important;
     }
+    
+    &.mobile-selling {
+      display: none;
+    }
   }
 
   .selling-points-left {
