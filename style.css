@@ -813,6 +813,8 @@ section.tokenization {
       transition-delay: 1.1s !important; }
     section.tokenization .selling-point-container:nth-of-type(5) {
       transition-delay: 1.3s !important; }
+    section.tokenization .selling-point-container.mobile-selling {
+      display: none; }
   section.tokenization .selling-points-left .selling-point-container {
     transform: translateX(-50%); }
   section.tokenization .selling-points-left.active .selling-point-container {
@@ -1825,8 +1827,10 @@ section.team-advisors {
     max-width: 400px;
     opacity: 1 !important;
     transform: none !important; }
-    section.tokenization .selling-point-container:nth-of-type(4), section.tokenization .selling-point-container:nth-of-type(5) {
+    section.tokenization .selling-point-container p {
       display: none; }
+    section.tokenization .selling-point-container.mobile-selling {
+      display: block; }
   section.tokenization .mobile-message {
     display: block; }
   section.tokenization .column-large {

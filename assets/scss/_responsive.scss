@@ -247,9 +247,13 @@
       max-width: 400px;
       opacity: 1 !important;
       transform: none !important;
-      
-      &:nth-of-type(4), &:nth-of-type(5) {
+
+      p {
         display: none;
+      }
+      
+      &.mobile-selling {
+        display: block;
       }
     }
     .mobile-message {
