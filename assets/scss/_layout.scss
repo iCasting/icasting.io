@@ -172,6 +172,10 @@ a {
       vertical-align: middle;
       margin-right: 10px;
     }
+
+    &:hover {
+      color: $text-color;
+    }
   }
 }
 

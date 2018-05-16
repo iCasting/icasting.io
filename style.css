@@ -352,6 +352,8 @@ a {
       height: 20px;
       vertical-align: middle;
       margin-right: 10px; }
+    .btn.white:hover {
+      color: #00112a; }
 
 p.mobile-message {
   display: none; }
