@@ -21,6 +21,11 @@ body, html {
   font-weight: $font-weight-light;
 }
 
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 p {
   margin-bottom: 20px;
 }
@@ -156,6 +161,16 @@ a {
       background: transparent;
       border: 1px solid white;
       color: white;
+    }
+  }
+
+  &.white {
+    background: white;
+
+    img {
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
   }
 }

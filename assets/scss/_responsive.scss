@@ -177,7 +177,7 @@
     .mobile-nav {
       position: absolute;
       background: $primary-color;
-      height: 100vh;
+      height: calc(100vh - 90px);
       width: 100vw;
       left: 0;
       top: 90px;
@@ -207,7 +207,7 @@
           left: 0;
           margin: 0 auto;
           right: 0;
-          top: 45%;
+          top: 50%;
           transform: translateY(-50%);
           text-align: center;
           font-size: 30px;

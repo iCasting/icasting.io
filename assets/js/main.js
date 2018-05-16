@@ -297,6 +297,7 @@ $(document).ready(function() {
 $('.mobile-nav a').on('touchstart click', function() {
   $('.hamburger').toggleClass('active');
   $('.mobile-nav').toggleClass('active');
+  $('body, html').toggleClass('no-scroll');
 });
 
 // Play and setSrc for hero video
@@ -346,6 +347,7 @@ $('.close-blockchain-video').on('touchstart click', function() {
 $('.hamburger').on('click', function() {
   $(this).toggleClass('active');
   $('.mobile-nav').toggleClass('active');
+  $('body, html').toggleClass('no-scroll');
 });
 
 // FlipCoins function for the tokenization
