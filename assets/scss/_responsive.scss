@@ -309,7 +309,7 @@
           display: block;
           position: absolute;
           width: auto;
-          height: 50vh;
+          height: 450px;
           margin-top: -5vh;
         }
       }
@@ -331,7 +331,7 @@
     .hero-bottom {
       .container {
         img.hero-img {
-          display: none;
+          display: none !important;
         }
       }
     }

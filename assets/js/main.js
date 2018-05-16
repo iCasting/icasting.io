@@ -280,12 +280,23 @@ $(document).ready(function() {
     }, 50);
   });
 
+  function pickRandomHeader() {
+    var arr = ['1', '2', '3', '4'];
+
+    var rand = arr[Math.floor(Math.random() * arr.length)];
+
+    $('.img-' + rand).fadeIn();
+
+    $('.hero .square img').attr('src', 'assets/img/mobile_square_img_' + rand + '.jpg');
+  }
+
+  pickRandomHeader();
 });
 
 $('.mobile-nav a').on('touchstart click', function() {
   $('.hamburger').toggleClass('active');
   $('.mobile-nav').toggleClass('active');
-})
+});
 
 // Play and setSrc for hero video
 $('#playbtn').on('touchstart click', function() {
