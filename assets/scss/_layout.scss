@@ -113,13 +113,14 @@ a {
   border: 1px solid $primary-color;
   font-weight: $font-weight-bold;
   color: $text-color;
-  padding: 16px 27px;
+  padding: 12px 25px;
   border-radius: 30px;
   font-size: 14px;
   letter-spacing: 2px;
   transition: all .2s ease-in-out;
   display: inline-block;
   position: relative;
+  text-align: center;
 
   &:hover {
     background: $primary-color;
@@ -128,6 +129,7 @@ a {
 
   &.arrow {
     padding-right: 50px;
+
     &:after {
       content: '';
       background-image: url('assets/img/button_arrow.png');

@@ -309,13 +309,14 @@ a {
   border: 1px solid #df1f36;
   font-weight: 700;
   color: #00112a;
-  padding: 16px 27px;
+  padding: 12px 25px;
   border-radius: 30px;
   font-size: 14px;
   letter-spacing: 2px;
   transition: all .2s ease-in-out;
   display: inline-block;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .btn:hover {
     background: #df1f36;
     color: white; }
