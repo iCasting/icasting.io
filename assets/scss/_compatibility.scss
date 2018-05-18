@@ -7,6 +7,12 @@
     }
   }
 
+  .counter-container {
+    h3 {
+      text-shadow: 0 0 5px black;
+    }
+  }
+
   section.blockchain .blockchainsquare,
   .hero .square {
     display: none !important;
@@ -30,6 +36,7 @@
         position: relative !important;
         top: 0 !important;
         transform: none !important;
+        margin-bottom: 50px;
       }
     }
   }
