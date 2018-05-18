@@ -368,12 +368,17 @@ p.mobile-message {
     opacity: .25; }
 .ie section.blockchain .blockchainsquare,
 .ie .hero .square {
-  opacity: .9; }
-  .ie section.blockchain .blockchainsquare .dots,
-  .ie .hero .square .dots {
-    opacity: .25; }
+  display: none !important; }
 .ie svg circle {
   display: none; }
+.ie .table {
+  margin: 0 auto !important; }
+  .ie .table .polygon svg {
+    display: none !important; }
+  .ie .table .polygon .icasting-people {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important; }
 
 /* Per section */
 .hero {

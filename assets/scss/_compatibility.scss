@@ -9,16 +9,28 @@
 
   section.blockchain .blockchainsquare,
   .hero .square {
-    opacity: .9;
-
-    .dots {
-      opacity: .25;
-    }
+    display: none !important;
   }
   
   svg {
     circle {
       display: none;
+    }
+  }
+
+  .table {
+    margin: 0 auto !important;
+
+    .polygon {
+      svg {
+        display: none !important;
+      }
+
+      .icasting-people {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+      }
     }
   }
 }
