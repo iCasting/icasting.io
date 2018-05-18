@@ -366,14 +366,22 @@ p.mobile-message {
   opacity: .8; }
   .ie section.team-advisors .membercontainer .memberimage .square .dots {
     opacity: .25; }
+.ie .counter-container h3 {
+  text-shadow: 0 0 5px black; }
 .ie section.blockchain .blockchainsquare,
 .ie .hero .square {
-  opacity: .9; }
-  .ie section.blockchain .blockchainsquare .dots,
-  .ie .hero .square .dots {
-    opacity: .25; }
+  display: none !important; }
 .ie svg circle {
   display: none; }
+.ie .table {
+  margin: 0 auto !important; }
+  .ie .table .polygon svg {
+    display: none !important; }
+  .ie .table .polygon .icasting-people {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    margin-bottom: 50px; }
 
 /* Per section */
 .hero {
