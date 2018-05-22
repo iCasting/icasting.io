@@ -238,12 +238,15 @@ $(document).ready(function() {
       }, 800);
 
       if (hash === '#video') {
-        var blockchainVideo = $('.blockchain-video');
+        var homeVideo = $('.home-video');
+        var heroVideo = $('.hero-video');
 
-        blockchainVideo.toggleClass('active');
-        $('.close-blockchain-video').toggleClass('active');
-        var videosrc = "https://www.youtube.com/embed/MrPVryavPI4?modestbranding=1&rel=0&autoplay=1";
-        blockchainVideo.attr("src",videosrc);
+        homeVideo.toggleClass('active');
+        heroVideo.toggleClass('active');
+        $('.close-hero-video').toggleClass('active');
+
+        var videosrc = "https://www.youtube.com/embed/KCkW5S5CFOg?modestbranding=1&rel=0&autoplay=1";
+        heroVideo.attr("src",videosrc);
       }
     }
   });
