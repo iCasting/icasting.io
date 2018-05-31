@@ -385,8 +385,7 @@ p.mobile-message {
 
 /* Per section */
 .hero {
-  position: relative;
-  mix-blend-mode: darken; }
+  position: relative; }
   .hero img.hero-img {
     position: absolute;
     bottom: 0;
@@ -643,8 +642,7 @@ section.about {
     border-right: 1px solid rgba(0, 17, 42, 0.2); }
 
 section.blockchain {
-  position: relative;
-  mix-blend-mode: darken; }
+  position: relative; }
   section.blockchain .table {
     padding: 25vh 0 15vh;
     height: auto; }
