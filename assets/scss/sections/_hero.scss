@@ -1,6 +1,10 @@
 .hero {
   position: relative;
 
+  &.multiply {
+    mix-blend-mode: multiply;
+  }
+
   img.hero-img {
     position: absolute;
     bottom: 0;

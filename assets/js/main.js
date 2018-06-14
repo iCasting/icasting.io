@@ -642,3 +642,11 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-43515294-2');
+
+function changeHandler(e) {
+  $('.hero, .blockchain').toggleClass('multiply');
+}
+
+document.addEventListener("fullscreenchange", changeHandler, false);
+document.addEventListener("webkitfullscreenchange", changeHandler, false);
+document.addEventListener("mozfullscreenchange", changeHandler, false);

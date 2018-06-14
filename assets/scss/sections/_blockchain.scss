@@ -1,6 +1,10 @@
 section.blockchain {
   position: relative;
 
+  &.multiply {
+    mix-blend-mode: multiply;
+  }
+
   .table {
     padding: 25vh 0 15vh;
     height: auto;
