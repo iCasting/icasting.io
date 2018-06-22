@@ -650,3 +650,31 @@ function changeHandler(e) {
 document.addEventListener("fullscreenchange", changeHandler, false);
 document.addEventListener("webkitfullscreenchange", changeHandler, false);
 document.addEventListener("mozfullscreenchange", changeHandler, false);
+
+
+var toload=$("section,footer");
+var active = false;
+
+var lazyLoad = function() {
+    if (active === false) {
+        active = true;
+        setTimeout(function() {
+            var bottom = window.innerHeight*2+$(window).scrollTop();
+            toload = toload.filter(function(index, section){
+                if(section.offsetTop>bottom)
+                  return true;
+                console.log("--------------", section);
+                $(section).find("img[data-src]").each(function (key, i) {
+                    i.src = i.dataset.src;
+                });
+                return false;
+            });
+
+            active = false;
+        }, 200);
+    }
+};
+
+document.addEventListener("scroll", lazyLoad);
+window.addEventListener("resize", lazyLoad);
+window.addEventListener("orientationchange", lazyLoad);

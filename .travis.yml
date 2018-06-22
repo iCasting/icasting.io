@@ -1,5 +1,9 @@
-install: skip
-script: skip
+language: node_js
+node_js:
+  - "8"
+install:
+  - npm install
+  - npm run build
 deploy:
   - provider: s3
     skip_cleanup: true
@@ -7,6 +11,7 @@ deploy:
     secret_access_key: "$awssecret"
     bucket: "dev.icasting.io"
     acl: public_read
+    local_dir: dist
     region: eu-west-1
     on:
       branch: dev
@@ -16,6 +21,7 @@ deploy:
     secret_access_key: "$awssecret"
     bucket: "icasting.io"
     acl: public_read
+    local_dir: dist
     region: eu-west-1
     on:
       tags: true
