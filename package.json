@@ -1,0 +1,31 @@
+{
+  "name": "icasting.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "build": "gulp && mkdir dist/assets/ && cp -r assets/img dist/assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iCasting/icasting.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iCasting/icasting.io/issues"
+  },
+  "homepage": "https://github.com/iCasting/icasting.io#readme",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "^2.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2",
+    "gulp-concat": "^2.6.1"
+  }
+}

@@ -285,13 +285,15 @@ $(document).ready(function() {
 
   function pickRandomHeader() {
     //var arr = ['1', '2', '3', '4'];
-    var arr = ['1', '4'];
+    var arr = ['assets/img/icasting_header_img.jpg', 'assets/img/icasting_header_img_4.jpg'];
+    var mobile = ['assets/img/mobile_square_img_1.jpg', 'assets/img/mobile_square_img_4.jpg'];
+    var num = ['1', '4'];
 
-    var rand = arr[Math.floor(Math.random() * arr.length)];
+    var rand = Math.floor(Math.random() * arr.length);
 
-    $('.img-' + rand).fadeIn();
+    $('#main-hero').attr('src', arr[rand]).addClass("img-"+num[rand]).fadeIn();
 
-    $('.hero .square img').attr('src', 'assets/img/mobile_square_img_' + rand + '.jpg');
+    $('.hero .square img').attr('src', mobile[rand]).addClass("img-"+num[rand]);
   }
 
   pickRandomHeader();
@@ -650,3 +652,30 @@ function changeHandler(e) {
 document.addEventListener("fullscreenchange", changeHandler, false);
 document.addEventListener("webkitfullscreenchange", changeHandler, false);
 document.addEventListener("mozfullscreenchange", changeHandler, false);
+
+
+var toload=$("section,footer");
+var active = false;
+
+var lazyLoad = function() {
+    if (active === false) {
+        active = true;
+        setTimeout(function() {
+            var bottom = window.innerHeight*2+$(window).scrollTop();
+            toload = toload.filter(function(index, section){
+                if(section.offsetTop>bottom)
+                  return true;
+                $(section).find("img[data-src]").each(function (key, i) {
+                    i.src = i.dataset.src;
+                });
+                return false;
+            });
+
+            active = false;
+        }, 200);
+    }
+};
+
+document.addEventListener("scroll", lazyLoad);
+window.addEventListener("resize", lazyLoad);
+window.addEventListener("orientationchange", lazyLoad);
