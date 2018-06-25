@@ -287,12 +287,13 @@ $(document).ready(function() {
     //var arr = ['1', '2', '3', '4'];
     var arr = ['assets/img/icasting_header_img.jpg', 'assets/img/icasting_header_img_4.jpg'];
     var mobile = ['assets/img/mobile_square_img_1.jpg', 'assets/img/mobile_square_img_4.jpg'];
+    var num = ['1', '4'];
 
     var rand = Math.floor(Math.random() * arr.length);
 
-    $('#main-hero').attr('src', arr[rand]).fadeIn();
+    $('#main-hero').attr('src', arr[rand]).addClass("img-"+num[rand]).fadeIn();
 
-    $('.hero .square img').attr('src', mobile[rand]);
+    $('.hero .square img').attr('src', mobile[rand]).addClass("img-"+num[rand]);
   }
 
   pickRandomHeader();
